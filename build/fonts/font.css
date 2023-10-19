@@ -1,0 +1,15 @@
+@font-face {
+    /* EN */
+    font-family: "EBGaramond";
+    src: url("./EBGaramond-Regular.ttf")
+}
+@font-face {
+    /* CN */
+    font-family: "NotoSerifSC";
+    src: url("./NotoSerifSC-Light.otf")
+}
+@font-face {
+    /* JP */
+    font-family: "ShipporiMinchoB1";
+    src: url("./ShipporiMinchoB1-Regular.ttf")
+}
