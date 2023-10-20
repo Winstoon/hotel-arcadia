@@ -1,0 +1,17 @@
+.order-dialog{
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+.order-dialog.show{
+    opacity: 1;
+    pointer-events: all;
+}

@@ -1,0 +1,53 @@
+.language{
+    position: relative;
+    opacity: 1;
+    font-size: 14px;
+    line-height: 18px;
+    transition: opacity .3s ease-out;
+}
+
+.language .trigger{
+    display: flex;
+    align-items: center;
+    transition: opacity .3s ease-out;
+}
+
+.language .trigger img{
+    margin-left: 6px;
+}
+
+.language .dropdown{
+    position: absolute;
+    right: 0;
+    top: 16px;
+    padding-top: 8px;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-out;
+}
+
+.language .dropdown .dp-item{
+    text-align: right;
+    line-height: 2;
+    opacity: .6;
+    padding-right: 18px;
+    transition: opacity .3s ease-out;
+}
+.language .dropdown .dp-item.active,
+.language .dropdown .dp-item:hover{
+    opacity: 1;
+}
+
+.language:hover{
+    cursor: pointer;
+
+    .trigger{
+        opacity: .6;
+    }
+
+    .dropdown{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
