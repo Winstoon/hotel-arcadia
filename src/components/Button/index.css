@@ -30,3 +30,28 @@
 .button.uppercase {
     text-transform: uppercase;
 }
+
+.button.ghost{
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+}
+
+.button .right-icon{
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+}
+
+.button.ghost:hover{
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+}
+
+.button.ghost:hover .right-icon{
+    border-color: black;
+}

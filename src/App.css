@@ -1,9 +1,14 @@
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+}
+
+.container .section {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 40px;
-    font-weight: 500;
+    height: 100%;
 }

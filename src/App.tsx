@@ -48,7 +48,7 @@ function App() {
         <div style={{ fontFamily: `EBGaramond, ${fontFamily}` }}>
             <Routes>
                 { ROUTERS.map(router =>
-                    <Route path={router.path} element={router.element} />
+                    <Route key={router.path} path={router.path} element={router.element} />
                 )}
             </Routes>
             <OrderDialog visible={orderDialogVisible} />

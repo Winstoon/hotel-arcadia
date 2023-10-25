@@ -59,3 +59,29 @@ export const useOrderDialogStore = create(immer<OrderState & OrderActions>((set,
     visible: false,
     setVisible: (visible: boolean) => set({ visible })
 })))
+
+
+
+type FadeSlideProps = {
+    active: number
+    setActive: (active: number) => void
+    setActiveFn: (fn: (prev: number) => number) => void
+}
+
+export const useFadeSlideStore = create(immer<FadeSlideProps>((set, get) => ({
+    active: 0,
+    setActive: active => set({ active }),
+    setActiveFn: fn => set(state => ({ active: fn(state.active) }))
+})))
+
+export const useFadeSlide2Store = create(immer<FadeSlideProps>((set, get) => ({
+    active: 0,
+    setActive: active => set({ active }),
+    setActiveFn: fn => set(state => ({ active: fn(state.active) }))
+})))
+
+export const useFadeSlide3Store = create(immer<FadeSlideProps>((set, get) => ({
+    active: 0,
+    setActive: active => set({ active }),
+    setActiveFn: fn => set(state => ({ active: fn(state.active) }))
+})))

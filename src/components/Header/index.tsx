@@ -23,10 +23,8 @@ export default function Header (props: IProps) {
         setOrderVisible(true)
     }
 
-    if (hidden) return null
-
     return (
-        <div className={`header ${lightmode ? 'lightmode' : ''}`}>
+        <div className={`header ${hidden ? 'hidden' : ''} ${lightmode ? 'lightmode' : ''}`}>
             <div className="header-left">
                 <Link to="/">
                     <Image
@@ -37,13 +35,13 @@ export default function Header (props: IProps) {
             </div>
             <div className="header-center">
                 { ROUTERS.map((router, idx) =>
-                    <>
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center' }}>
                         { idx === 0 ? null : <span className="divider">|</span> }
                         <Link
                             to={router.path}
                             className={router.path === pathname ? 'active' : ''}
                         >{router.label[lang]}</Link>
-                    </>
+                    </div>
                 )}
             </div>
             <div className="header-right">

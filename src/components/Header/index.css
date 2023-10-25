@@ -7,6 +7,14 @@
     align-items: stretch;
     padding: 0 40px 0 28px;
     height: 100px;
+    z-index: 9;
+    transition: opacity .3s ease-out 1.6s;
+}
+
+.header.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
 }
 
 .header.lightmode,
@@ -53,6 +61,10 @@
     opacity: .5;
     font-size: 14px;
     transition: opacity .3s ease-out;
+}
+
+.header.lightmode a {
+    opacity: .4;
 }
 
 .header a.active,
