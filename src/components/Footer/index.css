@@ -2,11 +2,65 @@
     height: 400px;
     background-color: #212020;
     display: flex;
-
-
-    
+    flex-direction: column;
+    border-top: 3px solid rgba(255, 255, 255, .3);
 }
 
 .footer img{
     width: 100px;
+}
+
+.footer .footer-basic{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-basic .comlogo{
+    width: 100px;
+    margin: 33px 33px 33px 0;
+}
+.footer .footer-basic .divider{
+    height: 143px;
+    width: 1px;
+    background-color: white;
+    opacity: .3;
+    margin: 0 85px;
+}
+
+.footer .footer-basic .otherlogos{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.footer .footer-btm{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-btm .quick-links{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    width: 1045px;
+}
+.footer .footer-btm .quick-links img{
+    height: 26px;
+    width: auto;
+    opacity: .7;
+    transition: opacity .3s ease-out;
+}
+
+.footer .footer-btm .quick-links img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.footer .footer-btm .copyright{
+    font-size: 13px;
+    opacity: .7;
 }

@@ -12,3 +12,7 @@
     justify-content: center;
     height: 100%;
 }
+
+.container .swiper-wrapper .swiper-slide:last-child {
+    height: 400px;
+}

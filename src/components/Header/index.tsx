@@ -9,11 +9,12 @@ import './index.css'
 
 interface IProps{
     hidden?: boolean
+    mask?: boolean
     lightmode?: boolean
 }
 
 export default function Header (props: IProps) {
-    const { hidden, lightmode } = props
+    const { hidden, lightmode, mask } = props
     const { pathname } = useLocation()
     const lang = useCommonStore(state => state.lang)
     const I18N = useCommonStore(state => state.I18N)
@@ -24,7 +25,7 @@ export default function Header (props: IProps) {
     }
 
     return (
-        <div className={`header ${hidden ? 'hidden' : ''} ${lightmode ? 'lightmode' : ''}`}>
+        <div className={`header ${hidden ? 'hidden' : ''} ${lightmode ? 'lightmode' : ''} ${mask ? 'mask' : ''}`}>
             <div className="header-left">
                 <Link to="/">
                     <Image

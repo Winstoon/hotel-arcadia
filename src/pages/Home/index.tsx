@@ -155,6 +155,7 @@ export default function Home () {
     const headerConfig = {
         hidden: pageSectionOrder === 0,
         lightmode: pageSectionOrder === 2,
+        mask: pageSectionOrder >= 5,
     }
 
     const data = {
@@ -196,7 +197,7 @@ export default function Home () {
     }
 
     return (
-        <div className="container">
+        <div className="container home">
             <Header {...headerConfig} />
             <Fullpage
                 ignoreHideIndex={[5,6]}

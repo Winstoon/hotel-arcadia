@@ -8,22 +8,44 @@
 .scrollview{
     flex: 1;
     overflow: auto;
+    padding-right: 20px;
+    margin-top: 76px;
+}
+
+.scrollview::-webkit-scrollbar {
+    width: 2px;
+  }
+
+.scrollview::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.15);
+    border-radius: 4px;
+}
+
+.scrollview::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.25);
+    border-radius: 4px;
+}
+
+.scrollview::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,.3);
+}
+
+.scrollview::-webkit-scrollbar-thumb:active {
+    background: rgba(255,255,255,.25);
 }
 
 .pictures{
     flex: 1;
     display: grid;
-    gap: 36px;
-    grid-template-columns: auto auto auto auto;
+    gap: 40px;
+    grid-template-columns: auto auto auto;
     justify-content: center;
-    overflow: auto;
 }
 
+
 .pictures .picbox {
-    width: 260px;
-    height: 260px;
-    padding: 12px;
-    border: 1px solid #e4e4e4;
+    width: 400px;
+    height: 400px;
 }
 
 .pictures .picture {
