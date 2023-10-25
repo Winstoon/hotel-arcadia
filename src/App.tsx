@@ -6,9 +6,11 @@ import Environment from './pages/Env';
 import Residence from './pages/Residence';
 import Delicious from './pages/Delicious';
 import Pictures from './pages/Pics';
+import Admin from './pages/Admin';
 import OrderDialog from './components/OrderDialog';
 
 import './App.css';
+import 'react-calendar/dist/Calendar.css';
 
 export const ROUTERS = [
     {
@@ -50,6 +52,8 @@ function App() {
                 { ROUTERS.map(router =>
                     <Route key={router.path} path={router.path} element={router.element} />
                 )}
+
+                <Route path='/admin' element={<Admin />} />
             </Routes>
             <OrderDialog visible={orderDialogVisible} />
         </div>
