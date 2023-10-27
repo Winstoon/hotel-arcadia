@@ -19,7 +19,7 @@ export default function CircleProgress (props: IProps) {
     return (
         <svg viewBox="0 0 160 160" width={width} height={height} className={`svgprogress ${className}`}>
             <circle cx="70" cy="70" r="70"></circle>
-            <circle cx="70" cy="70" r="70" stroke-linecap="round"></circle>
+            <circle cx="70" cy="70" r="70" strokeLinecap="round"></circle>
         </svg>
     )
 }

@@ -2,7 +2,7 @@ var fs = require('fs')
 var path = require('path')
 var express = require('express')
 var app = express()
-var PORT = 8080
+var PORT = process.env.PORT || 8080
 
 app.use(express.static(path.join(__dirname, 'build')))
 
@@ -42,6 +42,7 @@ app.post('/api/addOrder', express.json(), (req, res) => {
     
     newOrder.id = orders.length + 1
     newOrder.addDate = new Date().toLocaleString()
+    newOrder.processed = false
     orders.push(newOrder)
     
     writeJson('orders.json', orders)

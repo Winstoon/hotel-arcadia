@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Calendar from "react-calendar"
 import { Value } from "react-calendar/dist/cjs/shared/types"
 import dayjs from "dayjs"
+import { formatCalendarDate } from "../../components/OrderDialog/CalendarInput"
 
 function uniq(arr: string[]) {
     return [...new Set(arr)]
@@ -23,7 +24,7 @@ export default function CalendarOperation () {
     const handleChange = (value: Value) => {
         if (value) {
             // @ts-ignore
-            const result = dayjs(value.valueOf()).format('YYYY-MM-DD')
+            const result = formatCalendarDate(value)
             setNewDates(uniq([...newDates, result]))
         }
     }

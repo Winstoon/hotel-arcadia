@@ -10,12 +10,12 @@ export type NewOrder = {
     phone: string       // 电话
     email: string       // 邮箱
     notes: string       // 备注
-    processed: boolean  // 已处理
 }
 
 export type Order = {
     id: number
     addDate: string
+    processed: boolean  // 已处理
 } & NewOrder
 
 function formatDate (date: string, format = 'YYYY-MM-DD') {

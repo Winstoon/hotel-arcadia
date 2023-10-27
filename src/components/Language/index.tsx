@@ -16,7 +16,7 @@ export default function Language ({ lightmode }: { lightmode: boolean }) {
             </div>
             <div className="dropdown" style={{ letterSpacing: letterSpacing.TXT }}>
                 {Object.entries(I18N_LABELS).filter(([key]) => key !== lang).map(([key, label]) =>
-                    <div className={"dp-item"} onClick={() => setLang(key as I18N)}>{label}</div>
+                    <div key={key} className={"dp-item"} onClick={() => setLang(key as I18N)}>{label}</div>
                 )}
             </div>
         </div>

@@ -1,17 +1,307 @@
-.order-dialog{
+.order-dialog,
+.success-dialog{
     position: fixed;
     inset: 0;
     background-color: black;
     z-index: 99;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
     pointer-events: none;
     opacity: 0;
+    padding: 140px 50px 120px;
     transition: opacity .5s ease-out;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.15);
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,.25);
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(255,255,255,.3);
+    }
+    
+    &::-webkit-scrollbar-thumb:active {
+        background: rgba(255,255,255,.25);
+    }
 }
 
+.success-dialog.show,
 .order-dialog.show{
     opacity: 1;
     pointer-events: all;
+}
+
+.order-dialog .close{
+    position: fixed;
+    left: 154px;
+    top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    opacity: .7;
+    transition: opacity .3s ease-out;
+}
+
+.order-dialog .close:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.order-dialog .close img{
+    width: 24px;
+}
+
+.order-dialog .order-form .form-header{
+    text-align: center;
+}
+
+.order-dialog .order-form h2{
+    margin: 0 0 24px;
+    font-size: 22px;
+}
+
+.order-dialog .order-form .cpts{
+    opacity: .8;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.order-dialog .order-form .form-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 864px;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.order-dialog .order-form .form-body .error-msg {
+    position: absolute;
+    bottom: -40px;
+    font-size: 14px;
+    align-self: center;
+    color: red;
+}
+
+.order-dialog .order-form .form-items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 64px;
+}
+
+.order-dialog .order-form .form-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.order-dialog .order-form .form-item.full {
+    grid-column: 1 / span 2
+}
+.order-dialog .order-form .form-item.full .form-input {
+    width: 100%;
+}
+.order-dialog .order-form .form-item>span:first-child {
+    font-size: 14px;
+}
+
+.order-dialog .order-form .form-input {
+    font-family: inherit;
+    width: 400px;
+    height: 48px;
+    outline: none;
+    border: none;
+    margin-top: 16px;
+    border-bottom: 1px solid #f3f3f3;
+    background-color: rgba(217, 217, 217, .2);
+    color: #fff;
+    font-size: 14px;
+    padding: 0 16px;
+    line-height: 46px;
+}
+
+.order-dialog .order-form .form-input.days-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-dialog .order-form .form-input.days-input .days-value{
+    flex: 1;
+    text-align: center;
+}
+
+.order-dialog .order-form .form-input.days-input img{
+    width: 24px;
+    opacity: .7;
+    transition: opacity .2s ease-out;
+}
+.order-dialog .order-form .form-input.days-input img.disabled{
+    opacity: .4;
+}
+
+.order-dialog .order-form .form-input.days-input img:not(.disabled):hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.order-dialog .order-form .form-input.days-input img:not(.disabled):active{
+    opacity: .6;
+}
+
+
+.order-dialog .order-form .dp-input{
+    display: flex;
+    align-items: center;
+}
+.order-dialog .order-form .dp-input .dp-value{
+    flex: 1;
+}
+.order-dialog .order-form .form-dropdown{
+    position: absolute;
+    z-index: 9;
+    top: 92px;
+    left: 0;
+    width: 400px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
+    background-color: #464545;
+}
+
+.order-dialog .order-form .form-dropdown.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.order-dialog .order-form .form-dropdown .form-dropdown{
+    background-color: #606060
+}
+
+.order-dialog .order-form .form-dropdown .form-dp-item{
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color .3s ease-out;
+}
+
+.order-dialog .order-form .form-dropdown .form-dp-item:hover{
+    cursor: pointer;
+    background-color: #606060;
+}
+
+.order-dialog .order-form .button {
+    width: 336px;
+    align-self: center;
+    margin-top: 60px;
+}
+
+/* form footer */
+
+.order-dialog .order-form .form-footer{
+    font-size: 14px;
+    line-height: 24px;
+    width: 864px;
+    opacity: .8;
+}
+.order-dialog .order-form .policy-title{
+    margin-bottom: 16px;
+}
+
+.order-dialog .order-form .form-footer ul{
+    margin: 0;
+    padding: 0 0 0 12px;
+}
+
+.success-dialog{
+    align-items: center;
+    flex-direction: column;
+}
+.success-dialog .cpt{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.success-dialog .cpt img{
+    width: 24px;
+}
+.success-dialog .desc{
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .8;
+    text-align: center;
+    margin-bottom: 36px;
+}
+.success-dialog .button{
+    width: 336px;
+}
+
+/* 覆写react-calendar样式 */
+
+.calendar-pop {
+    color: #333;
+    position: absolute;
+    z-index: 9;
+    top: 92px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
+}
+
+.calendar-pop.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.calendar-pop .react-calendar{
+    background-color: #464545;
+    border: none;
+    color: #fff;
+    width: 400px;
+    font-weight: 300;
+}
+
+.calendar-pop .react-calendar button{
+    color: #fff;
+}
+.calendar-pop .react-calendar .react-calendar__tile--active,
+.calendar-pop .react-calendar button:enabled:hover,
+.calendar-pop .react-calendar button:enabled:focus{
+    background-color: #606060;
+}
+
+.calendar-pop .react-calendar .react-calendar__month-view__days__day--neighboringMonth{
+    opacity: .6;
+}
+
+.calendar-pop .react-calendar .react-calendar__month-view__weekdays abbr{
+    text-decoration: none;
+}
+
+.calendar-pop .react-calendar .react-calendar__tile--now{
+    background-color: #464545;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.calendar-pop .react-calendar button:disabled{
+    background-color: #606060;
+    opacity: .3;
 }
