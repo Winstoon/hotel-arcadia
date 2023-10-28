@@ -2,9 +2,9 @@ import Image from '../Image'
 
 import './index.css'
 
-export default function Footer() {
+export default function Footer({ noborder }: {noborder?:boolean}) {
     return (
-        <div className='footer'>
+        <div className='footer' style={{ borderTop: noborder ? 'none' : '3px solid rgba(255, 255, 255, .3);'}}>
             <div className='footer-basic'>
                 <Image className='comlogo' src="/logos/com.logo.svg" />
                 <div className='divider'></div>

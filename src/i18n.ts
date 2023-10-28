@@ -949,7 +949,110 @@ export const I18NS: I18NFullData = {
         [I18N.EN]: 'Free Wi-Fi',
         [I18N.JP]: '無料Wi-Fi',
     },
-    
+
+    'dli.s1.desc1': {
+        [I18N.ZH]: '私享主厨的诠释',
+        [I18N.EN]: 'The interpretation of the private chef',
+        [I18N.JP]: 'プライベートシェフの解釈'
+    },
+    'dli.s1.desc2': {
+        [I18N.ZH]: '回响技艺与珍馐的高定赏味',
+        [I18N.EN]: 'Echoing skills and high-end taste of delicacies',
+        [I18N.JP]: 'スキルと珍味の高級味'
+    },
+    'dli.s2.cpt': {
+        [I18N.ZH]: '品赏',
+        [I18N.EN]: 'Tasting',
+        [I18N.JP]: '品評'
+    },
+    'dli.s2.desc1': {
+        [I18N.ZH]: '对佳馔的执着',
+        [I18N.EN]: 'The persistence of delicacies',
+        [I18N.JP]: '美味の執着'
+    },
+    'dli.s2.desc2': {
+        [I18N.ZH]: '更精粹的技艺',
+        [I18N.EN]: 'More refined skills',
+        [I18N.JP]: 'より洗練されたスキル'
+    },
+    'dli.s2.desc3': {
+        [I18N.ZH]: '更新鲜的食材',
+        [I18N.EN]: 'Fresh ingredients',
+        [I18N.JP]: '新鮮な食材'
+    },
+    'dli.s2.desc4': {
+        [I18N.ZH]: '只为诠释独道的料理创作',
+        [I18N.EN]: 'Only to interpret the unique cooking creation',
+        [I18N.JP]: '唯一の料理の創造を解釈する'
+    },
+    'dli.s2.desc5': {
+        [I18N.ZH]: '以 Omakase 形式',
+        [I18N.EN]: 'In Omakase form',
+        [I18N.JP]: 'Omakase形式で'
+    },
+    'dli.s2.desc6': {
+        [I18N.ZH]: '融汇自然的至臻馈赠',
+        [I18N.EN]: 'Integrate the natural gift',
+        [I18N.JP]: '自然の贈り物を統合する'
+    },
+    'dli.s2.desc7': {
+        [I18N.ZH]: '承载匠心的料理之魂',
+        [I18N.EN]: 'Carrying the soul of the chef',
+        [I18N.JP]: 'シェフの魂を運ぶ'
+    },
+
+    'dli.s3.cpt': {
+        [I18N.ZH]: '甄选',
+        [I18N.EN]: 'Selection',
+        [I18N.JP]: '選択'
+    },
+    'dli.s3.desc1': {
+        [I18N.ZH]: '探寻北海道在地珍馐',
+        [I18N.EN]: 'Explore Hokkaido\'s local delicacies',
+        [I18N.JP]: '北海道の珍味を探索する'
+    },
+    'dli.s3.desc2': {
+        [I18N.ZH]: '尊重食材的四季休憩',
+        [I18N.EN]: 'Respect the four seasons of ingredients',
+        [I18N.JP]: '食材の四季を尊重する'
+    },
+    'dli.s3.desc3': {
+        [I18N.ZH]: '捕捉自然之味',
+        [I18N.EN]: 'Capture the taste of nature',
+        [I18N.JP]: '自然の味を捕らえる'
+    },
+    'dli.s3.desc4': {
+        [I18N.ZH]: '深思土壤 共鸣万物',
+        [I18N.EN]: 'Think deeply about the soil and resonate with everything',
+        [I18N.JP]: '土壌を深く考え、すべてと共鳴する'
+    },
+    'dli.s3.desc5': {
+        [I18N.ZH]: '久炼技艺 潜心呈献',
+        [I18N.EN]: 'Long-term training skills',
+        [I18N.JP]: '長年の訓練スキル'
+    },
+    'dli.s3.desc6': {
+        [I18N.ZH]: '终就无穷回味',
+        [I18N.EN]: 'Finally, there is endless aftertaste',
+        [I18N.JP]: '最後に、終わりのない余韻があります'
+    },
+
+    'dli.s4.desc1': {
+        [I18N.ZH]: '悦享朝晨，赏味西式或日式私厨早餐',
+        [I18N.EN]: 'Enjoy the morning and taste the Western or Japanese private chef breakfast',
+        [I18N.JP]: '朝を楽しみ、西洋または日本のプライベートシェフの朝食を味わう'
+    },
+    'dli.s4.desc2': {
+        [I18N.ZH]: '珍稀食材，品味私人高定晚宴',
+        [I18N.EN]: 'Rare ingredients, taste private high-end dinner',
+        [I18N.JP]: '珍しい食材、プライベートな高級ディナーを味わう'
+    },
+    'dli.s4.tip': {
+        [I18N.ZH]: '在您的入住方案中，含前三晚私厨定制晚宴',
+        [I18N.EN]: 'In your stay plan, it includes a private chef custom dinner for the first three nights',
+        [I18N.JP]: 'あなたの滞在計画では、最初の3泊のプライベートシェフカスタムディナーが含まれています'
+    },
+
 
 
 

@@ -11,6 +11,10 @@
     transition: opacity .3s ease-out 1.6s;
 }
 
+.header.withbg{
+    background-color: rgba(33,32,32,1);
+}
+
 .header::after{
     content: "";
     position: absolute;
@@ -50,7 +54,7 @@
     border-color: black;
 }
 .header.lightmode .button:hover {
-    background-color: black;
+    background-color: #212020;
     color: white;
 }
 

@@ -1,5 +1,5 @@
 // 居所
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 import AmLine from "../../components/AmLine/AmLine";
 import Button from "../../components/Button";
 import CircleProgress from "../../components/CircleProgress";
@@ -11,7 +11,6 @@ import Fullpage from "../../components/FullPage";
 import Header from "../../components/Header";
 import Image, { AnimateBg } from "../../components/Image";
 import SwiperImages from "../../components/SwiperImages/SwiperImages";
-import SwiperImages2 from "../../components/SwiperImages/SwiperImages2";
 import SwiperImages3 from "../../components/SwiperImages/SwiperImages3";
 import { ILetterSpacing } from "../../letterSpacings";
 import { useCommonStore, useOrderDialogStore } from "../../store";

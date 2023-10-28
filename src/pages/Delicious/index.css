@@ -1,0 +1,127 @@
+.delicious .section1 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delicious .section1 .content .title {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.delicious .section1 .content .desc {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.delicious .section1 .content .button {
+    margin-top: 24px;
+}
+
+
+.delicious.container .section2,
+.delicious.container .section3{
+    background-color: #212020;
+}
+
+.delicious.container .section2{
+    justify-content: flex-end;
+    padding-left: 480px;
+}
+.delicious.container .section3{
+    justify-content: flex-start;
+    padding-right: 480px;
+}
+
+.delicious .section3 .h3-slideitem,
+.delicious .section2 .h2-slideitem{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delicious .section3 .h3-slideitem > img,
+.delicious .section2 .h2-slideitem > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+}
+
+.delicious .section3 .h3-slideitem img.active,
+.delicious .section2 .h2-slideitem img.active{
+    animation: zoomtofit 6.5s ease-out;
+}
+
+.delicious .section3 .h3-pagination,
+.delicious .section2 .h2-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.delicious .section3 .h3-content,
+.delicious .section2 .h2-content{
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 80px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+}
+
+.delicious .section3 .h3-content{
+    left: auto;
+    right: 120px;
+}
+
+.delicious .section3 .h3-content .tips,
+.delicious .section2 .h2-content .tips{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    line-height: 2;
+    opacity: .8;
+}
+
+.delicious .section3 .h3-content .title,
+.delicious .section2 .h2-content .title{
+    font-size: 22px;
+    padding-bottom: 20px;
+    width: 300px;
+}
+
+.delicious .section3 .h3-content .desc,
+.delicious .section2 .h2-content .desc{
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 24px;
+}
+
+.delicious .section4 .content{
+    text-align: center;
+}
+.delicious .section4 .content .desc{
+    font-size: 18px;
+    line-height: 32px;
+}
+.delicious .section4 .content .tip{
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .8;
+}

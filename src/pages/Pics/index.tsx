@@ -3,20 +3,24 @@ import Header from "../../components/Header";
 import Image from "../../components/Image";
 
 import './index.css'
+import Footer from "../../components/Footer";
 
 const data = [
-    { id: 1, url: '' },
-    { id: 2, url: '' },
-    { id: 3, url: '' },
-    { id: 4, url: '' },
-    { id: 5, url: '' },
-    { id: 6, url: '' },
-    { id: 7, url: '' },
-    { id: 8, url: '' },
-    { id: 9, url: '' },
-    { id: 10, url: '' },
-    { id: 11, url: '' },
-    { id: 12, url: '' }
+    { id: 1, url: '/jpgs/pic-1.jpg', burl: '/jpgs/bpic-1.jpg' },
+    { id: 2, url: '/jpgs/pic-2.jpg', burl: '/jpgs/bpic-2.jpg' },
+    { id: 3, url: '/jpgs/pic-3.jpg', burl: '/jpgs/bpic-3.jpg' },
+    { id: 4, url: '/jpgs/pic-4.jpg', burl: '/jpgs/bpic-4.jpg' },
+    { id: 5, url: '/jpgs/pic-5.jpg', burl: '/jpgs/bpic-5.jpg' },
+    { id: 6, url: '/jpgs/pic-6.jpg', burl: '/jpgs/bpic-6.jpg' },
+    { id: 7, url: '/jpgs/pic-7.jpg', burl: '/jpgs/bpic-7.jpg' },
+    { id: 8, url: '/jpgs/pic-8.jpg', burl: '/jpgs/bpic-8.jpg' },
+    { id: 9, url: '/jpgs/pic-9.jpg', burl: '/jpgs/bpic-9.jpg' },
+    { id: 10, url: '/jpgs/pic-10.jpg', burl: '/jpgs/bpic-10.jpg' },
+    { id: 11, url: '/jpgs/pic-11.jpg', burl: '/jpgs/bpic-11.jpg' },
+    { id: 12, url: '/jpgs/pic-12.jpg', burl: '/jpgs/bpic-12.jpg' },
+    { id: 13, url: '/jpgs/pic-13.jpg', burl: '/jpgs/bpic-13.jpg' },
+    { id: 14, url: '/jpgs/pic-14.jpg', burl: '/jpgs/bpic-14.jpg' },
+    { id: 15, url: '/jpgs/pic-15.jpg', burl: '/jpgs/bpic-15.jpg' }
 ]
 
 function PPT ({
@@ -39,6 +43,7 @@ function PPT ({
     const nextImage = images[nextIdx]
     const prevable = !!prevImage
     const nextable = !!nextImage
+    const curtImage = images[idx]
 
     const handlePrev = () => {
         if (prevable) onIdxChange(prevIdx)
@@ -50,17 +55,21 @@ function PPT ({
 
     return (
         <div className={`ppt ${visible ? 'show' : ''}`}>
-            <div className="ppt-close" onClick={() => onVisibleChange(false)}>x</div>
+            <div className="close" onClick={() => onVisibleChange(false)}>
+                <Image src="/icons/close.svg" />
+            </div>
 
-            <div className="ppt-prev" onClick={handlePrev}>prev ({prevable})</div>
-            <div className="ppt-slider">
-                { images.map((img, index) =>
-                    <div className={`ppt-slider-item ${index === idx ? 'show' : ''}`}>
-                        <Image src={img.url} />
-                    </div>
+            <div className={`ppt-btn ${prevable ? '': 'disabled'}`} onClick={handlePrev}>
+                <Image src="/icons/prev.svg" />
+            </div>
+            <div className="img-box">
+                {images.map((img, index) =>
+                    <Image className={index === idx ? 'active' : ''} src={img.burl} />
                 )}
             </div>
-            <div className="ppt-next" onClick={handleNext}>next ({nextable})</div>
+            <div className={`ppt-btn ${nextable ? '': 'disabled'}`} onClick={handleNext}>
+                <Image src="/icons/next.svg" />
+            </div>
         </div>
     )
 }
@@ -76,10 +85,10 @@ export default function Pictures () {
     }
 
     return (
-        <div className="container withscroll">
-            <Header />
-            <div className="scrollview">
-                <div className="pictures">
+        <>
+            <Header withbg />
+            <div className="pictures">
+                <div className="pictures-center">
                     {data.map((img, idx) => 
                         <div key={img.id} className="picbox">
                             <Image onClick={() => handleClick(idx)} className="picture" src={img.url} />
@@ -95,6 +104,7 @@ export default function Pictures () {
                 onIdxChange={setPPTIdx}
                 onVisibleChange={setPPTMode}
             />
-        </div>
+            <Footer noborder />
+        </>
     )
 }
