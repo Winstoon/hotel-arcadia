@@ -252,12 +252,11 @@ function ToggleVisible (props: {
 
     return (
         <div className={`toggle-item ${visible ? '' : 'hidden'}`}>
-            <div className="toggle-title">
+            <div className="toggle-title" onClick={onChangeVisible}>
                 <span className="toggle-cpt">{caption}</span>
                 { disabled ? null :
                     <Image
                         className="toggle-btn"
-                        onClick={onChangeVisible}
                         src={visible ? '/icons/down.black.svg' : '/icons/up.black.svg'}
                     />
                 }

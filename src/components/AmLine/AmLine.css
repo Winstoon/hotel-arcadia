@@ -19,7 +19,7 @@
     bottom: 0;
     width: 0%;
     background-color: #fff;
-    transition: width 2s ease-in-out 1s;
+    transition: width 3.5s ease-in-out 1s;
 }
 
 .am-line.active i{
