@@ -43,7 +43,6 @@ function PPT ({
     const nextImage = images[nextIdx]
     const prevable = !!prevImage
     const nextable = !!nextImage
-    const curtImage = images[idx]
 
     const handlePrev = () => {
         if (prevable) onIdxChange(prevIdx)
