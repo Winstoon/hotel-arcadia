@@ -4,9 +4,9 @@ import Image from '../Image'
 import CalendarInput, { formatCalendarDate } from './CalendarInput'
 import DaysInput from './DaysInput'
 import Dropdown from './Dropdown'
+import Button from '../Button'
 
 import './index.css'
-import Button from '../Button'
 
 interface IProps {
     visible: boolean

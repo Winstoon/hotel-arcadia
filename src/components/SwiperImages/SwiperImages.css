@@ -1,0 +1,227 @@
+.swiper-images{
+    display: flex;
+    align-items: flex-end;
+    gap: 70px;
+    width: 190%;
+    transition: transform .6s ease-out;
+}
+
+.swiper-images.secondpage{
+    transform: translateX(-24%)
+}
+
+.swiper-images.thridpage{
+    transform: translateX(-47%)
+}
+
+.swiper-images .swiper-item{
+    opacity: .5;
+    transition: opacity .6s ease-out;
+}
+
+.swiper-images .swiper-item.nopointer{
+    opacity: 1;
+}
+.swiper-images .swiper-item img{
+    width: 100%;
+}
+
+.swiper-images .swiper-item:nth-child(1){
+    width: 22.4%;
+}
+
+.swiper-images .swiper-item:nth-child(2){
+    width: 31%;
+}
+
+.swiper-images .swiper-item:nth-child(3){
+    width: 21.4%
+}
+
+.swiper-images .swiper-item:nth-child(4){
+    width: 19%;
+}
+
+.swiper-images .swiper-item:nth-child(5){
+    width: 31%;
+}
+
+.swiper-images .swiper-item:nth-child(6){
+    width: 16%;
+}
+
+.swiper-images .swiper-item:nth-child(7){
+    width: 21.4%;
+}
+.swiper-images .swiper-item:nth-child(8){
+    width: 26%;
+}
+
+.swiper-images .swiper-item:not(.nopointer):hover,
+.swiper-images .swiper-item:not(.nopointer):hover{
+    cursor: pointer;
+    transition: opacity .6s ease-out;
+    opacity: .8;
+}
+
+.swiper-imagesbar{
+    position: relative;
+    height: .5px;
+    width: 600px;
+    margin: 50px auto 0;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.swiper-imagesbar .bar{
+    transition: left .6s ease-out;
+    position: relative;
+    background-color: rgba(0, 0, 0, .5);
+    height: .5px;
+    width: 33%;
+    left: 0;
+}
+
+.swiper-imagesbar.secondpage .bar{
+    left: 33%;
+}
+
+.swiper-imagesbar.thridpage .bar{
+    left: 67%;
+}
+
+.swiper-images2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-images2 .prev{ margin-right: 20px; }
+.swiper-images2 .next{ margin-left: 20px; }
+
+.swiper-images2 .prev,
+.swiper-images2 .next{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    opacity: .5;
+}
+
+.swiper-images2 .prev.disabled,
+.swiper-images2 .next.disabled{
+    opacity: 0;
+}
+
+.swiper-images2 .prev:not(.disabled):hover,
+.swiper-images2 .next:not(.disabled):hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.swiper-images2 .images{
+    margin-top: 12px;
+    max-width: calc(100% - 260px);
+    overflow: hidden;
+}
+
+.swiper-images2 .images .wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    transition: transform .6s ease-out;
+}
+
+.swiper-images2 .images .img-box{
+    padding: 20px;
+    text-align: center;
+    min-width: 33%;
+}
+
+.swiper-images2 .images .img-box .hover-animate{
+    overflow: hidden;
+}
+
+.swiper-images2 .images .img-box .hover-animate .img{
+    transition: transform 4s ease-out;
+}
+
+.swiper-images2 .images .img-box .hover-animate:hover .img{
+    transform: scale(1.1);
+}
+
+.swiper-images2 .images .img-box .img{
+    width: 100%;
+}
+
+.swiper-images2 .images .img-caption {
+    margin-top: 28px;
+    font-size: 16px;
+}
+
+.swiper-images2 .images .img-desc {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.swiper-imagesbar.secondSwiper .bar{
+    width: 50%;
+}
+
+.swiper-imagesbar.secondSwiper.secondpage .bar{
+    left: 50%;
+}
+
+.swiper-images3{
+    padding: 0 120px;
+    display: flex;
+    gap: 80px;
+    width: 220%;
+    transition: transform .6s ease-out;
+}
+
+.swiper-images3.secondpage{
+    transform: translateX(-36.5%)
+}
+
+.swiper-images3.thridpage{
+    transform: translateX(-54%)
+}
+
+.swiper-images3 .swiper-item{
+    position: relative;
+    opacity: .5;
+    flex: 1;
+    transition: opacity .6s ease-out;
+}
+.swiper-images3 .swiper-item .intros{
+    position: absolute;
+    width: 80%;
+    bottom: 24px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-images3 .swiper-item .intros .img-caption{
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+.swiper-images3 .swiper-item .intros .img-desc{
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .8;
+}
+
+.swiper-images3 .swiper-item.nopointer{
+    opacity: 1;
+}
+.swiper-images3 .swiper-item img{
+    width: 100%;
+}
+
+.swiper-images3 .swiper-item:not(.nopointer):hover,
+.swiper-images3 .swiper-item:not(.nopointer):hover{
+    cursor: pointer;
+    transition: opacity .6s ease-out;
+    opacity: .8;
+}

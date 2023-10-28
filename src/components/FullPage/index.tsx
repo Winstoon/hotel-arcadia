@@ -29,7 +29,7 @@ interface ISlideBgProps {
 function SwiperSlideBg (props: ISlideBgProps) {
     const { index, prev, end, children } = props
     return (
-        <div className={`swiper-slide ${prev === index ? 'hidding' : ''} ${end === index ? 'show': ''}`}>
+        <div className={`swiper-slide ${prev === index ? 'hidding' : ''} ${end === index ? 'show': ''}`} style={{ overflow: 'auto' }}>
             {children}
         </div>
     )
@@ -64,6 +64,11 @@ export default function Fullpage (props: IProps) {
         })
         swiper.on('slideChangeTransitionEnd', (a: any) => {
             setActive(atv => ({ ...atv, end: a.activeIndex }))
+        })
+
+
+        swiper.on('scroll', () =>{
+            console.log('??????')
         })
 
         return () => {

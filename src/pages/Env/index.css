@@ -1,0 +1,113 @@
+
+.environment .section1 .content,
+.environment .section5 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.environment .section1 .content .title,
+.environment .section5 .content .title {
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.environment .section1 .content .desc,
+.environment .section5 .content .desc {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.environment .section1 .content .button,
+.environment .section5 .content .button {
+    margin-top: 24px;
+}
+
+.environment.container .section3,
+.environment.container .section4,
+.environment.container .section5{
+    background-color: #212020;
+}
+
+/* Section 2, Section 3, Section 4 */
+.environment.container .section3{
+    justify-content: flex-end;
+    padding-left: 480px;
+}
+.environment.container .section4{
+    justify-content: flex-start;
+    padding-right: 480px;
+}
+.environment .section4 .h4-slideitem,
+.environment .section3 .h3-slideitem,
+.environment .section2 .h2-slideitem{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.environment .section4 .h4-slideitem > img,
+.environment .section3 .h3-slideitem > img,
+.environment .section2 .h2-slideitem > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+}
+
+.environment .section4 .h4-slideitem img.active,
+.environment .section3 .h3-slideitem img.active,
+.environment .section2 .h2-slideitem img.active {
+    animation: zoomtofit 6.5s ease-out;
+}
+
+.environment .section4 .h4-pagination,
+.environment .section3 .h3-pagination,
+.environment .section2 .h2-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.environment .section4 .h4-content,
+.environment .section3 .h3-content,
+.environment .section2 .h2-content{
+    position: absolute;
+    left: 120px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.environment .section4 .h4-content{
+    left: auto;
+    right: 120px;
+}
+
+.environment .section4 .h4-content .title,
+.environment .section3 .h3-content .title,
+.environment .section2 .h2-content .title{
+    font-size: 22px;
+    padding-bottom: 20px;
+    width: 300px;
+}
+
+.environment .section4 .h4-content .desc,
+.environment .section3 .h3-content .desc,
+.environment .section2 .h2-content .desc{
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 24px;
+}

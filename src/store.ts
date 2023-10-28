@@ -85,3 +85,28 @@ export const useFadeSlide3Store = create(immer<FadeSlideProps>((set, get) => ({
     setActive: active => set({ active }),
     setActiveFn: fn => set(state => ({ active: fn(state.active) }))
 })))
+
+
+type SwiperImageProps = {
+    page: number
+    setPage: (page: number) => void
+    setPageFn: (fn: (prev: number) => number) => void
+}
+
+export const useSwiperImageStore = create(immer<SwiperImageProps>((set, get) => ({
+    page: 1,
+    setPage: page => set({ page }),
+    setPageFn: fn => set(state => ({ active: fn(state.page) }))
+})))
+
+export const useSwiperImage2Store = create(immer<SwiperImageProps>((set, get) => ({
+    page: 0,
+    setPage: page => set({ page }),
+    setPageFn: fn => set(state => ({ active: fn(state.page) }))
+})))
+
+export const useSwiperImage3Store = create(immer<SwiperImageProps>((set, get) => ({
+    page: 1,
+    setPage: page => set({ page }),
+    setPageFn: fn => set(state => ({ active: fn(state.page) }))
+})))
