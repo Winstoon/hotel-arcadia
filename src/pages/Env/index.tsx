@@ -42,7 +42,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section2">
-            <div className="h2-content">
+            <div className={`h2-content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -82,7 +82,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section3">
-            <div className="h3-content">
+            <div className={`h3-content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -123,7 +123,7 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section4">
-            <div className="h4-content">
+            <div className={`h4-content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -158,7 +158,7 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     const active = order === 4
     
     return (
-        <div className="section section5">
+        <div className={`section section5 ${active ? 'animate' : ''}`}>
             <SwiperImages2 images={data.images} />
         </div>
     )

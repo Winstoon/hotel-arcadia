@@ -274,3 +274,41 @@
     opacity: 1;
     pointer-events: auto;
 }
+
+
+
+/* animations */
+.residence .section2 .content .intros {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.residence .section2 .content .intros.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.residence .section3 .h3-content,
+.residence .section6 .h6-content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.residence .section3 .h3-content.animate,
+.residence .section6 .h6-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.residence .section4 .h4-content {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.residence .section4 .h4-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}

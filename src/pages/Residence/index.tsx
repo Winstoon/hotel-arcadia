@@ -51,7 +51,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section2">
             <div className="content">
-                <div className="intros">
+                <div className={`intros ${active ? 'animate' : ''}`}>
                     <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                     <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
                     <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
@@ -82,7 +82,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section3">
-            <div className="h3-content">
+            <div className={`h3-content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -125,7 +125,7 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section4">
-            <div className="h4-content">
+            <div className={`h4-content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -185,7 +185,7 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section6">
-            <div className="h6-content">
+            <div className={`h6-content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>

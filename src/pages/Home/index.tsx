@@ -21,6 +21,7 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 1
     const I18N = useCommonStore(state => state.I18N)
     const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
@@ -30,7 +31,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section2">
-            <div className="content">
+            <div className={`content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
@@ -43,31 +44,36 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 2
+
     return (
         <div className="section section3">
             <div className="content">
                 <Image className="banner" src={data.banner} />
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className={`paragraph ${active ? 'animate' : ''}`}>
+                    <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                </div>
             </div>
         </div>
     )
 }
 
 function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 3
     const I18N = useCommonStore(state => state.I18N)
     const setActive = useFadeSlideStore(state => state.setActive)
     
     useEffect(() => {
-        if (order === 3) {
+        if (active) {
             setActive(0)
         }
-    }, [order])
+    }, [active])
 
     return (
         <div className="section section4">
-            <div className="content">
+            <div className={`content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
@@ -80,11 +86,12 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 4
     const I18N = useCommonStore(state => state.I18N)
 
     return (
         <div className="section section5">
-            <div className="content">
+            <div className={`content ${active ? 'animate' : ''}`}>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
@@ -97,9 +104,11 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 5
+
     return (
         <div className="section section6">
-            <div className="content">
+            <div className={`content ${active ? 'animate' : ''}`}>
                 <div className="info" style={{ letterSpacing: ls.TXT }}>{data.title}</div>
                 <div className="group">
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance1}</div>
@@ -117,7 +126,7 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.email}</div>
                 </div>
             </div>
-            <Image className="map" src="/jpgs/home-6.jpg" />
+            <Image className={`map ${active ? 'animate' : ''}`} src="/jpgs/home-6.jpg" />
         </div>
     )
 }

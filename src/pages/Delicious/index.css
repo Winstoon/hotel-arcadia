@@ -125,3 +125,37 @@
     line-height: 24px;
     opacity: .8;
 }
+
+/* animations */
+.delicious .section2 .h2-content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.delicious .section2 .h2-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.delicious .section3 .h3-content {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.delicious .section3 .h3-content.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.delicious .section4 .content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.delicious .section4 .content.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
