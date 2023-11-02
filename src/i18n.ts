@@ -81,6 +81,12 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '提出する',
     },
 
+    'wechat.desc': {
+        [I18N.ZH]: '打开微信扫描二维码，关注我们',
+        [I18N.EN]: 'Open WeChat to scan the QR code and follow us',
+        [I18N.JP]: 'WeChatを開いてQRコードをスキャンしてフォローしてください',
+    },
+
     'home.s2.title': {
         [I18N.ZH]: 'ARCADIA 二世古 雪屋',
         [I18N.EN]: 'ARCADIA NISEKO YUKIYA',

@@ -23,11 +23,13 @@ type CommonState = {
     I18N: I18NData
     letterSpacing: ILetterSpacing
     pageSectionOrder: number
+    wechatDialogVisible: boolean
 }
 
 type CommonActions = {
     setLang: (lang: I18N) => void
     setPageSectionOrder: (order: number) => void
+    setWeChatDialogVisible: (visible: boolean) => void
 }
 
 export const useCommonStore = create(immer<CommonState & CommonActions>((set, get) => ({
@@ -35,6 +37,7 @@ export const useCommonStore = create(immer<CommonState & CommonActions>((set, ge
     I18N: getDefaultI18NData(),
     letterSpacing: LetterSpacingMap,
     pageSectionOrder: 0,
+    wechatDialogVisible: false,
     setLang: lang => {
         let lsmap = lang === I18N.EN ? ENLetterSpacingMap : LetterSpacingMap
         let result: I18NData = {}
@@ -45,6 +48,7 @@ export const useCommonStore = create(immer<CommonState & CommonActions>((set, ge
         set({ lang, I18N: result, letterSpacing: lsmap })
     },
     setPageSectionOrder: order => set({ pageSectionOrder: order }),
+    setWeChatDialogVisible: visible => set({ wechatDialogVisible: visible })
 })))
 
 type OrderState ={

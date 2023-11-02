@@ -11,6 +11,7 @@ import OrderDialog from './components/OrderDialog';
 
 import './App.css';
 import 'react-calendar/dist/Calendar.css';
+import WeChatDialog from './components/WeChatDialog/WeChatDialog';
 
 export const ROUTERS = [
     {
@@ -56,6 +57,7 @@ function App() {
                 <Route path='/admin' element={<Admin />} />
             </Routes>
             <OrderDialog visible={orderDialogVisible} />
+            <WeChatDialog />
         </div>
     )
 }

@@ -12,5 +12,6 @@ interface IProps {
 export { AnimateBg }
 
 export default function Image (props: IProps) {
-    return <img {...props} alt="img" draggable='false' style={{ display: 'block'}} />
+    const { style, ...others } = props
+    return <img {...others} alt="img" draggable='false' style={{ ...style, display: 'block'}} />
 }
