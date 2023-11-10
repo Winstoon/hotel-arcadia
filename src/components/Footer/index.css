@@ -6,7 +6,11 @@
 }
 
 .footer img{
-    width: 100px;
+    width: 84px;
+}
+
+.footer .otherlogos img:nth-last-child(-n+3){
+    width: auto;
 }
 
 .footer .footer-basic{
@@ -25,7 +29,7 @@
     width: 1px;
     background-color: white;
     opacity: .3;
-    margin: 0 85px;
+    margin: 0 80px;
 }
 
 .footer .footer-basic .otherlogos{

@@ -24,7 +24,7 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button uppercase size='small' ghost rightIcon onClick={() => setOrderVisible(true)}>{I18N['reserve2']}</Button>
+                <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve2']}</Button>
             </div>
 
             <AnimateBg src="/jpgs/env-1.jpg" infinite />

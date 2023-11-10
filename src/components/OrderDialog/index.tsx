@@ -2,7 +2,7 @@ import { InputHTMLAttributes, useEffect, useState } from 'react'
 import { useCommonStore, useOrderDialogStore } from '../../store'
 import Image from '../Image'
 import CalendarInput, { formatCalendarDate } from './CalendarInput'
-import DaysInput from './DaysInput'
+import DaysInput, { MINDAYS } from './DaysInput'
 import Dropdown from './Dropdown'
 import Button from '../Button'
 
@@ -28,7 +28,7 @@ export default function OrderDialog (props: IProps) {
     const [childrenDpVisible, setChildrenDpVisible] = useState(false)
     
     const [reserveDate, setReserveDate] = useState<string>(formatCalendarDate(new Date()))
-    const [reserveDays, setReserveDays] = useState(5)
+    const [reserveDays, setReserveDays] = useState(MINDAYS)
     const [reserveAdults, setReserveAdults] = useState(1)
     const [reserveChildren, setReserveChildren] = useState(0)
     const [reserveName, setReserveName] = useState('')
@@ -158,6 +158,7 @@ export default function OrderDialog (props: IProps) {
                                     value={reserveName}
                                     placeholder={I18N['reserve.form.name.placeholder']}
                                     onChange={e => setReserveName(e.target.value)}
+                                    style={{ letterSpacing: ls.TXT }}
                                 />
                             </div>
                             <div className='form-item'>
@@ -166,6 +167,7 @@ export default function OrderDialog (props: IProps) {
                                     value={reservePhone}
                                     placeholder={I18N['reserve.form.phone.placeholder']}
                                     onChange={e => setReservePhone(e.target.value)}
+                                    style={{ letterSpacing: ls.TXT }}
                                 />
                             </div>
                             <div className='form-item full'>
@@ -174,6 +176,7 @@ export default function OrderDialog (props: IProps) {
                                     value={reserveEmail}
                                     placeholder={I18N['reserve.form.email.placeholder']}
                                     onChange={e => setReserveEmail(e.target.value)}
+                                    style={{ letterSpacing: ls.TXT }}
                                 />
                             </div>
                             <div className='form-item full'>
@@ -182,6 +185,7 @@ export default function OrderDialog (props: IProps) {
                                     value={reserveNotes}
                                     placeholder={I18N['reserve.form.notes.placeholder']}
                                     onChange={e => setReserveNotes(e.target.value)}
+                                    style={{ letterSpacing: ls.TXT }}
                                 />
                             </div>
                         </div>
@@ -204,11 +208,11 @@ export default function OrderDialog (props: IProps) {
                 </div>
             </div>
             <div className={`success-dialog ${success ? 'show' : ''}`}>
-                <div className='cpt'>
+                <div className='cpt' style={{ letterSpacing: ls.H1 }}>
                     <Image src='/icons/success.svg' />
                     {I18N['reserve.form.success.cpt']}
                 </div>
-                <div className='desc'>{I18N['reserve.form.success.desc']}</div>
+                <div className='desc'style={{ letterSpacing: ls.TXT }}>{I18N['reserve.form.success.desc']}</div>
                 <Button onClick={() => {
                     setSuccess(false)
                     setVisible(false)

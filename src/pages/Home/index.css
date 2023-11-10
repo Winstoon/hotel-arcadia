@@ -44,8 +44,8 @@
 }
 
 .home .section2 .content .button,
-.home .section4 .content .button,
-.home .section5 .content .button {
+.home .section4 .content .button2,
+.home .section5 .content .button2 {
     margin-top: 22px;
 }
 
@@ -80,7 +80,6 @@
     transform: translateY(0);
 }
 
-
 .home .section3 .content .banner{
     min-width: 1120px;
     max-width: 1600px;
@@ -90,12 +89,16 @@
 
 .home .section3 .content .title{
     font-size: 22px;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
 }
 
 .home .section3 .content .desc{
     font-size: 14px;
     line-height: 24px;
+}
+
+.home .section3 .content .button2{
+    margin-top: 22px;
 }
 
 /* Section 4 */

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useCommonStore } from '../../store'
 import './index.css'
+import { useLocation } from 'react-router-dom'
 
 interface ISlideProps {
     index: number
@@ -43,6 +44,7 @@ interface IProps {
 }
 
 export default function Fullpage (props: IProps) {
+    const location = useLocation()
     const { speed = 2000, sliders, ignoreHideIndex } = props
     const [active, setActive] = useState({ prev: -1, end: 0 })
     const setPageSectionOrder = useCommonStore(state => state.setPageSectionOrder)
@@ -57,6 +59,10 @@ export default function Fullpage (props: IProps) {
             slidesPerView: 'auto',
             direction: 'vertical'
         });
+
+        swiper.on('slideChange', (a: any) => {
+            a.allowSlidePrev = location.pathname === '/' && a.activeIndex !== 1
+        })
         
         swiper.on('slideChangeTransitionStart', (a: any) => {
             setPageSectionOrder(a.activeIndex)
@@ -67,9 +73,9 @@ export default function Fullpage (props: IProps) {
         })
 
 
-        swiper.on('scroll', () =>{
-            console.log('??????')
-        })
+        // swiper.on('scroll', () =>{
+        //     console.log('??????')
+        // })
 
         return () => {
             swiper.destroy()
@@ -81,7 +87,7 @@ export default function Fullpage (props: IProps) {
         <>
             {/* @ts-ignore */}
             <div style={{"--swiper-navigation-color": "#fff", "--swiper-pagination-color": "#fff"}} className="swiper swiper-home">
-                <div className="swiper-wrapper swiper-no-swiping">
+                <div className="swiper-wrapper">
                     {sliders.filter(Boolean).map((slide, index) => (
                         <SwiperSlide key={index + 'SL'} index={index} prev={active.prev} ignoreHideIndex={ignoreHideIndex}>
                             {slide}

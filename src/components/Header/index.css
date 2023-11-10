@@ -82,20 +82,26 @@
 
 .header .logo{
     height: 140px;
+    opacity: 1;
+    transition: opacity .3s ease-out;
 }
 
-.header a{
-    opacity: .5;
+.header .logo:hover{
+    opacity: .7;
+}
+
+.header .header-center a{
+    opacity: .6;
     font-size: 14px;
     transition: opacity .3s ease-out;
 }
 
-.header.lightmode a {
+.header.lightmode .header-center a {
     opacity: .4;
 }
 
-.header a.active,
-.header a:hover{
+.header .header-center a.active,
+.header .header-center a:hover{
     opacity: 1;
 }
 
@@ -107,4 +113,6 @@
 .header-center .divider{
     font-size: 14px;
     opacity: .5;
+    position: relative;
+    top: -1px;
 }

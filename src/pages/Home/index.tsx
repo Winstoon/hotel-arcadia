@@ -8,6 +8,7 @@ import Footer from "../../components/Footer";
 import Image, { AnimateBg } from "../../components/Image";
 
 import './index.css'
+import Button2 from "../../components/Button2";
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     return (
@@ -35,7 +36,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button uppercase onClick={handleOrder}>{I18N['reserve']}</Button>
+                <Button uppercase onClick={handleOrder}>{I18N['reserve2']}</Button>
             </div>
 
             <AnimateBg src="/jpgs/home-2.jpg" infinite />
@@ -45,6 +46,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 2
+    const I18N = useCommonStore(state => state.I18N)
 
     return (
         <div className="section section3">
@@ -54,6 +56,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                     <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                     <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                     <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                    <Button2 to="/env" dark>{I18N['explore']}</Button2>
                 </div>
             </div>
         </div>
@@ -77,7 +80,7 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button to="/residence" uppercase size='small' ghost rightIcon>{I18N['explore']}</Button>
+                <Button2 to="/residence">{I18N['explore']}</Button2>
             </div>
 
             <AnimateBg src="/jpgs/home-4.jpg" infinite />
@@ -95,7 +98,7 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button to="/delicious" uppercase size='small' ghost rightIcon>{I18N['explore']}</Button>
+                <Button2 to="/delicious">{I18N['explore']}</Button2>
             </div>
 
             <AnimateBg src="/jpgs/home-5.jpg" infinite />

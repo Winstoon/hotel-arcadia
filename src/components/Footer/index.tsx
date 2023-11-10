@@ -14,7 +14,7 @@ export default function Footer({ noborder }: {noborder?:boolean}) {
                     <div className='divider'></div>
                     <div className='otherlogos'>
                         <Image src="/logos/foot.logo1.svg" />
-                        <Image src="/logos/foot.logo2.svg" style={{ width: 120 }} />
+                        <Image src="/logos/foot.logo2.svg" style={{ width: 170 }} />
                         <Image src="/logos/foot.logo3.svg" />
                         <Image src="/logos/foot.logo4.svg" />
                         <Image src="/logos/foot.logo5.svg" />
