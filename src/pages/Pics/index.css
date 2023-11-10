@@ -75,14 +75,14 @@
     width: 24px;
 }
 
-.ppt .img-box{
+.ppt .ppt-imgs{
     position: relative;
     width: 960px;
     height: 540px;
     margin: 0 33px;
 }
 
-.ppt .img-box img{
+.ppt .ppt-imgs .ppt-item{
     position: absolute;
     left: 0;
     top: 0;
@@ -92,8 +92,13 @@
     opacity: 0;
     transition: opacity 1s ease-out;
 }
-.ppt .img-box img.active{
+.ppt .ppt-imgs .ppt-item.active{
     opacity: 1;
+}
+
+.ppt .ppt-imgs .ppt-item img{
+    width: auto;
+    height: 100%;
 }
 
 .ppt .ppt-btn{
