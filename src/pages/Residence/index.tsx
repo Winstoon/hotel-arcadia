@@ -249,11 +249,12 @@ function ToggleVisible (props: {
     onChangeVisible?: any
 }) {
     const { grid, caption, children, visible, disabled, onChangeVisible } = props
+    const ls = useCommonStore(state => state.letterSpacing)
 
     return (
         <div className={`toggle-item ${visible ? '' : 'hidden'}`}>
             <div className="toggle-title" onClick={onChangeVisible}>
-                <span className="toggle-cpt">{caption}</span>
+                <span className="toggle-cpt" style={{ letterSpacing: ls.H1 }}>{caption}</span>
                 { disabled ? null :
                     <Image
                         className="toggle-btn"
@@ -261,7 +262,7 @@ function ToggleVisible (props: {
                     />
                 }
             </div>
-            <div className={`toggle-body ${grid ? 'grid' : ''}`}>{children}</div>
+            <div className={`toggle-body ${grid ? 'grid' : ''}`} style={{ letterSpacing: ls.TXT }}>{children}</div>
         </div>
     )
 }
