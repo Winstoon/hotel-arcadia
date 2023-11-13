@@ -212,6 +212,29 @@
     opacity: 1;
 }
 
+
+.loading-page{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+}
+
+.loading-page.hide{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.loading-page.remove{
+    display: none;
+}
+
+.loading-page video{
+    min-height: 100%;
+}
+
 @keyframes flicker {
     0% { opacity: .2; }
     100% { opacity: 1; }

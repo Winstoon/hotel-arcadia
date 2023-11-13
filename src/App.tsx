@@ -68,13 +68,13 @@ function App() {
     const location = useLocation()
     const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        if (isMobile && !location.pathname.startsWith('/mobile')) {
-            window.location.href = `/mobile${location.pathname}`
-        } else if (!isMobile && location.pathname.startsWith('/mobile')) {
-            window.location.href = location.pathname.replace('/mobile', '')
-        }
-    }, [isMobile, location.pathname])
+    // useEffect(() => {
+    //     if (isMobile && !location.pathname.startsWith('/mobile')) {
+    //         window.location.href = `/mobile${location.pathname}`
+    //     } else if (!isMobile && location.pathname.startsWith('/mobile')) {
+    //         window.location.href = location.pathname.replace('/mobile', '')
+    //     }
+    // }, [isMobile, location.pathname])
 
     useEffect(() => {
         setTimeout(() => {

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useCommonStore, useFadeSlideStore, useOrderDialogStore } from "../../store";
 import { ILetterSpacing } from "../../letterSpacings";
 import Fullpage from "../../components/FullPage";
@@ -136,6 +136,8 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
 // 首页
 export default function Home () {
+    const [lpHide, setLPHide] = useState(false)
+    const [lpRemoved, setLPRemoved] = useState(false)
     const I18N = useCommonStore(state => state.I18N)
     const letterSpacing = useCommonStore(state => state.letterSpacing)
     const pageSectionOrder = useCommonStore(state => state.pageSectionOrder)
@@ -187,23 +189,38 @@ export default function Home () {
     useEffect(() => {
         setPageSectionOrder(0)
         // eslint-disable-next-line react-hooks/exhaustive-deps
+
+        setTimeout(() => {
+            setLPHide(true)
+        }, 4000);
+
+        setTimeout(() => {
+            setLPRemoved(true)
+        }, 5600);
     }, [])
 
     return (
         <div className="container home">
             <Header {...headerConfig} />
-            <Fullpage
-                ignoreHideIndex={[5,6]}
-                sliders={[
-                    <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
-                    <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
-                    <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
-                    <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
-                    <Slide5 ls={letterSpacing} data={data.section5} order={pageSectionOrder} />,
-                    <Slide6 ls={letterSpacing} data={data.section6} order={pageSectionOrder} />,
-                    <Footer />
-                ]}
-            />
+
+            <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
+                <video src='/lp.mp4' autoPlay muted playsInline />
+            </div>
+
+            { lpHide ?
+                <Fullpage
+                    ignoreHideIndex={[5,6]}
+                    sliders={[
+                        <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
+                        <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
+                        <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
+                        <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
+                        <Slide5 ls={letterSpacing} data={data.section5} order={pageSectionOrder} />,
+                        <Slide6 ls={letterSpacing} data={data.section6} order={pageSectionOrder} />,
+                        <Footer />
+                    ]}
+                /> : null
+            }
         </div>
     )
 }
