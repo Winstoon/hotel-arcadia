@@ -61,7 +61,11 @@ export default function Fullpage (props: IProps) {
         });
 
         swiper.on('slideChange', (a: any) => {
-            a.allowSlidePrev = location.pathname === '/' && a.activeIndex !== 1
+            if (location.pathname === '/') {
+                a.allowSlidePrev = a.activeIndex !== 1
+            } else {
+                a.allowSlidePrev = true
+            }
         })
         
         swiper.on('slideChangeTransitionStart', (a: any) => {

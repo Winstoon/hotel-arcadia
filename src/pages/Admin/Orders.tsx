@@ -68,12 +68,12 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
             <div className="order-basic">
                 <div className="order-info">
                     <div className="order-attr">
-                        <div className="os-cpt">预定日期：</div>
+                        <div className="os-cpt">预订日期：</div>
                         <div>{formatDate(date)}</div>
                     </div>
                     <div className="order-attr">
-                        <div className="os-cpt">预订天数：</div>
-                        <div>{days} 天</div>
+                        <div className="os-cpt">退房日期：</div>
+                        <div>{formatDate(dayjs(date).add(days, 'day').toString())} ({days}晚)</div>
                     </div>
                     <div className="order-attr">
                         <div className="os-cpt">成 人：</div>
