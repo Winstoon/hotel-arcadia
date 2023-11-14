@@ -17,3 +17,15 @@
 .container .swiper-wrapper .swiper-slide:last-child {
     height: 400px;
 }
+
+
+.mobile-container .section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-container .loading-page video {
+    height: 100%;
+}

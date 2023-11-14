@@ -1,0 +1,65 @@
+.mobile-home .section *:not(.bgimg) {
+    position: relative;
+    z-index: 2;
+}
+/* Section 1 */
+.mobile-home .section1 .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-home .section1 .content .title{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.mobile-home .section1 .content .desc{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Section 2 */
+.mobile-home .section2 {
+    background-color: #fff;
+    padding-top: 72px;
+    color: #333;
+}
+.mobile-home .section2 .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+
+}
+.mobile-home .section2 .content .banner{
+    width: 90%;
+}
+
+.mobile-home .section2 .paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.mobile-home .section2 .content .title{
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.mobile-home .section2 .content .desc{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.mobile-home .section2 .content .button2{
+    margin-top: 16px;
+}
+
+@keyframes flicker {
+    0% { opacity: .2; }
+    100% { opacity: 1; }
+}

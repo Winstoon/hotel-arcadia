@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useCommonStore, useOrderDialogStore } from './store';
+import {
+    useCommonStore as useMobileCommonStore,
+    useOrderDialogStore as useMobileOrderDialogStore
+} from './mobilestore'
 import { I18N } from './i18n';
 
 import Home from './pages/Home'
@@ -18,6 +22,9 @@ import MobilePics from './mobile/Pics';
 
 import OrderDialog from './components/OrderDialog';
 import WeChatDialog from './components/WeChatDialog/WeChatDialog';
+
+import MobileOrderDialog from './mobileComponents/OrderDialog';
+import MobileWeChatDialog from './mobileComponents/WeChatDialog';
 
 import 'react-calendar/dist/Calendar.css';
 import './App.css';
@@ -62,19 +69,25 @@ function mobileCheck () {
 
 function App() {
     const lang = useCommonStore(state => state.lang)
+    const mobileLang = useMobileCommonStore(state => state.lang)
+
     const fontFamily = FontFamilies[lang]
+    const mobileFontFamily = FontFamilies[mobileLang]
+    
     const orderDialogVisible = useOrderDialogStore(state => state.visible)
+    const mobileOrderDialogVisible = useMobileOrderDialogStore(state => state.visible)
+    
     const isMobile = mobileCheck()
     const location = useLocation()
     const [loading, setLoading] = useState(true)
 
-    // useEffect(() => {
-    //     if (isMobile && !location.pathname.startsWith('/mobile')) {
-    //         window.location.href = `/mobile${location.pathname}`
-    //     } else if (!isMobile && location.pathname.startsWith('/mobile')) {
-    //         window.location.href = location.pathname.replace('/mobile', '')
-    //     }
-    // }, [isMobile, location.pathname])
+    useEffect(() => {
+        if (isMobile && !location.pathname.startsWith('/mobile')) {
+            window.location.href = `/mobile${location.pathname}`
+        } else if (!isMobile && location.pathname.startsWith('/mobile')) {
+            window.location.href = location.pathname.replace('/mobile', '')
+        }
+    }, [isMobile, location.pathname])
 
     useEffect(() => {
         setTimeout(() => {
@@ -83,7 +96,7 @@ function App() {
     }, [])
 
     return (
-        <div style={{ fontFamily: `EBGaramond, ${fontFamily}` }}>
+        <div style={{ fontFamily: `EBGaramond, ${isMobile ? mobileFontFamily : fontFamily}` }}>
             { loading ? null :
                 <Routes>
                     { ROUTERS.map(router =>
@@ -99,6 +112,9 @@ function App() {
             }
             <OrderDialog visible={orderDialogVisible} />
             <WeChatDialog />
+
+            <MobileOrderDialog visible={mobileOrderDialogVisible} />
+            <MobileWeChatDialog />
         </div>
     )
 }

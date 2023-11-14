@@ -1,0 +1,39 @@
+.mobile-wechat-dialog{
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    color: white;
+    transition: opacity 1s ease-out;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-wechat-dialog.show{
+    opacity: 1;
+}
+
+.mobile-wechat-dialog .dialog-qrcode img{
+    width: 200px;
+    height: 200px;
+}
+.mobile-wechat-dialog .dialog-desc{
+    margin-top: 28px;
+    font-size: 14px;
+}
+
+.mobile-wechat-dialog .dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-wechat-dialog .dialog-close {
+    position: fixed;
+    right: 24px;
+    top: 38px;
+    padding: 7px 0;
+    opacity: 1;
+}

@@ -1,0 +1,100 @@
+.mobile-order-dialog,
+.mobile-success-dialog{
+    position: fixed;
+    inset: 0;
+    background-color: #212020;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    overflow: auto;
+}
+
+.mobile-success-dialog.show,
+.mobile-order-dialog.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-order-dialog .top-mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, rgba(33,32,32,1) 10%, rgba(33,32,32,.5) 100%);
+}
+
+.mobile-order-dialog .close{
+    position: fixed;
+    right: 24px;
+    top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    transition: opacity .3s ease-out;
+    z-index: 2;
+}
+
+.mobile-order-dialog .close img{
+    width: 24px;
+}
+
+.mobile-order-dialog .order-form{
+    padding: 80px 20px 60px;
+}
+
+.mobile-order-dialog .order-form .form-header{
+    text-align: center;
+}
+
+.mobile-order-dialog .order-form h2{
+    margin: 0 0 24px;
+    font-size: 22px;
+}
+
+.mobile-order-dialog .order-form .cpts{
+    opacity: .8;
+    font-size: 13px;
+    line-height: 24px;
+    margin: 0 0 60px;
+}
+
+.mobile-order-dialog .order-form .form-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.mobile-order-dialog .order-form .form-body .error-msg {
+    position: absolute;
+    bottom: -40px;
+    font-size: 13px;
+    align-self: center;
+    color: red;
+}
+
+/* body css.... */
+
+.mobile-order-dialog .order-form .form-footer{
+    font-size: 13px;
+    line-height: 24px;
+    opacity: .8;
+    text-align: justify;
+}
+.mobile-order-dialog .order-form .policy-title{
+    margin-bottom: 12px;
+}
+
+.mobile-order-dialog .order-form .form-footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

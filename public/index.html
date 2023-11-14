@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <link rel="icon" href="/%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="stylesheet" href="fonts/font.css" />
-    <link rel="stylesheet" href="css/swiper.min.css" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="stylesheet" href="/fonts/font.css" />
+    <link rel="stylesheet" href="/css/swiper.min.css" />
+    <link rel="apple-touch-icon" href="/%PUBLIC_URL%/logo.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -29,7 +29,7 @@
     <title>Ryowha Group</title>
   </head>
   <body>
-    <script src="js/swiper.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
     <div id="root"></div>
@@ -43,5 +43,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      let html = document.querySelector('html')
+      // 1rem = html.style.fontSize
+      // 布局视口的宽度就为 16rem
+      // 设计图的宽度为750px (以iphone6为准) ，其实就是16rem
+      html.style.fontSize = '40px'
+    </script>
   </body>
 </html>

@@ -1,0 +1,101 @@
+.mobile-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: opacity .3s ease-out 1.6s;
+    background: linear-gradient(to bottom, rgba(0,0,0,9), rgba(0,0,0,0));
+}
+
+.mobile-header.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
+}
+
+.mobile-header .header-left .more{
+    height: 18px;
+    padding: 4px 0;
+}
+.mobile-header .header-center{
+    flex: 1;
+}
+.mobile-header .header-center a{
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-header .header-center .logo{
+    height: 92px;
+}
+.mobile-header .header-right{
+    font-size: 13px;
+}
+
+.mobile-header-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(15px);
+    background-color: rgba(33, 32, 32, 0.5);
+    transition: opacity .5s ease-out;
+}
+
+.mobile-header-dialog.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-header-dialog .close{
+    position: absolute;
+    right: 24px;
+    top: 38px;
+    width: 24px;
+}
+
+.mobile-header-dialog .routers{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 160px;
+}
+.mobile-header-dialog .router-item{
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+    opacity: .7;
+}
+
+.mobile-header-dialog .router-item.active{
+    opacity: 1;
+}
+
+.mobile-header-dialog.show .router-item.active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 50%;
+    height: .5px;
+    background-color: white;
+    transform: translateX(-30px);
+    animation: slideInFromLeft .6s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
+}
