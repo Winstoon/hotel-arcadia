@@ -1,0 +1,11 @@
+.mobile-button3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: 64px;
+    color: white;
+    font-size: 16px;
+    line-height: 1;
+    background-color: rgba(46, 46, 46, 1);
+}

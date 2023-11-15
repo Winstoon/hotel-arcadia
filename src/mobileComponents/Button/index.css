@@ -1,4 +1,4 @@
-.button{
+.mobile-button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,29 +16,29 @@
     transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
 }
 
-.button:hover{
+.mobile-button:hover{
     background-color: white;
     color: black;
     cursor: pointer;
     border-color: white;
 }
 
-.button.small {
+.mobile-button.small {
     width: 136px;
     height: 36px;
 }
 
-.button.uppercase {
+.mobile-button.uppercase {
     text-transform: uppercase;
 }
 
-.button.ghost{
+.mobile-button.ghost{
     background-color: transparent;
     text-decoration: underline;
     border: none;
 }
 
-.button .right-icon{
+.mobile-button .right-icon{
     width: 6px;
     height: 6px;
     border-top: 1px solid white;
@@ -46,13 +46,13 @@
     transform: rotate(45deg);
 }
 
-.button.ghost:hover{
+.mobile-button.ghost:hover{
     color: black;
     cursor: pointer;
     background-color: white;
     text-decoration: none;
 }
 
-.button.ghost:hover .right-icon{
+.mobile-button.ghost:hover .right-icon{
     border-color: black;
 }

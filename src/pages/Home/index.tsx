@@ -22,7 +22,7 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 1
+    const active = order === 0
     const I18N = useCommonStore(state => state.I18N)
     const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
@@ -36,7 +36,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button uppercase onClick={handleOrder}>{I18N['reserve2']}</Button>
+                <Button uppercase onClick={handleOrder}>{I18N['reserve']}</Button>
             </div>
 
             <AnimateBg src="/jpgs/home-2.jpg" infinite />
@@ -45,7 +45,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 2
+    const active = order === 1
     const I18N = useCommonStore(state => state.I18N)
 
     return (
@@ -64,7 +64,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 3
+    const active = order === 2
     const I18N = useCommonStore(state => state.I18N)
     const setActive = useFadeSlideStore(state => state.setActive)
     
@@ -89,7 +89,7 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 4
+    const active = order === 3
     const I18N = useCommonStore(state => state.I18N)
 
     return (
@@ -107,7 +107,7 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 5
+    const active = order === 4
 
     return (
         <div className="section section6">
@@ -143,9 +143,8 @@ export default function Home () {
     const pageSectionOrder = useCommonStore(state => state.pageSectionOrder)
     const setPageSectionOrder = useCommonStore(state => state.setPageSectionOrder)
     const headerConfig = {
-        hidden: pageSectionOrder === 0,
-        lightmode: pageSectionOrder === 2,
-        mask: pageSectionOrder >= 5,
+        lightmode: pageSectionOrder === 1,
+        mask: pageSectionOrder >= 4,
     }
 
     const data = {
@@ -209,9 +208,9 @@ export default function Home () {
 
             { lpHide ?
                 <Fullpage
-                    ignoreHideIndex={[5,6]}
+                    ignoreHideIndex={[4,5]}
                     sliders={[
-                        <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
+                        // <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
                         <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
                         <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
                         <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,

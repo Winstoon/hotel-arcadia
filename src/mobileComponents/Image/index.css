@@ -1,22 +1,22 @@
-.bgimg{
+.mobile-bgimg{
     position: absolute;
     inset: 0;
     z-index: 1;
     overflow: hidden;
 }
 
-.bgimg.infinite img {
+.mobile-bgimg.infinite img {
     animation-direction: alternate;
 }
 
-.bgimg img{
+.mobile-bgimg img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     animation: scaleIn 10s ease-in-out;
 }
 
-.bgimg.infinite img {
+.mobile-bgimg.infinite img {
     animation: scaleIn 10s ease-in-out alternate infinite;
 }
 

@@ -8,7 +8,17 @@
     align-items: center;
     padding: 0 20px;
     transition: opacity .3s ease-out 1.6s;
-    background: linear-gradient(to bottom, rgba(0,0,0,9), rgba(0,0,0,0));
+}
+
+.mobile-header::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,0));
 }
 
 .mobile-header.hidden{
@@ -40,6 +50,8 @@
     position: fixed;
     inset: 0;
     z-index: 9;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     pointer-events: none;
     backdrop-filter: blur(15px);
@@ -53,10 +65,10 @@
 }
 
 .mobile-header-dialog .close{
-    position: absolute;
+    position: fixed;
     right: 24px;
     top: 38px;
-    width: 24px;
+    padding: 7px 0;
 }
 
 .mobile-header-dialog .routers{
@@ -64,6 +76,7 @@
     flex-direction: column;
     gap: 5px;
     margin-top: 160px;
+    margin-bottom: 80px;
 }
 .mobile-header-dialog .router-item{
     position: relative;
@@ -89,6 +102,17 @@
     animation: slideInFromLeft .6s ease-in-out;
 }
 
+.mobile-header-dialog .quicklinks{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    gap: 40px;
+}
+
+.mobile-header-dialog .quicklinks img{
+    height: 24px;
+}
 @keyframes slideInFromLeft {
     0% {
         opacity: 0;

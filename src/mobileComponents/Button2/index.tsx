@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useCommonStore } from '../../store'
+import { useCommonStore } from '../../mobilestore'
 
 import './index.css'
 
@@ -14,7 +14,7 @@ interface IProps {
 export default function Button2 (props: IProps) {
     const letterSpacing = useCommonStore(state => state.letterSpacing)
     const { children, dark, to, href, onClick } = props
-    const classname = `button2 ${dark ? 'dark' : ''}`
+    const classname = `mobile-button2 ${dark ? 'dark' : ''}`
     const style = { letterSpacing: letterSpacing.TXT, textIndent: letterSpacing.TXT }
 
     const newChildren = (

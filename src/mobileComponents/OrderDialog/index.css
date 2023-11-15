@@ -2,15 +2,15 @@
 .mobile-success-dialog{
     position: fixed;
     inset: 0;
-    background-color: #212020;
     z-index: 99;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity .5s ease-out;
     overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #212020;
+    transition: opacity .5s ease-out;
 }
 
 .mobile-success-dialog.show,
@@ -81,7 +81,110 @@
     color: red;
 }
 
-/* body css.... */
+.mobile-order-dialog .form-item{
+    position: relative;
+    margin-bottom: 32px;
+}
+.mobile-order-dialog .form-input.disabled{
+    opacity: .3;
+}
+.mobile-order-dialog .form-input{
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    height: 48px;
+    outline: none;
+    border: none;
+    margin-top: 8px;
+    color: #fff;
+    background-color: rgba(217, 217, 217, .1);
+    font-size: 14px;
+    padding: 0 16px;
+    line-height: 46px;
+}
+
+.mobile-order-dialog .calendar-pop{
+    width: 100%;
+    top: 77px;
+}
+
+.mobile-order-dialog .calendar-pop .react-calendar{
+    width: 100%;
+    font-size: 14px;
+}
+
+.mobile-order-dialog .days-input,
+.mobile-order-dialog .dp-input{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-order-dialog .days-input .days-value{
+    flex: 1;
+    text-align: center;
+}
+.mobile-order-dialog .days-input .days-minus,
+.mobile-order-dialog .days-input .days-plus{
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-order-dialog .days-input .days-minus.disabled,
+.mobile-order-dialog .days-input .days-plus.disabled{
+    opacity: .4;
+}
+.mobile-order-dialog .days-input .days-minus:active,
+.mobile-order-dialog .days-input .days-plus:active{
+    opacity: .8;
+}
+
+.mobile-order-dialog .dp-input .dp-value{
+    flex: 1
+}
+
+.mobile-order-dialog .form-dropdown{
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    background-color: #464545;
+    z-index: 1;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
+    max-height: 300px;
+    overflow: auto;
+}
+.mobile-order-dialog .form-dropdown.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-order-dialog .form-dropdown .form-dp-item{
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.mobile-order-dialog .form-dropdown .form-dp-item:hover{
+    background-color: #555555;
+    cursor: pointer;
+}
+
+.mobile-order-dialog .order-form .form-body .form-item > span:first-child{
+    display: block;
+    font-size: 14px;
+    opacity: .7;
+}
+
+.mobile-order-dialog .form-body .button{
+    width: 100%;
+}
+.mobile-order-dialog .form-body .button:hover{
+    background-color: #252525;
+    color: #fff;
+    border-color: rgba(255, 255, 255, .6);
+}
 
 .mobile-order-dialog .order-form .form-footer{
     font-size: 13px;
@@ -97,4 +200,23 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.mobile-success-dialog{
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+}
+.mobile-success-dialog .cpt{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.mobile-success-dialog .desc{
+    font-size: 13px;
+    opacity: .7;
+    margin-bottom: 40px;
 }

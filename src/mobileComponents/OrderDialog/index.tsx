@@ -1,18 +1,31 @@
 
-import { useEffect, useState } from 'react'
-import Image from '../../mobileComponents/Image'
-import { useCommonStore, useOrderDialogStore } from '../../mobilestore'
+import { InputHTMLAttributes, useEffect, useState } from 'react'
+import Image from '../Image'
 import Button from '../Button'
+import { useCommonStore, useOrderDialogStore } from '../../mobilestore'
+import CalendarInput, { formatCalendarDate } from './CalendarInput'
+import DaysInput, { MINDAYS } from './DaysInput'
+import Dropdown from './Dropdown'
 
 import './index.css'
 
-import { MINDAYS } from '../../components/OrderDialog/DaysInput'
-import { formatCalendarDate } from '../../components/OrderDialog/CalendarInput'
-
-
-
 interface IProps {
     visible: boolean
+}
+
+function Input (props: InputHTMLAttributes<HTMLInputElement>) {
+    return <input className='form-input' type='text' {...props} />
+}
+
+
+function getChildrenNums (adultNums: number) {
+    if (adultNums <= 11) {
+        const length = 15 - adultNums + 1
+
+        return Array.from({ length }, (_, i) => i)
+    } else {
+        return []
+    }
 }
 
 export default function MobileOrderDialog (props: IProps) {
@@ -99,6 +112,10 @@ export default function MobileOrderDialog (props: IProps) {
         }
     }, [calendarVisible, adultsDpVisible, childrenDpVisible])
 
+    useEffect(() => {
+        setReserveChildren(0)
+    }, [reserveAdults])
+
     return (
         <>
             <div className={`mobile-order-dialog ${visible ? 'show' : ''}`} onClick={handleHideAll}>
@@ -117,30 +134,78 @@ export default function MobileOrderDialog (props: IProps) {
                     <div className='form-body' style={{ letterSpacing: ls.TXT }}>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.date']}</span>
+                            <CalendarInput
+                                popVisible={calendarVisible}
+                                setPopVisible={setCalendarVisible}
+                                reserveDate={reserveDate}
+                                setReserveDate={setReserveDate}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.days']}</span>
+                            <DaysInput
+                                days={reserveDays}
+                                setDays={setReserveDays}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.adults']}</span>
+                            <Dropdown
+                                dpVisible={adultsDpVisible}
+                                setDpVisible={setAdultsDpVisible}
+                                setValue={setReserveAdults}
+                                displayValue={`${reserveAdults} ${I18N['adults']}`}
+                                numbers={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.children']}</span>
+                            <Dropdown
+                                dpVisible={childrenDpVisible}
+                                setDpVisible={setChildrenDpVisible}
+                                setValue={setReserveChildren}
+                                displayValue={`${reserveChildren} ${I18N['children']}`}
+                                numbers={getChildrenNums(reserveAdults)}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.name']}</span>
+                            <Input
+                                value={reserveName}
+                                placeholder={I18N['reserve.form.name.placeholder']}
+                                onChange={e => setReserveName(e.target.value)}
+                                style={{ letterSpacing: ls.TXT }}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.phone']}</span>
+                            <Input
+                                value={reservePhone}
+                                placeholder={I18N['reserve.form.phone.placeholder']}
+                                onChange={e => setReservePhone(e.target.value)}
+                                style={{ letterSpacing: ls.TXT }}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.email']}</span>
+                            <Input
+                                value={reserveEmail}
+                                placeholder={I18N['reserve.form.email.placeholder']}
+                                onChange={e => setReserveEmail(e.target.value)}
+                                style={{ letterSpacing: ls.TXT }}
+                            />
                         </div>
                         <div className='form-item'>
                             <span>* {I18N['reserve.form.notes']}</span>
+                            <Input
+                                value={reserveNotes}
+                                placeholder={I18N['reserve.form.notes.placeholder']}
+                                onChange={e => setReserveNotes(e.target.value)}
+                                style={{ letterSpacing: ls.TXT }}
+                            />
                         </div>
 
-                        <div className='button' onClick={handleSubmit}>提交</div>
+                        <div className='button' onClick={handleSubmit}>{I18N['submit']}</div>
                         <div className={`error-msg ${errorMsg ? 'show' : ''}`}>{errorMsg}</div>
                     </div>
 

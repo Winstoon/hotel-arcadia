@@ -1,0 +1,38 @@
+.mobile-fade-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.mobile-fade-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.mobile-fade-wrapper .fade-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.mobile-fade-wrapper .fade-item.active{
+    opacity: 1;
+}
+
+.mobile-fade-slide .mobile-fade-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    position: absolute;
+    z-index: 3;
+    bottom: 42px;
+    width: 100%;
+}

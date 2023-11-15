@@ -1,0 +1,71 @@
+.footer-btn-group{
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+}
+
+.mobile-footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #212020;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.mobile-footer .footer-basic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-footer .footer-basic .comlogo{
+    width: 85px;
+}
+
+.mobile-footer .footer-basic .divider{
+    align-self: stretch;
+    height: .5px;
+    background-color: rgba(255, 255, 255, .2);
+    margin: 40px 60px;
+}
+
+.mobile-footer .footer-basic .otherlogos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    row-gap: 20px;
+}
+
+.mobile-footer .footer-basic .otherlogos > div{
+    /* flex: 1; */
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobile-footer .footer-basic .otherlogos > div > img{
+    height: 64px;
+}
+
+.mobile-footer .footer-btm{
+    margin-top: 50px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-footer .footer-btm .quick-links{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 20px;
+}
+.mobile-footer .footer-btm .copyright{
+    font-size: 12px;
+    opacity: .7;
+}

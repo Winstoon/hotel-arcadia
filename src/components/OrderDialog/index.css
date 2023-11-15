@@ -305,4 +305,5 @@
 .calendar-pop .react-calendar button:disabled{
     background-color: #606060;
     opacity: .3;
+    text-decoration: line-through;
 }

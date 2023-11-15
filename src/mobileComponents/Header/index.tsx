@@ -1,10 +1,9 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { useCommonStore, useOrderDialogStore } from "../../store"
+import { useCommonStore } from "../../mobilestore"
 import { ROUTERS } from "../../App"
 import Image from "../../mobileComponents/Image"
-import Language from "../Language"
-import Button from "../Button"
+import Language, { RadioLanguage } from "../Language"
 
 import './index.css'
 
@@ -18,18 +17,19 @@ interface IProps{
 export default function Header (props: IProps) {
     const { hidden, lightmode, withbg, mask } = props
     const { pathname } = useLocation()
-    const _pathname = pathname.endsWith('/') ? pathname : pathname + '/'
+    
     const [maskVisible, setMaskVisible] = useState(false)
     const lang = useCommonStore(state => state.lang)
-    const I18N = useCommonStore(state => state.I18N)
-    // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
-
-    // const handleOrder = () => {
-    //     setOrderVisible(true)
-    // }
+    const setDialogVisible = useCommonStore(state => state.setWeChatDialogVisible)
 
     const onClose = () => {
         setMaskVisible(false)
+    }
+
+    const sameRouterPath = (rp: string, cp: string) => {
+        const _rp = '/mobile' + (rp.endsWith('/') ? rp : rp + '/')
+        const _cp = cp.endsWith('/') ? cp : cp + '/'
+        return _rp === _cp
     }
 
     return (
@@ -52,7 +52,7 @@ export default function Header (props: IProps) {
                 </div>
                 <div className="header-right">
                     <Language lightmode={!!lightmode} />
-                    {/* <Button size='small' uppercase onClick={handleOrder}>{I18N['reserve2']}</Button> */}
+                    {/* <Button size='small' uppercase onClick={handleOrder}>{I18N['reserve']}</Button> */}
                 </div>
             </div>
             <div className={`mobile-header-dialog ${maskVisible ? 'show' : ''}`}>
@@ -62,16 +62,24 @@ export default function Header (props: IProps) {
                     { ROUTERS.map((router, idx) =>
                         <div
                             key={idx}
-                            className={`router-item ${'/mobile' + router.path === _pathname ? 'active' : ''}`}
+                            className={`router-item ${sameRouterPath(router.path, pathname) ? 'active' : ''}`}
                         >
                             <Link to={'/mobile' + router.path}>{router.label[lang]}</Link>
                         </div>
                     )}
                 </div>
 
-                <Language lightmode={!!lightmode} />
+                <RadioLanguage onChange={() => setMaskVisible(false)} />
 
-                <div>... quick links ...</div>
+                <div className="quicklinks">
+                    <Image src="/icons/m.wechat.svg" onClick={() => setDialogVisible(true)} />
+                    <a rel="noreferrer" target="_blank" href="https://www.xiaohongshu.com/user/profile/63656b45000000001f01575f">
+                        <Image src="/icons/m.redbook.svg" />
+                    </a>
+                    <a rel="noreferrer" target="_blank" href="https://instagram.com/arcadiaryowhajapan?igshid=NTc4MTIwNjQ2YQ==">
+                        <Image src="/icons/m.ins.arcadia.svg" />
+                    </a>
+                </div>
             </div>
         </>
     )

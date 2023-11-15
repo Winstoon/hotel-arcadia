@@ -1,4 +1,4 @@
-.language{
+.mobile-language{
     position: relative;
     opacity: 1;
     font-size: 14px;
@@ -6,22 +6,22 @@
     transition: opacity .3s ease-out;
 }
 
-.language.lightmode .trigger,
-.language.lightmode .dropdown .dp-item{
+.mobile-language.lightmode .trigger,
+.mobile-language.lightmode .dropdown .dp-item{
     color: black;
 }
 
-.language .trigger{
+.mobile-language .trigger{
     display: flex;
     align-items: center;
     transition: opacity .3s ease-out;
 }
 
-.language .trigger img{
+.mobile-language .trigger img{
     margin-left: 6px;
 }
 
-.language .dropdown{
+.mobile-language .dropdown{
     position: absolute;
     right: 0;
     top: 16px;
@@ -32,27 +32,44 @@
     transition: opacity .5s ease-out;
 }
 
-.language .dropdown .dp-item{
+.mobile-language .dropdown .dp-item{
     text-align: right;
     line-height: 2;
     opacity: .6;
     padding-right: 18px;
     transition: opacity .3s ease-out;
 }
-.language .dropdown .dp-item.active,
-.language .dropdown .dp-item:hover{
+.mobile-language .dropdown .dp-item.active,
+.mobile-language .dropdown .dp-item:hover{
     opacity: 1;
 }
 
-.language:hover{
+.mobile-language:hover{
     cursor: pointer;
+}
 
-    .trigger{
-        opacity: .6;
-    }
+.mobile-language:hover .trigger{ opacity: .6; }
+.mobile-language:hover .dropdown{
+    opacity: 1;
+    pointer-events: all;
+}
 
-    .dropdown{
-        opacity: 1;
-        pointer-events: all;
-    }
+
+
+.radio-language{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    font-size: 13px;
+    padding-bottom: 24px;
+    border-bottom: .5px solid rgba(255, 255, 255, .5);
+}
+
+.radio-language .radio-item{
+    color: white;
+    opacity: .5;
+}
+.radio-language .radio-item.active{
+    opacity: 1;
 }

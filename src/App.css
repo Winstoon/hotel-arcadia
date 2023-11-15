@@ -29,3 +29,8 @@
 .mobile-container .loading-page video {
     height: 100%;
 }
+
+.mobile-container .section>*:not(.mobile-bgimg):not(.mobile-fade-slide) {
+    position: relative;
+    z-index: 2;
+}

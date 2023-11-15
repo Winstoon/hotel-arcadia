@@ -14,7 +14,7 @@ interface IProps {
 export default function AnimateBg (props: IProps) {
     const { infinite, ...others } = props
     return (
-        <div className={`bgimg ${infinite ? 'infinite' : ''}`}>
+        <div className={`mobile-bgimg ${infinite ? 'infinite' : ''}`}>
             <Image {...others} />
         </div>
     )
