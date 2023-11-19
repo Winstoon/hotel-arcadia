@@ -25,7 +25,7 @@ export default function DaysInput (props: IProps) {
     return (
         <div className="form-input days-input">
             <Image onClick={handleMinus} src='/icons/minus.svg' className={`days-minus ${days <= MINDAYS ? 'disabled' : ''}`} />
-            <span className="days-value">{days} {I18N['night']}</span>
+            <span className="days-value">{days + 1} {I18N['days']} {days} {I18N['night']}</span>
             <Image onClick={handlePlus} src='/icons/plus.svg' className='days-plus' />
         </div>
     )

@@ -1,0 +1,40 @@
+.v-scroll{
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 40px;
+}
+
+.v-scroll::-webkit-scrollbar{
+    height: 1px;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.v-scroll::-webkit-scrollbar-thumb{
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.v-scroll.lightmode::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.v-scroll.lightmode::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.v-scrollinner{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.v-scrollinner .vs-item{
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.v-scrollinner .vs-item .vs-img{
+    width: 100%;
+}

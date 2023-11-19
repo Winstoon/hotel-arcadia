@@ -12,6 +12,16 @@ interface IProps {
     visible: boolean
 }
 
+function getChildrenNums (adultNums: number) {
+    if (adultNums <= 11) {
+        const length = 15 - adultNums + 1
+
+        return Array.from({ length }, (_, i) => i)
+    } else {
+        return []
+    }
+}
+
 function Input (props: InputHTMLAttributes<HTMLInputElement>) {
     return <input className='form-input' type='text' {...props} />
 }
@@ -100,6 +110,10 @@ export default function OrderDialog (props: IProps) {
         }
     }, [calendarVisible, adultsDpVisible, childrenDpVisible])
 
+    useEffect(() => {
+        setReserveChildren(0)
+    }, [reserveAdults])
+
     return (
         <>
             <div className={`order-dialog ${visible ? 'show' : ''}`} onClick={handleHideAll}>
@@ -149,7 +163,7 @@ export default function OrderDialog (props: IProps) {
                                     setDpVisible={setChildrenDpVisible}
                                     setValue={setReserveChildren}
                                     displayValue={`${reserveChildren} ${I18N['children']}`}
-                                    numbers={[0, 1, 2, 3]}
+                                    numbers={getChildrenNums(reserveAdults)}
                                 />
                             </div>
                             <div className='form-item'>

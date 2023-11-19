@@ -27,7 +27,7 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button>
+                {/* <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button> */}
             </div>
 
             <AnimateBg src="/jpgs/res-1.jpg" infinite />
@@ -165,8 +165,6 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
 
 function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 4
-
     return (
         <div className="section section5">
             <SwiperImages3 images={data.images} />
@@ -258,7 +256,7 @@ function ToggleVisible (props: {
                 { disabled ? null :
                     <Image
                         className="toggle-btn"
-                        src={visible ? '/icons/down.black.svg' : '/icons/up.black.svg'}
+                        src={visible ? '/icons/down.svg' : '/icons/up.svg'}
                     />
                 }
             </div>
@@ -354,7 +352,7 @@ export default function Residence () {
     const letterSpacing = useCommonStore(state => state.letterSpacing)
 
     const headerConfig = {
-        lightmode: pageSectionOrder === 1 || pageSectionOrder === 6,
+        lightmode: pageSectionOrder === 1,
         mask: pageSectionOrder >= 6,
     }
 
@@ -408,7 +406,7 @@ export default function Residence () {
                     caption: I18N['res.s5.image1.cpt'],
                     desc: [
                         I18N['res.s5.image1.desc1'],
-                        I18N['res.s5.image1.desc2'],
+                        // I18N['res.s5.image1.desc2'],
                     ]
                 },
                 {
@@ -416,7 +414,7 @@ export default function Residence () {
                     caption: I18N['res.s5.image2.cpt'],
                     desc: [
                         I18N['res.s5.image2.desc1'],
-                        I18N['res.s5.image2.desc2'],
+                        // I18N['res.s5.image2.desc2'],
                     ]
                 },
                 {
@@ -424,7 +422,7 @@ export default function Residence () {
                     caption: I18N['res.s5.image3.cpt'],
                     desc: [
                         I18N['res.s5.image3.desc1'],
-                        I18N['res.s5.image3.desc2'],
+                        // I18N['res.s5.image3.desc2'],
                     ]
                 },
                 {
@@ -432,7 +430,7 @@ export default function Residence () {
                     caption: I18N['res.s5.image4.cpt'],
                     desc: [
                         I18N['res.s5.image4.desc1'],
-                        I18N['res.s5.image4.desc2'],
+                        // I18N['res.s5.image4.desc2'],
                     ]
                 },
                 {
@@ -440,7 +438,7 @@ export default function Residence () {
                     caption: I18N['res.s5.image5.cpt'],
                     desc: [
                         I18N['res.s5.image5.desc1'],
-                        I18N['res.s5.image5.desc2'],
+                        // I18N['res.s5.image5.desc2'],
                     ]
                 }
             ]
@@ -504,12 +502,12 @@ export default function Residence () {
                 cpt: I18N['res.s7.cpt4'],
                 list: [
                     { label: I18N['res.s7.cpt4.1'] },
-                    { label: I18N['res.s7.cpt4.2'], arrowLeft: 24, hover: I18N['res.s7.cpt4.2.hover'] },
-                    { label: I18N['res.s7.cpt4.3'], arrowLeft: 24, hover: I18N['res.s7.cpt4.3.hover'] },
-                    { label: I18N['res.s7.cpt4.4'], arrowLeft: 24, hover: I18N['res.s7.cpt4.4.hover'] },
-                    { label: I18N['res.s7.cpt4.5'], arrowLeft: 24, hover: I18N['res.s7.cpt4.5.hover'] },
+                    { label: I18N['res.s7.cpt4.2'], arrowLeft: 24, /*hover: I18N['res.s7.cpt4.2.hover'] */},
+                    { label: I18N['res.s7.cpt4.3'], arrowLeft: 24, /*hover: I18N['res.s7.cpt4.3.hover'] */},
+                    { label: I18N['res.s7.cpt4.4'], arrowLeft: 24, /*hover: I18N['res.s7.cpt4.4.hover'] */},
+                    { label: I18N['res.s7.cpt4.5'], arrowLeft: 24, /*hover: I18N['res.s7.cpt4.5.hover'] */},
                     { label: I18N['res.s7.cpt4.6'] },
-                    { label: I18N['res.s7.cpt4.7'], arrowLeft: 36, hover: I18N['res.s7.cpt4.7.hover'] },
+                    { label: I18N['res.s7.cpt4.7'], arrowLeft: 36, /*hover: I18N['res.s7.cpt4.7.hover'] */},
                     { label: I18N['res.s7.cpt4.8'] },
                     { label: I18N['res.s7.cpt4.9'] },
                     { label: I18N['res.s7.cpt4.10'] },

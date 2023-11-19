@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
-import { useCommonStore, useFadeSlideStore } from '../../mobilestore'
+import { useCommonStore } from '../../mobilestore'
+import { ILetterSpacing } from '../../letterSpacings'
 import Header from '../../mobileComponents/Header'
-import Button from '../../mobileComponents/Button'
 import Button2 from '../../mobileComponents/Button2'
 import Image, { AnimateBg } from '../../mobileComponents/Image'
-import { ILetterSpacing } from '../../letterSpacings'
-
-import './index.css'
 import FadeSlide from '../../mobileComponents/FadeSlide/FadeSlide'
 import CircleProgress from '../../mobileComponents/CircleProgress'
 import FadeSlide2 from '../../mobileComponents/FadeSlide/FadeSlide2'
 import Footer from '../../mobileComponents/Footer'
+
+import './index.css'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
@@ -30,7 +29,7 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
 
     return (
-        <div className="section section2" style={{ height: window.outerHeight }}>
+        <div className="section section2">
             <div className="content">
                 <Image className="banner" src={data.banner} />
                 <div className='paragraph'>
@@ -121,7 +120,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
-        <div className="section section5" style={{ height: window.outerHeight }}>
+        <div className="section section5">
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.TXT }}>{data.title}</div>
                 <div className="group">
@@ -136,11 +135,11 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <div className="lgg">
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.address}</div>
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.phone}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div>
+                    {/* <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div> */}
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.email}</div>
                 </div>
             </div>
-            <Image className='mobile-bgimg map' src="/mobile/home-5.jpg" />
+            <Image className='map' src="/mobile/home-5.jpg" />
         </div>
     )
 }

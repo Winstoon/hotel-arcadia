@@ -22,7 +22,7 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button>
+                {/* <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button> */}
             </div>
 
             <AnimateBg src="/jpgs/dli-1.jpg" infinite />
@@ -177,7 +177,7 @@ export default function Delicious () {
                     <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
                     <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
                     <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
-                    <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
+                    // <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
                     <Footer />
                 ]}
             />

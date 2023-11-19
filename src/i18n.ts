@@ -75,6 +75,12 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '晩',
     },
 
+    'days': {
+        [I18N.ZH]: '天',
+        [I18N.EN]: 'Days',
+        [I18N.JP]: '天',
+    },
+
     'submit': {
         [I18N.ZH]: '提交',
         [I18N.EN]: 'Submit',
@@ -152,27 +158,25 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '北海道札幌から約2時間のドライブ',
     },
     'home.s6.desc3': {
-        [I18N.ZH]: '距离比罗夫村中心 (Central Hirafu Village) 步行约5分钟',
+        [I18N.ZH]: '距离比罗夫镇游客中心步行约5分钟',
         [I18N.EN]: 'About 5 minutes walk from Central Hirafu Village',
         [I18N.JP]: '比羅夫村の中心から徒歩約5分',
     },
     'home.s6.desc4': {
-        [I18N.ZH]: '距离家庭滑雪缆车 (Ace Family Chair Lift) 车程约5分钟',
+        [I18N.ZH]: '距离比罗夫镇缆车中心车程约5分钟',
         [I18N.EN]: 'About 5 minutes drive from Ace Family Chair Lift',
         [I18N.JP]: 'エースファミリーチェアリフトから車で約5分',
     },
     'home.s6.desc5': {
-        [I18N.ZH]: '距离Yukoro温泉 (2024年12月开业) 20米 步行约1分钟',
-        [I18N.EN]: 'About 1 minute walk from Yukoro Onsen (opening in December 2024)',
-        [I18N.JP]: 'Yukoro温泉から徒歩約1分 (2024年12月オープン) ',
+        [I18N.ZH]: '距离YUKORO温泉 (预计2025年开业) 20米 步行约1分钟',
+        [I18N.EN]: 'About 1 minute walk from YUKORO Onsen (expected to open in 2025)',
+        [I18N.JP]: 'YUKORO温泉から徒歩約1分（2025年にオープン予定）',
     },
-
-    
     
     'home.s6.desc6': {
-        [I18N.ZH]: '地址：〒044-0036 日本国北海道虻田郡倶知安町南 6 条西 1 丁目 5 番地 1',
-        [I18N.EN]: 'Address: 〒044-0036 1-5-1 Nishi 6-jo Minami, Kutchan-cho, Abuta-gun, Hokkaido, Japan',
-        [I18N.JP]: '住所：〒044-0036 北海道虻田郡倶知安町南6条西1丁目5番地1',
+        [I18N.ZH]: '地址：〒044-0089 日本国北海道虻田郡俱知安町二世谷比罗夫镇2条2丁目7番地18号',
+        [I18N.EN]: 'Address: 〒044-0089 2-2-7-18 Niseko Hirafu, Kutchan-cho, Abuta-gun, Hokkaido, Japan',
+        [I18N.JP]: '住所：〒044-0089 北海道虻田郡倶知安町二世谷比羅夫2-2-7-18',
     },
     'home.s6.desc7': {
         [I18N.ZH]: '查看地图>',
@@ -181,9 +185,9 @@ export const I18NS: I18NFullData = {
     },
     
     'home.s6.desc8': {
-        [I18N.ZH]: '电话：+81 136 55 8917',
-        [I18N.EN]: 'Phone: +81 136 55 8917',
-        [I18N.JP]: '電話：+81 136 55 8917',
+        [I18N.ZH]: '电话：+81 0136 55 7559',
+        [I18N.EN]: 'Phone: +81 0136 55 7559',
+        [I18N.JP]: '電話：+81 0136 55 7559',
     },
     'home.s6.desc9': {
         [I18N.ZH]: '传真：+81 136 55 8927',
@@ -191,9 +195,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'FAX：+81 136 55 8927',
     },
     'home.s6.desc10': {
-        [I18N.ZH]: '邮箱：info@ryowhagroup.com',
-        [I18N.EN]: 'Email: info@ryowhagroup.com',
-        [I18N.JP]: 'メール：info@ryowhagroup.com'
+        [I18N.ZH]: '邮箱：info.arcadia@ryowhagroup.com',
+        [I18N.EN]: 'Email: info.arcadia@ryowhagroup.com',
+        [I18N.JP]: 'メール：info.arcadia@ryowhagroup.com'
     },
 
     // 环境
@@ -322,6 +326,12 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'ゴルフの楽しみを味わう',
     },
 
+    'env.s5.title': {
+        [I18N.ZH]: "知·行",
+        [I18N.EN]: 'Itinerary',
+        [I18N.JP]: '知·行',
+    },
+
     'env.s5.image1.cpt': {
         [I18N.ZH]: '私享专车',
         [I18N.EN]: 'Private car',
@@ -404,9 +414,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'イタリアの建築の巨匠',
     },
     'res.s2.desc2': {
-        [I18N.ZH]: 'Riccardo Rubellia 倾心之作',
-        [I18N.EN]: 'Riccardo Rubellia\'s masterpiece',
-        [I18N.JP]: 'Riccardo Rubelliaの傑作',
+        [I18N.ZH]: 'RICCARDO RUBELLIA 倾心之作',
+        [I18N.EN]: 'RICCARDO RUBELLIA\'s masterpiece',
+        [I18N.JP]: 'RICCARDO RUBELLIAの傑作',
     },
     'res.s2.desc3': {
         [I18N.ZH]: '极简外廓与内里木石灵动交融',
@@ -419,9 +429,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '世界の外の世界のように',
     },
     'res.s2.desc5': {
-        [I18N.ZH]: '独立双层宅邸',
-        [I18N.EN]: 'Independent two-story mansion',
-        [I18N.JP]: '独立した2階建ての邸宅',
+        [I18N.ZH]: '独立三层宅邸',
+        [I18N.EN]: 'Independent three-story mansion',
+        [I18N.JP]: '独立した3階建ての邸宅',
     },
     'res.s2.desc6': {
         [I18N.ZH]: '全屋6间全套房卧室',
@@ -450,9 +460,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'リビングルーム',
     },
     'res.s3.desc1': {
-        [I18N.ZH]: '独立的双层宅邸',
-        [I18N.EN]: 'Independent two-story mansion',
-        [I18N.JP]: '独立した2階建ての邸宅',
+        [I18N.ZH]: '独立的三层宅邸',
+        [I18N.EN]: 'Independent three-story mansion',
+        [I18N.JP]: '独立した3階建ての邸宅',
     },
     'res.s3.desc2': {
         [I18N.ZH]: '生活区与休憩区和恰相融',
@@ -479,8 +489,13 @@ export const I18NS: I18NFullData = {
         [I18N.EN]: 'The heart follows the flying snow',
         [I18N.JP]: '心は飛ぶ雪に従う',
     },
+    'res.s3.tip': {
+        [I18N.ZH]: '· 智能 APPLE TV 和 DEVIALET 音响 尽享无限娱乐',
+        [I18N.EN]: '· Intelligent APPLE TV and DEVIALET speakers Enjoy endless entertainment',
+        [I18N.JP]: '· インテリジェントAPPLE TVとDEVIALETスピーカー 無限のエンターテイメントをお楽しみください',
+    },
     'res.s3.tip1': {
-        [I18N.ZH]: '· 智能 Apple TV 和 DEVIALET 音响',
+        [I18N.ZH]: '· 智能 APPLE TV 和 DEVIALET 音响',
         [I18N.EN]: 'Living room',
         [I18N.JP]: 'リビングルーム',
     },
@@ -496,9 +511,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'マスターベッドルーム',
     },
     'res.s4.desc1': {
-        [I18N.ZH]: 'Master Room I',
-        [I18N.EN]: 'Master Room I',
-        [I18N.JP]: 'Master Room I',
+        [I18N.ZH]: 'MASTER ROOM I',
+        [I18N.EN]: 'MASTER ROOM I',
+        [I18N.JP]: 'MASTER ROOM I',
     },
     'res.s4.desc2': {
         [I18N.ZH]: '私享 65 平方米开阔空间',
@@ -516,9 +531,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '目は壮大です',
     },
     'res.s4.desc5': {
-        [I18N.ZH]: 'Master Room II',
-        [I18N.EN]: 'Master Room II',
-        [I18N.JP]: 'Master Room II',
+        [I18N.ZH]: 'MASTER ROOM II',
+        [I18N.EN]: 'MASTER ROOM II',
+        [I18N.JP]: 'MASTER ROOM II',
     },
     'res.s4.desc6': {
         [I18N.ZH]: '独享 55 平方米静谧空间',
@@ -551,90 +566,97 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '· イタリア製家具',
     },
     'res.s4.tip4': {
-        [I18N.ZH]: '· 意大利顶奢品牌 Agape 浴缸',
-        [I18N.EN]: '· Italian top luxury brand Agape bathtub',
-        [I18N.JP]: '· イタリアのトップラグジュアリーブランドAgapeバスタブ',
+        [I18N.ZH]: '· 意大利顶奢品牌 AGAPE 浴缸',
+        [I18N.EN]: '· Italian top luxury brand AGAPE bathtub',
+        [I18N.JP]: '· イタリアのトップラグジュアリーブランドAGAPEバスタブ',
+    },
+
+    
+    'res.s5.title': {
+        [I18N.ZH]: '客房',
+        [I18N.EN]: 'Guest Room',
+        [I18N.JP]: 'ゲストルーム',
     },
 
     'res.s5.image1.cpt': {
-        [I18N.ZH]: '客房 III',
-        [I18N.EN]: 'Guest Room III',
-        [I18N.JP]: 'ゲストルームIII',
+        [I18N.ZH]: 'ROOM A',
+        [I18N.EN]: 'ROOM A',
+        [I18N.JP]: 'ROOM A',
     },
     'res.s5.image1.desc1': {
-        [I18N.ZH]: '25平方米空间，全屋地暖',
+        [I18N.ZH]: '25平方米空间，榻榻米房',
         [I18N.EN]: '25 square meters of space, full house floor heating',
         [I18N.JP]: '25平方メートルのスペース、フルハウス床暖房',
     },
-    'res.s5.image1.desc2': {
-        [I18N.ZH]: 'VOLA 丹麦顶奢卫浴设施',
-        [I18N.EN]: 'VOLA Danish top luxury bathroom facilities',
-        [I18N.JP]: 'VOLAデンマークのトップラグジュアリーバスルーム設備',
-    },
+    // 'res.s5.image1.desc2': {
+    //     [I18N.ZH]: 'VOLA 丹麦顶奢卫浴设施',
+    //     [I18N.EN]: 'VOLA Danish top luxury bathroom facilities',
+    //     [I18N.JP]: 'VOLAデンマークのトップラグジュアリーバスルーム設備',
+    // },
 
     'res.s5.image2.cpt': {
-        [I18N.ZH]: '客房 IV',
-        [I18N.EN]: 'Guest Room IV',
-        [I18N.JP]: 'ゲストルームIV',
+        [I18N.ZH]: 'ROOM B',
+        [I18N.EN]: 'ROOM B',
+        [I18N.JP]: 'ROOM B',
     },
     'res.s5.image2.desc1': {
-        [I18N.ZH]: '36平方米空间，全屋地暖',
-        [I18N.EN]: '36 square meters of space, full house floor heating',
-        [I18N.JP]: '36平方メートルのスペース、フルハウス床暖房',
+        [I18N.ZH]: '36平方米空间，KING SIZE 双人床房',
+        [I18N.EN]: '36 square meters of space, KING SIZE double bed room',
+        [I18N.JP]: '36平方メートルのスペース、KING SIZEダブルベッドルーム',
     },
-    'res.s5.image2.desc2': {
-        [I18N.ZH]: 'King Size 双人床，步入式衣帽间',
-        [I18N.EN]: 'King Size double bed, walk-in closet',
-        [I18N.JP]: 'キングサイズのダブルベッド、ウォークインクローゼット',
-    },
+    // 'res.s5.image2.desc2': {
+    //     [I18N.ZH]: 'King Size 双人床，步入式衣帽间',
+    //     [I18N.EN]: 'King Size double bed, walk-in closet',
+    //     [I18N.JP]: 'キングサイズのダブルベッド、ウォークインクローゼット',
+    // },
 
     'res.s5.image3.cpt': {
-        [I18N.ZH]: '客房 V',
-        [I18N.EN]: 'Guest Room V',
-        [I18N.JP]: 'ゲストルームV',
+        [I18N.ZH]: 'ROOM C',
+        [I18N.EN]: 'ROOM C',
+        [I18N.JP]: 'ROOM C',
     },
     'res.s5.image3.desc1': {
-        [I18N.ZH]: '36平方米空间，全屋地暖',
-        [I18N.EN]: '36 square meters of space, full house floor heating',
-        [I18N.JP]: '36平方メートルのスペース、フルハウス床暖房',
+        [I18N.ZH]: '36平方米空间，双拼床房',
+        [I18N.EN]: '36 square meters of space, Double bed room',
+        [I18N.JP]: '36平方メートルのスペース、ダブルベッドルーム'
     },
-    'res.s5.image3.desc2': {
-        [I18N.ZH]: 'King Size 双人床，步入式衣帽间',
-        [I18N.EN]: 'King Size double bed, walk-in closet',
-        [I18N.JP]: 'キングサイズのダブルベッド、ウォークインクローゼット',
-    },
+    // 'res.s5.image3.desc2': {
+    //     [I18N.ZH]: 'King Size 双人床，步入式衣帽间',
+    //     [I18N.EN]: 'King Size double bed, walk-in closet',
+    //     [I18N.JP]: 'キングサイズのダブルベッド、ウォークインクローゼット',
+    // },
 
     'res.s5.image4.cpt': {
-        [I18N.ZH]: '客房 VI',
-        [I18N.EN]: 'Guest Room VI',
-        [I18N.JP]: 'ゲストルームVI',
+        [I18N.ZH]: 'ROOM D',
+        [I18N.EN]: 'ROOM D',
+        [I18N.JP]: 'ROOM D',
     },
     'res.s5.image4.desc1': {
-        [I18N.ZH]: '28平方米空间，全屋地暖',
-        [I18N.EN]: '28 square meters of space, full house floor heating',
-        [I18N.JP]: '28平方メートルのスペース、フルハウス床暖房',
+        [I18N.ZH]: '28平方米空间，KING SIZE 双人房',
+        [I18N.EN]: '28 square meters of space, KING SIZE double bed room',
+        [I18N.JP]: '28平方メートルのスペース、KING SIZEダブルベッドルーム',
     },
-    'res.s5.image4.desc2': {
-        [I18N.ZH]: 'King Size 双人床',
-        [I18N.EN]: 'King Size double bed',
-        [I18N.JP]: 'キングサイズのダブルベッド',
-    },
+    // 'res.s5.image4.desc2': {
+    //     [I18N.ZH]: 'King Size 双人床',
+    //     [I18N.EN]: 'King Size double bed',
+    //     [I18N.JP]: 'キングサイズのダブルベッド',
+    // },
 
     'res.s5.image5.cpt': {
-        [I18N.ZH]: '高低床房',
-        [I18N.EN]: 'High and low bed room',
-        [I18N.JP]: '高低ベッドルーム',
+        [I18N.ZH]: '随行人员房',
+        [I18N.EN]: 'Accompanying person room',
+        [I18N.JP]: '同行者の部屋'
     },
     'res.s5.image5.desc1': {
-        [I18N.ZH]: '位于地下一层，设有高低床',
+        [I18N.ZH]: '位于地下一层，高低床房',
         [I18N.EN]: 'Located on the first floor, with high and low beds',
         [I18N.JP]: '地下1階に位置し、高低ベッドがあります',
     },
-    'res.s5.image5.desc2': {
-        [I18N.ZH]: '有序格局，与主人区私密分隔',
-        [I18N.EN]: 'Ordered pattern, private separation from the master area',
-        [I18N.JP]: '整然としたパターン、マスターエリアからのプライベートセパレーション',
-    },
+    // 'res.s5.image5.desc2': {
+    //     [I18N.ZH]: '有序格局，与主人区私密分隔',
+    //     [I18N.EN]: 'Ordered pattern, private separation from the master area',
+    //     [I18N.JP]: '整然としたパターン、マスターエリアからのプライベートセパレーション',
+    // },
 
     'res.s6.title': {
         [I18N.ZH]: '私享设施',
@@ -692,9 +714,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'ジム',
     },
     'res.s6.desc11': {
-        [I18N.ZH]: '全套 Technogym 设备',
-        [I18N.EN]: 'Full set of Technogym equipment',
-        [I18N.JP]: 'テクノジムの完全なセット',
+        [I18N.ZH]: '全套 TECHNOGYM 设备',
+        [I18N.EN]: 'Full set of TECHNOGYM equipment',
+        [I18N.JP]: 'TECHNOGYM 設備一式',
     },
     'res.s6.desc12': {
         [I18N.ZH]: '满足多样体调需求',
@@ -702,9 +724,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'さまざまな体の調整ニーズに対応',
     },
     'res.s6.tip': {
-        [I18N.ZH]: '· 功能设施亦包含中西厨房、娱乐室、洗衣房，尽享便捷无缝的居住体验',
-        [I18N.EN]: '· Functional facilities also include Chinese and Western kitchens, entertainment rooms, laundry rooms, and enjoy a convenient and seamless living experience',
-        [I18N.JP]: '· 機能的な施設には、中国と西洋のキッチン、エンターテイメントルーム、洗濯室も含まれており、便利でシームレスな生活体験をお楽しみいただけます',
+        [I18N.ZH]: '· 功能设施亦包含中西厨房、洗衣房，尽享便捷无缝的居住体验',
+        [I18N.EN]: '· Functional facilities also include Chinese and Western kitchens, laundry rooms, and enjoy a convenient and seamless living experience',
+        [I18N.JP]: '· 機能的な施設には、中国と西洋のキッチン、洗濯室も含まれており、便利でシームレスな生活体験をお楽しみいただけます',
     },
 
 
@@ -730,40 +752,42 @@ export const I18NS: I18NFullData = {
         [I18N.EN]: 'Suite information',
         [I18N.JP]: 'スイート情報',
     },
+
+
     'res.s7.cpt2.1': {
-        [I18N.ZH]: 'Master Room I: 65 平方米，配备 King Size 双人床',
-        [I18N.EN]: 'Master Room I: 65 square meters, equipped with King Size double bed',
-        [I18N.JP]: 'Master Room I: 65平方メートル、King Sizeダブルベッド付き',
+        [I18N.ZH]: 'MASTER ROOM I: 65平方米，KING SIZE 双人床',
+        [I18N.EN]: 'MASTER ROOM I: 65 square meters, equipped with King Size double bed',
+        [I18N.JP]: 'MASTER ROOM I: 65平方メートル、King Sizeダブルベッド付き',
     },
     'res.s7.cpt2.2': {
-        [I18N.ZH]: 'Master Room II: 55 平方米，配备 King Size 双人床',
-        [I18N.EN]: 'Master Room II: 55 square meters, equipped with King Size double bed',
-        [I18N.JP]: 'Master Room II: 55平方メートル、King Sizeダブルベッド付き',
+        [I18N.ZH]: 'MASTER ROOM II: 55平方米，KING SIZE 双人床',
+        [I18N.EN]: 'MASTER ROOM II: 55 square meters, equipped with King Size double bed',
+        [I18N.JP]: 'MASTER ROOM II: 55平方メートル、King Sizeダブルベッド付き',
     },
     'res.s7.cpt2.3': {
-        [I18N.ZH]: '客房 III: 25 平方米，配备 King Size 双人床',
-        [I18N.EN]: 'Guest Room III: 25 square meters, equipped with King Size double bed',
-        [I18N.JP]: 'ゲストルームIII: 25平方メートル、King Sizeダブルベッド付き',
+        [I18N.ZH]: 'ROOM A: 25平方米，榻榻米',
+        [I18N.EN]: 'ROOM A: 25 square meters, tatami',
+        [I18N.JP]: 'ROOM A: 25平方メートル、畳',
     },
     'res.s7.cpt2.4': {
-        [I18N.ZH]: '客房 IV: 36 平方米，配备 King Size 双人床',
-        [I18N.EN]: 'Guest Room IV: 36 square meters, equipped with King Size double bed',
-        [I18N.JP]: 'ゲストルームIV: 36平方メートル、King Sizeダブルベッド付き',
+        [I18N.ZH]: 'ROOM B: 36平方米，KING SIZE 双人床',
+        [I18N.EN]: 'ROOM B: 36 square meters, equipped with King Size double bed',
+        [I18N.JP]: 'ROOM B: 36平方メートル、King Sizeダブルベッド付き',
     },
     'res.s7.cpt2.5': {
-        [I18N.ZH]: '客房 V: 36 平方米，配备 King Size 双人床',
-        [I18N.EN]: 'Guest Room V: 36 square meters, equipped with King Size double bed',
-        [I18N.JP]: 'ゲストルームV: 36平方メートル、King Sizeダブルベッド付き',
+        [I18N.ZH]: 'ROOM C: 36平方米，双拼床',
+        [I18N.EN]: 'ROOM C: 36 square meters, double bed',
+        [I18N.JP]: 'ROOM C: 36平方メートル、ダブルベッド',
     },
     'res.s7.cpt2.6': {
-        [I18N.ZH]: '客房 VI: 28 平方米，配备 King Size 双人床',
-        [I18N.EN]: 'Guest Room VI: 28 square meters, equipped with King Size double bed',
-        [I18N.JP]: 'ゲストルームVI: 28平方メートル、King Sizeダブルベッド付き',
+        [I18N.ZH]: 'ROOM D: 28平方米，KING SIZE 双人床',
+        [I18N.EN]: 'ROOM D: 28 square meters, equipped with King Size double bed',
+        [I18N.JP]: 'ROOM D: 28平方メートル、King Sizeダブルベッド付き',
     },
     'res.s7.cpt2.7': {
-        [I18N.ZH]: '高低床房: 位于地下一层，配备高低床',
-        [I18N.EN]: 'High and low bed room: located on the first floor, with high and low beds',
-        [I18N.JP]: '高低ベッドルーム：地下1階に位置し、高低ベッドがあります',
+        [I18N.ZH]: '随行人员房: 位于地下一层，高低床',
+        [I18N.EN]: 'Accompanying person room: located on the first floor, high and low bed',
+        [I18N.JP]: '同行者の部屋：1階にあり、高低ベッド',
     },
 
     'res.s7.cpt3': {
@@ -782,8 +806,8 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'フルハウスバスルーム',
     },
     'res.s7.cpt3.2.hover': {
-        [I18N.ZH]: '全屋卫浴 (VOLA)、全屋坐便 (卫洗丽 Washlet)',
-        [I18N.EN]: 'Full house bathroom (VOLA), full house toilet (Washlet)',
+        [I18N.ZH]: '全屋卫浴 (VOLA)、全屋坐便 (卫洗丽 WASHLET)',
+        [I18N.EN]: 'Full house bathroom (VOLA), full house toilet (WASHLET)',
         [I18N.JP]: 'フルハウスバスルーム（VOLA）、フルハウストイレ（ウォシュレット）',
     },
     'res.s7.cpt3.3': {
@@ -822,8 +846,8 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'ジム',
     },
     'res.s7.cpt3.8.hover': {
-        [I18N.ZH]: '全套 Technogym 设备',
-        [I18N.EN]: 'Full set of Technogym equipment',
+        [I18N.ZH]: '全套 TECHNOGYM 设备',
+        [I18N.EN]: 'Full set of TECHNOGYM equipment',
         [I18N.JP]: 'テクノジムの完全なセット',
     },
     'res.s7.cpt3.9': {
@@ -837,9 +861,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '中国と西洋のキッチン',
     },
     'res.s7.cpt3.10.hover': {
-        [I18N.ZH]: '洗碗机 (嘉格纳 GAGGENAU)、内置式烤箱、蒸箱 (米勒 Miele)、内置冰箱 (利勃海尔 Liebherr)、咖啡机 (Smeg)',
-        [I18N.EN]: 'Dishwasher (GAGGENAU), built-in oven, steamer (Miele), built-in refrigerator (Liebherr), coffee machine (Smeg)',
-        [I18N.JP]: '食器洗い機（GAGGENAU）、ビルトインオーブン、スチーマー（Miele）、ビルトイン冷蔵庫（Liebherr）、コーヒーマシン（Smeg）',
+        [I18N.ZH]: '洗碗机、内置式烤箱、蒸箱 (米勒 MIELE)、内置冰箱 (利勃海尔 LIEBHERR)、咖啡机 (SMEG)',
+        [I18N.EN]: 'Dishwasher, built-in oven, steamer (MIELE), built-in refrigerator (LIEBHERR), coffee machine (SMEG)',
+        [I18N.JP]: '食器洗い機、ビルトインオーブン、スチーマー（MIELE）、ビルトイン冷蔵庫（LIEBHERR）、コーヒーマシン（SMEG）',
     },
     'res.s7.cpt3.11': {
         [I18N.ZH]: '洗衣房',
@@ -847,9 +871,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '洗濯室',
     },
     'res.s7.cpt3.11.hover': {
-        [I18N.ZH]: '独立洗衣房、烘干机 (米勒 Miele)',
-        [I18N.EN]: 'Independent laundry room, dryer (Miele)',
-        [I18N.JP]: '独立した洗濯室、乾燥機（Miele）',
+        [I18N.ZH]: '双洗衣机、双烘干机 (米勒 MIELE)',
+        [I18N.EN]: 'Independent laundry room, dryer (MIELE)',
+        [I18N.JP]: '独立した洗濯室、乾燥機（MIELE）',
     },
     'res.s7.cpt3.12': {
         [I18N.ZH]: '车库',
@@ -867,7 +891,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'Apple TV',
     },
     'res.s7.cpt3.14': {
-        [I18N.ZH]: 'DEVIALET 音响',
+        [I18N.ZH]: 'DEVIALET音响',
         [I18N.EN]: 'DEVIALET audio',
         [I18N.JP]: 'DEVIALETオーディオ',
     },
@@ -884,9 +908,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'サービス情報',
     },
     'res.s7.cpt4.1': {
-        [I18N.ZH]: '全天专属管家',
-        [I18N.EN]: 'Exclusive butler all day',
-        [I18N.JP]: '一日中専属の執事',
+        [I18N.ZH]: '专属管家',
+        [I18N.EN]: 'Exclusive butler',
+        [I18N.JP]: '専属執事',
     },
     'res.s7.cpt4.2': {
         [I18N.ZH]: '专车服务',
@@ -909,9 +933,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '歓迎スナック、シャンパン、ソフトドリンクを含む',
     },
     'res.s7.cpt4.4': {
-        [I18N.ZH]: '免费早餐',
-        [I18N.EN]: 'Free breakfast',
-        [I18N.JP]: '無料朝食',
+        [I18N.ZH]: '私厨早餐',
+        [I18N.EN]: 'Private chef breakfast',
+        [I18N.JP]: 'プライベートシェフ朝食',
     },
     'res.s7.cpt4.4.hover': {
         [I18N.ZH]: '私人厨师免费早餐服务 (日式或西式)',
@@ -934,9 +958,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'バーでの無料ドリンク',
     },
     'res.s7.cpt4.7': {
-        [I18N.ZH]: '客房清洁服务',
-        [I18N.EN]: 'Room cleaning service',
-        [I18N.JP]: 'ルームクリーニングサービス',
+        [I18N.ZH]: '客房清洁',
+        [I18N.EN]: 'Room cleaning',
+        [I18N.JP]: 'ルームクリーニング',
     },
     'res.s7.cpt4.7.hover': {
         [I18N.ZH]: '每日提供客房清洁家政服务；床单与毛巾每隔三日将会更换一次',
@@ -954,9 +978,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '多言語サービス',
     },
     'res.s7.cpt4.10': {
-        [I18N.ZH]: '免费 Wi-Fi',
-        [I18N.EN]: 'Free Wi-Fi',
-        [I18N.JP]: '無料Wi-Fi',
+        [I18N.ZH]: 'WI-FI',
+        [I18N.EN]: 'WI-FI',
+        [I18N.JP]: 'WI-FI',
     },
 
     'dli.s1.desc1': {
@@ -995,9 +1019,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '唯一の料理の創造を解釈する'
     },
     'dli.s2.desc5': {
-        [I18N.ZH]: '以 Omakase 形式',
-        [I18N.EN]: 'In Omakase form',
-        [I18N.JP]: 'Omakase形式で'
+        [I18N.ZH]: '以 OMAKASE 形式',
+        [I18N.EN]: 'In OMAKASE form',
+        [I18N.JP]: 'OMAKASE形式で'
     },
     'dli.s2.desc6': {
         [I18N.ZH]: '融汇自然的至臻馈赠',
@@ -1068,19 +1092,19 @@ export const I18NS: I18NFullData = {
     // 预订
 
     'reserve.cpt1': {
-        [I18N.ZH]: '管家将于提交后1个工作日内，以邮件形式与您联系具体事宜（日本时间 周一至周五 9:00-18:00）',
-        [I18N.EN]: 'The butler will contact you by email within 1 working day after submission (Monday to Friday 9:00-18:00 Japan time)',
-        [I18N.JP]: '執事は提出後1営業日以内にメールでご連絡いたします（月曜日から金曜日9:00〜18:00日本時間）',
+        [I18N.ZH]: '管家将于提交后1个工作日内，以邮件形式与您联系具体事宜',
+        [I18N.EN]: 'The butler will contact you by email within 1 working day after submission',
+        [I18N.JP]: '執事は提出後1営業日以内にメールでご連絡いたします',
     },
     'reserve.cpt2': {
-        [I18N.ZH]: '您也可以拨打预定电话 +81 136 55 8917（日本时间 周一至周五 9:00-18:00）',
-        [I18N.EN]: 'You can also call the reservation phone +81 136 55 8917 (Monday to Friday 9:00-18:00 Japan time)',
-        [I18N.JP]: '予約電話+81 136 55 8917（月曜日から金曜日9:00〜18:00日本時間）もご利用いただけます',
+        [I18N.ZH]: '您也可以拨打预定电话 +81 0136 55 7559',
+        [I18N.EN]: 'You can also call the reservation phone +81 0136 55 7559',
+        [I18N.JP]: '予約電話+81 0136 55 7559 もご利用いただけます',
     },
     'reserve.cpt3': {
-        [I18N.ZH]: '或发送邮件至 info@ryowhagroup.com 进行预订',
-        [I18N.EN]: 'Or send an email to info@ryowhagroup.com to make a reservation',
-        [I18N.JP]: 'または、info@ryowhagroup.com にメールを送信して予約してください',
+        [I18N.ZH]: '或发送邮件至 info.arcadia@ryowhagroup.com 进行预订',
+        [I18N.EN]: 'Or send an email to info.arcadia@ryowhagroup.com to make a reservation',
+        [I18N.JP]: 'または、info.arcadia@ryowhagroup.com にメールを送信して予約してください',
     },
 
     'reserve.form.date': {
@@ -1089,9 +1113,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'チェックイン日',
     },
     'reserve.form.days': {
-        [I18N.ZH]: '入住天数（7晚起订）',
-        [I18N.EN]: 'Length of stay (7 nights minimum)',
-        [I18N.JP]: '滞在期間（7泊以上）',
+        [I18N.ZH]: '入住天数（8天7晚起订）',
+        [I18N.EN]: 'Number of days (minimum 8 days 7 nights)',
+        [I18N.JP]: '滞在日数（8日7泊以上）',
     },
     'reserve.form.adults': {
         [I18N.ZH]: '成人人数',
@@ -1151,14 +1175,14 @@ export const I18NS: I18NFullData = {
     },
 
     'reserve.policy.desc1': {
-        [I18N.ZH]: '· 2023年12月1日起开放入住预定，5晚起订',
-        [I18N.EN]: '· Open for reservation from December 1, 2023, minimum 5 nights',
-        [I18N.JP]: '· 2023年12月1日から予約可能、最低5泊',
+        [I18N.ZH]: '· 2023年12月1日起开放入住预定，8天7晚起订',
+        [I18N.EN]: '· Check-in reservations will be opened from December 1, 2023, with a minimum of 8 days and 7 nights',
+        [I18N.JP]: '· 2023年12月1日からチェックイン予約が開始され、最低8日7泊となります',
     },
     'reserve.policy.desc2': {
-        [I18N.ZH]: '· 入住时间: 14点后；退房时间: 11点前',
-        [I18N.EN]: '· Check-in time: after 14:00; Check-out time: before 11:00',
-        [I18N.JP]: '· チェックイン時間：14:00以降；チェックアウト時間：11:00以前',
+        [I18N.ZH]: '· 入住时间: 16点后；退房时间: 10点前',
+        [I18N.EN]: '· Check-in time: after 16:00; Check-out time: before 10:00',
+        [I18N.JP]: '· チェックイン時間：16:00以降；チェックアウト時間：10:00以前',
     },
     'reserve.policy.desc3': {
         [I18N.ZH]: '· 入住人数: 最多 15 位住客 (含最多 12 位成人住客，以及孩童、婴儿、随行人员)',

@@ -18,7 +18,7 @@ export type Order = {
     processed: boolean  // 已处理
 } & NewOrder
 
-function formatDate (date: string, format = 'YYYY-MM-DD') {
+function formatDate (date: string, format = 'YYYY/MM/DD') {
     return dayjs(date).format(format)
 }
 
@@ -69,11 +69,11 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
                 <div className="order-info">
                     <div className="order-attr">
                         <div className="os-cpt">预订日期：</div>
-                        <div>{formatDate(date)}</div>
+                        <div>{formatDate(date)} - {formatDate(dayjs(date).add(days, 'day').toString())}</div>
                     </div>
                     <div className="order-attr">
-                        <div className="os-cpt">退房日期：</div>
-                        <div>{formatDate(dayjs(date).add(days, 'day').toString())} ({days}晚)</div>
+                        <div className="os-cpt">预定天数：</div>
+                        <div>{days+1}天 {days}晚</div>
                     </div>
                     <div className="order-attr">
                         <div className="os-cpt">成 人：</div>

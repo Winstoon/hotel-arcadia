@@ -163,6 +163,9 @@
 }
 
 
+.order-dialog .order-form .dp-input.disabled{
+    opacity: .3;
+}
 .order-dialog .order-form .dp-input{
     display: flex;
     align-items: center;
@@ -175,6 +178,8 @@
     z-index: 9;
     top: 92px;
     left: 0;
+    max-height: 307px;
+    overflow: auto;
     width: 400px;
     opacity: 0;
     pointer-events: none;
@@ -262,6 +267,7 @@
     top: 92px;
     left: 0;
     opacity: 0;
+    font-size: 14px;
     pointer-events: none;
     transition: opacity .3s ease-out;
 }

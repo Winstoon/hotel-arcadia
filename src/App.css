@@ -19,6 +19,10 @@
 }
 
 
+.mobile-container {
+    background-color: #212020;
+}
+
 .mobile-container .section{
     position: relative;
     display: flex;

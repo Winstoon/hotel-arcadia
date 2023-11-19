@@ -18,19 +18,18 @@
 /* Section 2 */
 .mobile-home .section2 {
     background-color: #fff;
-    padding-top: 72px;
     color: #333;
+    padding: 20px 20px 28px;
 }
 .mobile-home .section2 .content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
 
 }
 .mobile-home .section2 .content .banner{
-    width: 90%;
+    width: 100%;
 }
 
 .mobile-home .section2 .paragraph {
@@ -94,22 +93,23 @@
 }
 
 /* Section 5 */
-.mobile-home .section5{
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+.mobile-home.mobile-container .section5{
+    display: block;
+    padding: 104px 0 0;
 }
 
-.mobile-home .section5 .map{
-    position: absolute;
-    height: 100%;
-    top: 0;
-    right: 0;
+.mobile-home.mobile-container .section5 .map{
+    width: 100%;
+    position: relative;
+    z-index: 1!important;
+    margin-top: -30px;
 }
 
 .mobile-home .section5 .content{
     padding: 0 24px;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .mobile-home .section5 .content .title,

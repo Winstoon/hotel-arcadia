@@ -36,7 +36,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button uppercase onClick={handleOrder}>{I18N['reserve']}</Button>
+                {/* <Button uppercase onClick={handleOrder}>{I18N['reserve']}</Button> */}
             </div>
 
             <AnimateBg src="/jpgs/home-2.jpg" infinite />
@@ -125,7 +125,7 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <div className="lgg">
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.address}<a href="https://www.google.com/maps/place/1+Chome+Minami+6+Jonishi,+%E4%BF%B1%E7%9F%A5%E5%AE%89%E7%94%BA%E8%99%BB%E7%94%B0%E9%83%A1%E5%8C%97%E6%B5%B7%E9%81%93+044-0036%E6%97%A5%E6%9C%AC/@42.8957696,140.749132,17.66z" target="_blank">{data.viewMap}</a></div>
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.phone}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div>
+                    {/* <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div> */}
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.email}</div>
                 </div>
             </div>

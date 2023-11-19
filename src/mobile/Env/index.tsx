@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
-import { useCommonStore, useFadeSlideStore } from '../../mobilestore'
-import Header from '../../mobileComponents/Header'
-import Button from '../../mobileComponents/Button'
-import Button2 from '../../mobileComponents/Button2'
-import Image, { AnimateBg } from '../../mobileComponents/Image'
+import { useEffect } from 'react'
+import { useCommonStore } from '../../mobilestore'
 import { ILetterSpacing } from '../../letterSpacings'
-
-import './index.css'
+import Header from '../../mobileComponents/Header'
+import Image, { AnimateBg } from '../../mobileComponents/Image'
 import FadeSlide from '../../mobileComponents/FadeSlide/FadeSlide'
 import CircleProgress from '../../mobileComponents/CircleProgress'
 import FadeSlide2 from '../../mobileComponents/FadeSlide/FadeSlide2'
 import Footer from '../../mobileComponents/Footer'
+import { VScroll } from '../../mobileComponents/VScroll'
+
+import './index.css'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
@@ -28,8 +27,6 @@ function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 
 function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
-    const I18N = useCommonStore(state => state.I18N)
-
     const images = [
         '/mobile/env-2-1.jpg',
         '/mobile/env-2-2.jpg',
@@ -37,7 +34,7 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     ]
 
     return (
-        <div className="section section2" style={{ height: window.outerHeight }}>
+        <div className="section section2" style={{ minHeight: 695 }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -69,13 +66,26 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 }
 
 function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
-    const I18N = useCommonStore(state => state.I18N)
+    const imgs = [
+        { url: '/mobile/env-3-1.jpg' },
+        { url: '/mobile/env-3-2.jpg' },
+        { url: '/mobile/env-3-3.jpg' }
+    ]
 
     return (
-        <div className="section section3" style={{ height: window.outerHeight }}>
+        <div className="section section3" style={{ minHeight: 770 }}>
             <div className="content">
-                TODO
+                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}></div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>
             </div>
+            <VScroll data={imgs} />
         </div>
     )
 }
@@ -83,11 +93,40 @@ function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 
 function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    const images = [
+        '/mobile/env-4-1.jpg',
+        '/mobile/env-4-2.jpg',
+        '/mobile/env-4-3.jpg'
+    ]
+
     return (
-        <div className="section section4" style={{ height: window.outerHeight }}>
-            <div className="content">
-                TODO
+        <div className="section section4" style={{ minHeight: 695 }}>
+            <div className='content'>
+                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}></div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
             </div>
+
+            <FadeSlide2
+                autoplay
+                length={3}
+                waiting={6500}
+                trigger='hover'
+                render={active => images.map((img, idx) => (
+                    <div className="h4-slideitem" key={idx}>
+                        <AnimateBg infinite src={img} className={active === idx ? 'active' : ''} />
+                    </div>
+                ))}
+                paginationClassName="h4-pagination"
+                renderPaginations={active => images.map((img, idx) => (
+                    <CircleProgress key={idx} active={active === idx} width={14} height={14} />
+                ))}
+            />
         </div>
     )
 }
@@ -96,7 +135,18 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
         <div className="section section5" style={{ 'minHeight': window.outerHeight }}>
             <div className="content">
-                TODO
+                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className='groups'>
+                    { data.images.map((img: any, idx: number) => (
+                        <div className='img-group' key={idx}>
+                            <Image className='img' src={img.src} />
+                            <div className='caption' style={{ letterSpacing: ls.H1 }}>{img.caption}</div>
+                            { img.desc.map((desc: any) =>
+                                <div className='desc' style={{ letterSpacing: ls.TXT }}>{desc}</div>
+                            )}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
@@ -146,6 +196,7 @@ export default function MobileEnv () {
             desc6: I18N['env.s4.desc6'],
         },
         section5: {
+            title: I18N['env.s5.title'],
             images: [
                 {
                     src: '/jpgs/env-5-1.jpg',

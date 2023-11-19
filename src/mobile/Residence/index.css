@@ -1,0 +1,244 @@
+/* Section 1 */
+.mobile-res .section1 .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.mobile-res .section1 .content .title{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.mobile-res .section1 .content .desc{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Section 2 */
+.mobile-res.mobile-container .section2 {
+    display: block;
+    background-color: white;
+    color: black;
+    padding: 60px 20px 40px;
+}
+
+.mobile-res .section2 .content{
+    padding: 0 4px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.mobile-res .section2 .content .title {
+    font-size: 20px;
+    border-bottom: .5px solid rgba(255, 255, 255, .7);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.mobile-res .section2 .content .desc {
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    opacity: .7;
+}
+
+/* Section 3 */
+.mobile-res.mobile-container .section3{
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 60px 20px 40px;
+}
+
+.mobile-res .section3 .content{
+    padding: 0 4px;
+    margin-bottom: 40px;
+}
+.mobile-res .section3 .content .title {
+    font-size: 20px;
+    border-bottom: .5px solid rgba(255, 255, 255, .7);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.mobile-res .section3 .content .desc {
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.mobile-res .section3 .content .tip {
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: .7;
+}
+
+/* Section 4 */
+.mobile-res.mobile-container .section4{
+    display: block;
+    padding: 60px 24px 40px;
+}
+
+.mobile-res .section4 .content .title {
+    font-size: 20px;
+    border-bottom: .5px solid rgba(255, 255, 255, .7);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.mobile-res .section4 .content .desc {
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+}
+.mobile-res .section4 .content .v-scroll {
+    margin-top: 20px;
+}
+.mobile-res .section4 .cont-group{
+    margin-bottom: 40px;
+}
+.mobile-res .section4 .content .tip {
+    font-size: 12px;
+    line-height: 24px;
+    opacity: .7;
+}
+
+/* Section 5 */
+.mobile-res.mobile-container .section5{
+    display: block;
+    background-color: #2c2c2c;
+}
+
+.mobile-res .section5 .content{
+    padding: 60px 24px 40px;
+}
+
+.mobile-res .section5 .content .title{
+    font-size: 20px;
+    border-bottom: .5px solid rgba(255, 255, 255, .7);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.mobile-res .section5 .content .groups{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mobile-res .section5 .content .img-group .img{
+    width: 100%;
+    margin-top: 20px;
+}
+.mobile-res .section5 .content .img-group .desc{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+
+/* Section 6 */
+.mobile-res.mobile-container .section6{
+    display: block;
+    padding: 60px 24px 40px;
+}
+
+.mobile-res .section6 .content{
+    padding: 0 4px;
+    margin-bottom: 40px;
+}
+
+.mobile-res .section6 .content .title{
+    font-size: 20px;
+    border-bottom: .5px solid rgba(255, 255, 255, .7);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.mobile-res .section6 .content .desc {
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.mobile-res .section6 .content .tip {
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: .7;
+}
+
+/* Section 7 */
+.mobile-res.mobile-container .section7{
+    display: block;
+    padding: 60px 20px 40px;
+}
+.mobile-res .section7 .title{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Toggle */
+.mobile-res .toggle-container{
+    margin-bottom: 24px;
+}
+.mobile-res .toggle-container:last-child{
+    margin-bottom: 0;
+}
+
+.mobile-res .toggle-container .toggle-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    opacity: .9;
+    border-bottom: .5px solid rgba(255, 255, 255, .1);
+}
+
+.mobile-res .toggle-container .toggle-body{
+    opacity: .7;
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.mobile-res .toggle-container .toggle-body.hidden{
+    transform: scaleY(0);
+    height: 0;
+    padding-top: 0;
+}
+/* Toggle End */
+
+.mobile-res .section7 .toggle-container .table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 12px;
+    column-gap: 8px;
+    line-height: 20px;
+}
+.mobile-res .section7 .toggle-container .table .box {
+    position: relative;
+}
+.mobile-res .section7 .toggle-container .table .box.hoverable {
+    text-decoration: underline;
+}
+.mobile-res .section7 .toggle-container .table .box .tip {
+    position: absolute;
+    z-index: 10;
+    top: 24px;
+    font-size: 12px;
+    padding: 12px;
+    background-color: #2c2c2c;
+    color: #fff;
+    border: .5px solid rgba(255, 255, 255, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+.mobile-res .section7 .toggle-container .table .box.hoverable:hover .tip {
+    opacity: 1;
+}
