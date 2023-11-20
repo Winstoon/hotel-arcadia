@@ -60,13 +60,13 @@ export default function Fullpage (props: IProps) {
             direction: 'vertical'
         });
 
-        swiper.on('slideChange', (a: any) => {
-            if (location.pathname === '/') {
-                a.allowSlidePrev = a.activeIndex !== 1
-            } else {
-                a.allowSlidePrev = true
-            }
-        })
+        // swiper.on('slideChange', (a: any) => {
+        //     if (location.pathname === '/') {
+        //         a.allowSlidePrev = a.activeIndex !== 1
+        //     } else {
+        //         a.allowSlidePrev = true
+        //     }
+        // })
         
         swiper.on('slideChangeTransitionStart', (a: any) => {
             setPageSectionOrder(a.activeIndex)
