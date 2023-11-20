@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     transition: opacity .3s ease-out;
+    padding: 12px 0;
 }
 
 .mobile-language .trigger img{
@@ -24,12 +25,15 @@
 .mobile-language .dropdown{
     position: absolute;
     right: 0;
-    top: 16px;
+    top: 28px;
     padding-top: 8px;
-    
     opacity: 0;
     pointer-events: none;
     transition: opacity .5s ease-out;
+}
+.mobile-language .dropdown.show{
+    opacity: 1;
+    pointer-events: all;
 }
 
 .mobile-language .dropdown .dp-item{
@@ -47,13 +51,6 @@
 .mobile-language:hover{
     cursor: pointer;
 }
-
-.mobile-language:hover .trigger{ opacity: .6; }
-.mobile-language:hover .dropdown{
-    opacity: 1;
-    pointer-events: all;
-}
-
 
 
 .radio-language{

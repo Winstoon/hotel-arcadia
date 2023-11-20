@@ -46,7 +46,7 @@ export default function Header (props: IProps) {
                     <Link to="/mobile">
                         <Image
                             className="logo"
-                            src={lightmode ? '/logo.black.svg' : '/logo.svg'}
+                            src={lightmode ? '/logo.mobile.black.svg' : '/logo.mobile.svg'}
                         />
                     </Link>
                 </div>

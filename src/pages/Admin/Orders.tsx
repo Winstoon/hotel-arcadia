@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import dayjs from "dayjs"
 
 export type NewOrder = {
-    date: string        // 预定日期
-    days: number        // 预定天数
+    date: string        // 预订日期
+    days: number        // 预订天数
     adults: number      // 成人数
     children: number    // 儿童数
     name: string        // 姓名
@@ -72,7 +72,7 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
                         <div>{formatDate(date)} - {formatDate(dayjs(date).add(days, 'day').toString())}</div>
                     </div>
                     <div className="order-attr">
-                        <div className="os-cpt">预定天数：</div>
+                        <div className="os-cpt">预订天数：</div>
                         <div>{days+1}天 {days}晚</div>
                     </div>
                     <div className="order-attr">

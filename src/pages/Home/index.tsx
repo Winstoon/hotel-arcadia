@@ -185,24 +185,32 @@ export default function Home () {
         }
     }
 
-    useEffect(() => {
-        setPageSectionOrder(0)
-        setTimeout(() => {
-            setLPHide(true)
-        }, 4000);
+    // useEffect(() => {
+    //     setPageSectionOrder(0)
+    //     setTimeout(() => {
+    //         setLPHide(true)
+    //     }, 4000);
 
+    //     setTimeout(() => {
+    //         setLPRemoved(true)
+    //     }, 5600);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
+
+    const handlePlayEnded = () => {
+        setPageSectionOrder(0)
+        setLPHide(true)
         setTimeout(() => {
             setLPRemoved(true)
-        }, 5600);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+        }, 1000)
+    }
 
     return (
         <div className="container home">
             <Header {...headerConfig} />
 
             <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
-                <video src='/lp.mp4' autoPlay muted playsInline />
+                <video src='/lp.mp4' autoPlay muted playsInline onEnded={handlePlayEnded} />
             </div>
 
             { lpHide ?

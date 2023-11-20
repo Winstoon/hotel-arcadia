@@ -6,7 +6,7 @@
     z-index: 9;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 30px 20px;
     transition: opacity .3s ease-out 1.6s;
 }
 
@@ -29,8 +29,8 @@
 }
 
 .mobile-header .header-left .more{
-    height: 18px;
-    padding: 4px 0;
+    height: 48px;
+    padding: 12px
 }
 .mobile-header .header-center{
     flex: 1;
@@ -41,7 +41,7 @@
 }
 
 .mobile-header .header-center .logo{
-    height: 92px;
+    height: 32px;
 }
 .mobile-header .header-right{
     font-size: 13px;

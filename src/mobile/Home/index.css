@@ -37,7 +37,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 36px;
+    margin-top: 28px;
+}
+.mobile-home .section2 .paragraph  .mobile-button2{
+    margin-top: 8px;
 }
 
 .mobile-home .section2 .content .title{
@@ -48,10 +51,6 @@
 .mobile-home .section2 .content .desc{
     font-size: 14px;
     line-height: 24px;
-}
-
-.mobile-home .section2 .content .button2{
-    margin-top: 16px;
 }
 
 /* Section 3, Section 4 */

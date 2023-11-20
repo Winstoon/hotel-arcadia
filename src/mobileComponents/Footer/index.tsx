@@ -16,7 +16,11 @@ export default function Footer() {
                     <Image className='comlogo' src="/logos/com.logo.svg" />
                     <div className='divider'></div>
                     <div className='otherlogos'>
-                        <div><Image src="/logos/foot.logo1.svg" /></div>
+                        <div>
+                            <a rel="noreferrer" target="_blank" href="https://www.ishibekojimuan.com">
+                                <Image src="/logos/foot.logo1.svg" />
+                            </a>
+                        </div>
                         <div><Image src="/logos/foot.logo2.svg" style={{ width: 170 }} /></div>
                         <div><Image src="/logos/foot.logo4.svg" /></div>
                         <div><Image src="/logos/foot.logo3.svg" /></div>

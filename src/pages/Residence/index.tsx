@@ -257,7 +257,7 @@ function ToggleVisible (props: {
                 { disabled ? null :
                     <Image
                         className="toggle-btn"
-                        src={visible ? '/icons/down.svg' : '/icons/up.svg'}
+                        src={visible ? '/icons/up.svg' : '/icons/down.svg'}
                     />
                 }
             </div>

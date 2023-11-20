@@ -27,8 +27,7 @@
 .footer .footer-basic .divider{
     height: 143px;
     width: 1px;
-    background-color: white;
-    opacity: .3;
+    background-color: rgba(255, 255, 255, .1);
     margin: 0 80px;
 }
 

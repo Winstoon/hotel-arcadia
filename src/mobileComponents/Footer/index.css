@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 64px;
+    height: 56px;
 }
 
 .mobile-footer{
@@ -12,7 +12,7 @@
     flex-direction: column;
     background-color: #212020;
     padding-top: 52px;
-    padding-bottom: 64px;
+    padding-bottom: 56px;
 }
 
 .mobile-footer .footer-basic{

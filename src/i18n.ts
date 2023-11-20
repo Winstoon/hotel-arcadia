@@ -948,7 +948,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'プライベートシェフディナー',
     },
     'res.s7.cpt4.5.hover': {
-        [I18N.ZH]: '在您的入住方案中，含前三晚私厨定制晚餐；如需提供其他入住日的晚餐服务，将另行收取费用（需入住前提前预定）',
+        [I18N.ZH]: '在您的入住方案中，含前三晚私厨定制晚餐；如需提供其他入住日的晚餐服务，将另行收取费用（需入住前提前预订）',
         [I18N.EN]: 'In your stay plan, it includes a private chef custom dinner for the first three nights; if you need to provide dinner service for other stay days, an additional fee will be charged (advance reservation is required before check-in)',
         [I18N.JP]: 'あなたの滞在計画では、最初の3泊のプライベートシェフカスタムディナーが含まれています。他の滞在日のディナーサービスを提供する必要がある場合は、追加料金が請求されます（チェックイン前に事前予約が必要です）',
     },
@@ -2054,7 +2054,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '執事は提出後1営業日以内にメールでご連絡いたします',
     },
     'reserve.cpt2': {
-        [I18N.ZH]: '您也可以拨打预定电话 +81 0136 55 7559',
+        [I18N.ZH]: '您也可以拨打预订电话 +81 0136 55 7559',
         [I18N.EN]: 'You can also call the reservation phone +81 0136 55 7559',
         [I18N.JP]: '予約電話+81 0136 55 7559 もご利用いただけます',
     },
@@ -2132,7 +2132,7 @@ export const I18NS: I18NFullData = {
     },
 
     'reserve.policy.desc1': {
-        [I18N.ZH]: '· 2023年12月1日起开放入住预定，8天7晚起订',
+        [I18N.ZH]: '· 2023年12月1日起开放入住预订，8天7晚起订',
         [I18N.EN]: '· Check-in reservations will be opened from December 1, 2023, with a minimum of 8 days and 7 nights',
         [I18N.JP]: '· 2023年12月1日からチェックイン予約が開始され、最低8日7泊となります',
     },
