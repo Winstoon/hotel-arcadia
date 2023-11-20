@@ -10,7 +10,7 @@ import './index.css'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
-        <div className="section section1" style={{ height: window.outerHeight }}>
+        <div className="section section1" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>

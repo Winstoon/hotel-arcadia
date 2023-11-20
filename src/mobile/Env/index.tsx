@@ -13,7 +13,7 @@ import './index.css'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
-        <div className="section section1" style={{ height: window.outerHeight }}>
+        <div className="section section1" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -133,7 +133,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
-        <div className="section section5" style={{ 'minHeight': window.outerHeight }}>
+        <div className="section section5" style={{ 'minHeight': window.innerHeight }}>
             <div className="content">
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className='groups'>

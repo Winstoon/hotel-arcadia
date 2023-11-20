@@ -13,7 +13,7 @@ import './index.css'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
-        <div className="section section1" style={{ height: window.outerHeight }}>
+        <div className="section section1" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -48,7 +48,7 @@ function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
 
     return (
-        <div className="section section3" style={{ height: window.outerHeight }}>
+        <div className="section section3" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -87,7 +87,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     // ]
 
     return (
-        <div className="section section4" style={{ height: window.outerHeight }}>
+        <div className="section section4" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -193,11 +193,29 @@ export default function MobileHome () {
         }, 1000)
     }
 
+    useEffect(() => {
+        // is wechat browser
+        if (/micromessenger/i.test(navigator.userAgent)) {
+            setLPHide(true)
+            setTimeout(() => {
+                setLPRemoved(true)
+            }, 1000)
+        }
+    }, [])
+
     return (
         <>
-            <Header />
+            { lpHide ? <Header /> : null }
             <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
-                <video src='/lp.mp4' autoPlay muted playsInline onEnded={handlePlayEnded} />
+                {/* @ts-ignore */}
+                <video
+                    src='/lp.mp4'
+                    muted
+                    autoPlay
+                    playsInline
+                    webkit-playsinline
+                    onEnded={handlePlayEnded}
+                />
             </div>
 
             <div className="mobile-container mobile-home">

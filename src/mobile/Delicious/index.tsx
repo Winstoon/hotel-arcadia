@@ -12,7 +12,7 @@ import './index.css'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
-        <div className="section section1" style={{ height: window.outerHeight }}>
+        <div className="section section1" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -59,7 +59,7 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const { title, menuGroup } = data
     
     return (
-        <div className="section section2" style={{ minHeight: window.outerHeight - 64 }}>
+        <div className="section section2" style={{ minHeight: window.innerHeight - 64 }}>
             <div className='title' style={{ letterSpacing: ls.H1 }}>{title}</div>
             <div className='menu-groups' style={{ letterSpacing: ls.TXT }}>
                 { menuGroup.map((group: any) =>
@@ -112,7 +112,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     ]
 
     return (
-        <div className="section section4" style={{ height: window.outerHeight }}>
+        <div className="section section4" style={{ height: window.innerHeight }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -374,33 +374,33 @@ export default function MobileDelicious () {
                             // 寿司套餐 - 高级
                             type: I18N['dli.menu.dinner.6.cpt'],
                             menu: [
-                                I18N['dli.menu.dinner.5.food1'],
-                                I18N['dli.menu.dinner.5.food2'],
-                                I18N['dli.menu.dinner.5.food3'],
-                                I18N['dli.menu.dinner.5.food4'],
-                                I18N['dli.menu.dinner.5.food5'],
-                                I18N['dli.menu.dinner.5.food6'],
-                                I18N['dli.menu.dinner.5.food7'],
-                                I18N['dli.menu.dinner.5.food8'],
-                                I18N['dli.menu.dinner.5.food9'],
-                                I18N['dli.menu.dinner.5.food10'],
-                                I18N['dli.menu.dinner.5.food11'],
-                                I18N['dli.menu.dinner.5.food12'],
-                                I18N['dli.menu.dinner.5.food13'],
-                                I18N['dli.menu.dinner.5.food14'],
-                                I18N['dli.menu.dinner.5.food15'],
-                                I18N['dli.menu.dinner.5.food16'],
-                                I18N['dli.menu.dinner.5.food17'],
-                                I18N['dli.menu.dinner.5.food18'],
-                                I18N['dli.menu.dinner.5.food19'],
-                                I18N['dli.menu.dinner.5.food20'],
-                                I18N['dli.menu.dinner.5.food21'],
-                                I18N['dli.menu.dinner.5.food22'],
+                                I18N['dli.menu.dinner.6.food1'],
+                                I18N['dli.menu.dinner.6.food2'],
+                                I18N['dli.menu.dinner.6.food3'],
+                                I18N['dli.menu.dinner.6.food4'],
+                                I18N['dli.menu.dinner.6.food5'],
+                                I18N['dli.menu.dinner.6.food6'],
+                                I18N['dli.menu.dinner.6.food7'],
+                                I18N['dli.menu.dinner.6.food8'],
+                                I18N['dli.menu.dinner.6.food9'],
+                                I18N['dli.menu.dinner.6.food10'],
+                                I18N['dli.menu.dinner.6.food11'],
+                                I18N['dli.menu.dinner.6.food12'],
+                                I18N['dli.menu.dinner.6.food13'],
+                                I18N['dli.menu.dinner.6.food14'],
+                                I18N['dli.menu.dinner.6.food15'],
+                                I18N['dli.menu.dinner.6.food16'],
+                                I18N['dli.menu.dinner.6.food17'],
+                                I18N['dli.menu.dinner.6.food18'],
+                                I18N['dli.menu.dinner.6.food19'],
+                                I18N['dli.menu.dinner.6.food20'],
+                                I18N['dli.menu.dinner.6.food21'],
+                                I18N['dli.menu.dinner.6.food22'],
                             ],
                             tips: [
-                                I18N['dli.menu.dinner.5.tip1'],
-                                I18N['dli.menu.dinner.5.tip2'],
-                                I18N['dli.menu.dinner.5.tip3'],
+                                I18N['dli.menu.dinner.6.tip1'],
+                                I18N['dli.menu.dinner.6.tip2'],
+                                I18N['dli.menu.dinner.6.tip3'],
                             ]
                         }
                     ]
