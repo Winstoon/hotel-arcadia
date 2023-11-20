@@ -248,7 +248,7 @@ export default function Environment () {
         <div className="container environment">
             <Header {...headerConfig} />
             <Fullpage
-                ignoreHideIndex={[5,6]}
+                ignoreHideIndex={[4,5]}
                 sliders={[
                     <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
                     <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,

@@ -107,7 +107,7 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 4
+    const active = order >= 4
 
     return (
         <div className="section section6">
