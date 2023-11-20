@@ -4,9 +4,9 @@ import { ILetterSpacing } from '../../letterSpacings'
 import Header from '../../mobileComponents/Header'
 import Button2 from '../../mobileComponents/Button2'
 import Image, { AnimateBg } from '../../mobileComponents/Image'
-import FadeSlide from '../../mobileComponents/FadeSlide/FadeSlide'
-import CircleProgress from '../../mobileComponents/CircleProgress'
-import FadeSlide2 from '../../mobileComponents/FadeSlide/FadeSlide2'
+// import FadeSlide from '../../mobileComponents/FadeSlide/FadeSlide'
+// import CircleProgress from '../../mobileComponents/CircleProgress'
+// import FadeSlide2 from '../../mobileComponents/FadeSlide/FadeSlide2'
 import Footer from '../../mobileComponents/Footer'
 
 import './index.css'
@@ -47,12 +47,6 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
 
-    const images = [
-        '/mobile/home-3-1.jpg',
-        '/mobile/home-3-2.jpg',
-        '/mobile/home-3-3.jpg'
-    ]
-
     return (
         <div className="section section3" style={{ height: window.outerHeight }}>
             <div className='content'>
@@ -62,7 +56,9 @@ function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <Button2 to="/mobile/residence">{I18N['explore']}</Button2>
             </div>
 
-            <FadeSlide
+            <AnimateBg src="/mobile/home-3.jpg" infinite />
+
+            {/* <FadeSlide
                 autoplay
                 length={3}
                 waiting={6500}
@@ -76,7 +72,7 @@ function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 renderPaginations={active => images.map((img, idx) => (
                     <CircleProgress key={idx} active={active === idx} width={14} height={14} />
                 ))}
-            />
+            /> */}
         </div>
     )
 }
@@ -84,11 +80,11 @@ function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
 
-    const images = [
-        '/mobile/home-4-1.jpg',
-        '/mobile/home-4-2.jpg',
-        '/mobile/home-4-3.jpg'
-    ]
+    // const images = [
+    //     '/mobile/home-4-1.jpg',
+    //     '/mobile/home-4-2.jpg',
+    //     '/mobile/home-4-3.jpg'
+    // ]
 
     return (
         <div className="section section4" style={{ height: window.outerHeight }}>
@@ -99,7 +95,10 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <Button2 to="/mobile/residence">{I18N['explore']}</Button2>
             </div>
 
-            <FadeSlide2
+            <AnimateBg src="/mobile/home-4.jpg" infinite />
+
+
+            {/* <FadeSlide2
                 autoplay
                 length={3}
                 waiting={6500}
@@ -113,7 +112,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 renderPaginations={active => images.map((img, idx) => (
                     <CircleProgress key={idx} active={active === idx} width={14} height={14} />
                 ))}
-            />
+            /> */}
         </div>
     )
 }

@@ -28,6 +28,7 @@ import MobileWeChatDialog from './mobileComponents/WeChatDialog';
 
 import 'react-calendar/dist/Calendar.css';
 import './App.css';
+import MenuDialog from './components/MenuDialog';
 
 export const ROUTERS = [
     {
@@ -115,6 +116,8 @@ function App() {
 
             <MobileOrderDialog visible={mobileOrderDialogVisible} />
             <MobileWeChatDialog />
+
+            <MenuDialog />
         </div>
     )
 }

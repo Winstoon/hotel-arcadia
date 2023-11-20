@@ -159,3 +159,62 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+
+.delicious .section-menu {
+    padding: 100px 0;
+    background-color: #212020;
+}
+
+.delicious .section-menu .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-60px);
+    transition: transform .7s ease-out 1.2s, opacity .7s ease-out 1.2s;
+}
+
+.delicious .section-menu .content.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delicious .section-menu .content .title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.delicious .section-menu .menu-group {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    width: 77vw;
+    gap: 40px;
+}
+.delicious .section-menu .menu-group .group-title{
+    font-size: 16px;
+    line-height: 48px;
+    height: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+.delicious .section-menu .menu-group .group-body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 12px;
+    column-gap: 65px;
+    padding: 12px 0;
+}
+
+.delicious .section-menu .menu-group .group-body .detail-item{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .7;
+    transition: opacity .3s ease-out;
+}
+.delicious .section-menu .menu-group .group-body .detail-item:hover{
+    opacity: 1;
+    cursor: pointer;
+}

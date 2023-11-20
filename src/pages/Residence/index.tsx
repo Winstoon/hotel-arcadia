@@ -1,7 +1,6 @@
 // 居所
 import { ReactNode, useState } from "react";
 import AmLine from "../../components/AmLine/AmLine";
-import Button from "../../components/Button";
 import CircleProgress from "../../components/CircleProgress";
 import FadeSlide from "../../components/FadeSlide/FadeSlide";
 import FadeSlide2 from "../../components/FadeSlide/FadeSlide2";
@@ -13,13 +12,13 @@ import Image, { AnimateBg } from "../../components/Image";
 import SwiperImages from "../../components/SwiperImages/SwiperImages";
 import SwiperImages3 from "../../components/SwiperImages/SwiperImages3";
 import { ILetterSpacing } from "../../letterSpacings";
-import { useCommonStore, useOrderDialogStore } from "../../store";
+import { useCommonStore } from "../../store";
 
 import './index.css'
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const I18N = useCommonStore(state => state.I18N)
-    const setOrderVisible = useOrderDialogStore(state => state.setVisible)
+    // const I18N = useCommonStore(state => state.I18N)
+    // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     return (
         <div className="section section1">
@@ -178,7 +177,9 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
         '/jpgs/res-6-1.jpg',
         '/jpgs/res-6-2.jpg',
         '/jpgs/res-6-3.jpg',
-        '/jpgs/res-6-4.jpg'
+        '/jpgs/res-6-4.jpg',
+        '/jpgs/res-6-5.jpg',
+        '/jpgs/res-6-6.jpg',
     ]
 
     return (
@@ -208,7 +209,7 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
             </div>
             <FadeSlide3
                 autoplay
-                length={4}
+                length={6}
                 waiting={6500}
                 trigger='hover'
                 render={active => images.map((img, idx) => (

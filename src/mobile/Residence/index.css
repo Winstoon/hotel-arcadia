@@ -128,8 +128,8 @@
     gap: 40px;
 }
 
-.mobile-res .section5 .content .img-group .img{
-    width: 100%;
+.mobile-res .section5 .content .img-group .v-scroll{
+    /* width: 100%; */
     margin-top: 20px;
 }
 .mobile-res .section5 .content .img-group .desc{

@@ -993,6 +993,967 @@ export const I18NS: I18NFullData = {
         [I18N.EN]: 'Echoing skills and high-end taste of delicacies',
         [I18N.JP]: 'スキルと珍味の高級味'
     },
+
+    'dli.menu.cpt': {
+        [I18N.ZH]: '菜单',
+        [I18N.EN]: 'Menu',
+        [I18N.JP]: 'メニュー'
+    },
+    // 早餐菜单
+    'dli.menu.breakfast': {
+        [I18N.ZH]: '早餐',
+        [I18N.EN]: 'Breakfast',
+        [I18N.JP]: '朝食'
+    },
+    // 中式 A
+    'dli.menu.bf.1.cpt': {
+        [I18N.ZH]: '和式早餐 A',
+        [I18N.EN]: 'Asian Style Breakfast A',
+        [I18N.JP]: '和朝食 A'
+    },
+    'dli.menu.bf.1.food1': {
+        [I18N.ZH]: '皮蛋粥',
+        [I18N.EN]: 'Congee with preserved egg',
+        [I18N.JP]: 'ピータン入りおかゆ'
+    },
+    'dli.menu.bf.1.food2': {
+        [I18N.ZH]: '花卷',
+        [I18N.EN]: 'Chinese Flower Rolls (Hua Juan)',
+        [I18N.JP]: '中華風蒸しパン'
+    },
+    'dli.menu.bf.1.food3': {
+        [I18N.ZH]: '香辣叉烧包子',
+        [I18N.EN]: 'Steamed Bun with Spicy Barbecue Pork',
+        [I18N.JP]: '蒸し饅頭とバーベキューポーク'
+    },
+    'dli.menu.bf.1.food4': {
+        [I18N.ZH]: '烧卖',
+        [I18N.EN]: 'Shao Mai',
+        [I18N.JP]: 'シュウマイ'
+    },
+    'dli.menu.bf.1.food5': {
+        [I18N.ZH]: '季节性水果',
+        [I18N.EN]: 'Fruits',
+        [I18N.JP]: '季節果物'
+    },
+    'dli.menu.bf.1.food6': {
+        [I18N.ZH]: '饮料 (牛奶、果汁、咖啡、茶)',
+        [I18N.EN]: 'Drinks (Milk, Juice, Coffee, Tea)',
+        [I18N.JP]: '飲み物 (ミルク、ジュース、コーヒー、お茶)'
+    },
+    'dli.menu.bf.1.tip1': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+    // 中式 B
+    'dli.menu.bf.2.cpt': {
+        [I18N.ZH]: '和式早餐 B',
+        [I18N.EN]: 'Asian Style Breakfast B',
+        [I18N.JP]: '和朝食 B'
+    },
+    'dli.menu.bf.2.food1': {
+        [I18N.ZH]: '饭团 (辣明太子、腌酸梅、黑芝麻)',
+        [I18N.EN]: 'Onigiri (Spicy Pollack Roe, Pickled Pum, Black Sesami) ',
+        [I18N.JP]: 'お握り (明太子、梅干し、黒ゴマ)'
+    },
+    'dli.menu.bf.2.food2': {
+        [I18N.ZH]: '烤日本三文鱼',
+        [I18N.EN]: 'Grilled Japanese Salmon',
+        [I18N.JP]: '鮭'
+    },
+    'dli.menu.bf.2.food3': {
+        [I18N.ZH]: '日式蛋卷',
+        [I18N.EN]: 'Japanese Style Egg Rolls',
+        [I18N.JP]: '卵焼き'
+    },
+    'dli.menu.bf.2.food4': {
+        [I18N.ZH]: '韩式煎饼',
+        [I18N.EN]: 'Korean Style Pancake',
+        [I18N.JP]: 'チヂミ'
+    },
+    'dli.menu.bf.2.food5': {
+        [I18N.ZH]: '蒸蔬菜',
+        [I18N.EN]: 'Steamed Vegetable with Miso',
+        [I18N.JP]: '蒸し野菜'
+    },
+    'dli.menu.bf.2.food6': {
+        [I18N.ZH]: '泡菜 (萝卜干、芹菜)',
+        [I18N.EN]: 'Pickles (Dried Radish Kimchi, Celery)',
+        [I18N.JP]: '漬物 (切り干し大根、セロリー) '
+    },
+    'dli.menu.bf.2.food7': {
+        [I18N.ZH]: '味增汤',
+        [I18N.EN]: 'Miso Soup',
+        [I18N.JP]: '味噌汁'
+    },
+    'dli.menu.bf.2.food8': {
+        [I18N.ZH]: '季节性水果',
+        [I18N.EN]: 'Fruits',
+        [I18N.JP]: '季節果物'
+    },
+    'dli.menu.bf.2.food9': {
+        [I18N.ZH]: '饮料 (牛奶、果汁、咖啡、茶)',
+        [I18N.EN]: 'Drinks (Milk, Juice, Coffee, Tea)',
+        [I18N.JP]: '飲み物 (ミルク、ジュース、コーヒー、お茶)'
+    },
+    'dli.menu.bf.2.tip1': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+    // 西式 A
+    'dli.menu.bf.3.cpt': {
+        [I18N.ZH]: '西式早餐 A',
+        [I18N.EN]: 'Western Style Breakfast A',
+        [I18N.JP]: '洋朝食 A'
+    },
+    'dli.menu.bf.3.food1': {
+        [I18N.ZH]: '烤面包配果酱 (草莓、橙子)',
+        [I18N.EN]: 'Toasted Bread Served with Jam (Strawberry, Orange)',
+        [I18N.JP]: 'トースターパンとジャム (いちご、オレンジ)'
+    },
+    'dli.menu.bf.3.food2': {
+        [I18N.ZH]: '炒鸡蛋 或 荷包蛋',
+        [I18N.EN]: 'Scrambled Eggs or Sunny-Side-Up Eggs',
+        [I18N.JP]: 'スクランブル 或いは 目玉焼き'
+    },
+    'dli.menu.bf.3.food3': {
+        [I18N.ZH]: '香肠 或 烤培根',
+        [I18N.EN]: 'Sausage or Grilled Bacon',
+        [I18N.JP]: 'ソーセージ 或いは ベーコン'
+    },
+    'dli.menu.bf.3.food4': {
+        [I18N.ZH]: '绿叶蔬菜和胡萝卜沙拉配自制芥末酱',
+        [I18N.EN]: 'Green Leaf and Carrot Salad Served with Homemade Mustard Dressing',
+        [I18N.JP]: 'グリーンリーフとキャロットサラダ (自家製マスタードドレッシング)'
+    },
+    'dli.menu.bf.3.food5': {
+        [I18N.ZH]: '季节性水果',
+        [I18N.EN]: 'Fruits',
+        [I18N.JP]: '季節果物'
+    },
+    'dli.menu.bf.3.food6': {
+        [I18N.ZH]: '酸奶',
+        [I18N.EN]: 'Yogurt',
+        [I18N.JP]: 'ヨーグルト'
+    },
+    'dli.menu.bf.3.food7': {
+        [I18N.ZH]: '有机谷类食',
+        [I18N.EN]: 'Organic Cereal',
+        [I18N.JP]: 'オーガニックシリアル'
+    },
+    'dli.menu.bf.3.food8': {
+        [I18N.ZH]: '饮料 (牛奶、果汁、咖啡、茶)',
+        [I18N.EN]: 'Drinks (Milk, Juice, Coffee, Tea)',
+        [I18N.JP]: '飲み物 (ミルク、ジュース、コーヒー、お茶)'
+    },
+    'dli.menu.bf.3.tip1': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+    
+    // 西式 B
+    'dli.menu.bf.4.cpt': {
+        [I18N.ZH]: '西式早餐 B',
+        [I18N.EN]: 'Western Style Breakfast B',
+        [I18N.JP]: '洋朝食 B'
+    },
+    'dli.menu.bf.4.food1': {
+        [I18N.ZH]: '意式烤面包配马苏里拉奶酪、番茄和罗勒',
+        [I18N.EN]: 'Bruschetta with Mozzarella, Tomato, and Basil',
+        [I18N.JP]: 'ブルスケッタ'
+    },
+    'dli.menu.bf.4.food2': {
+        [I18N.ZH]: '土豆罗斯蒂',
+        [I18N.EN]: 'Potato Rosti',
+        [I18N.JP]: 'ロスティ'
+    },
+    'dli.menu.bf.4.food3': {
+        [I18N.ZH]: '烤培根和自制肉丸',
+        [I18N.EN]: 'Grilled Bacon and Homemade Meatballs',
+        [I18N.JP]: 'ベーコンとミートボール'
+    },
+    'dli.menu.bf.4.food4': {
+        [I18N.ZH]: '季节性水果',
+        [I18N.EN]: 'Fruits',
+        [I18N.JP]: '季節果物'
+    },
+    'dli.menu.bf.4.food5': {
+        [I18N.ZH]: '酸奶',
+        [I18N.EN]: 'Yogurt',
+        [I18N.JP]: 'ヨーグルト'
+    },
+    'dli.menu.bf.4.food6': {
+        [I18N.ZH]: '有机谷类食',
+        [I18N.EN]: 'Organic Cereal',
+        [I18N.JP]: 'オーガニックシリアル'
+    },
+    'dli.menu.bf.4.food7': {
+        [I18N.ZH]: '饮料 (牛奶、果汁、咖啡、茶)',
+        [I18N.EN]: 'Drinks (Milk, Juice, Coffee, Tea)',
+        [I18N.JP]: '飲み物 (ミルク、ジュース、コーヒー、お茶)'
+    },
+    'dli.menu.bf.4.tip1': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+    // 西式 C
+    'dli.menu.bf.5.cpt': {
+        [I18N.ZH]: '西式早餐 C',
+        [I18N.EN]: 'Western Style Breakfast C',
+        [I18N.JP]: '洋朝食 C'
+    },
+    'dli.menu.bf.5.food1': {
+        [I18N.ZH]: '法式烤面包配焦糖香蕉',
+        [I18N.EN]: 'French Toasted Served with Caramelized Banana',
+        [I18N.JP]: 'フレンチトーストとキャラメルバナナ'
+    },
+    'dli.menu.bf.5.food2': {
+        [I18N.ZH]: '烤培根和香肠',
+        [I18N.EN]: 'Grilled Bacon and Sausage',
+        [I18N.JP]: 'ベーコンとソーセージ'
+    },
+    'dli.menu.bf.5.food3': {
+        [I18N.ZH]: '沙拉 (生菜、蘑菇、番茄、炸洋葱)',
+        [I18N.EN]: 'Salad (Lettuce, Mushroom, Tomato, Fried onion)',
+        [I18N.JP]: 'サラダ (レタス、マッシュルーム、トマト、フライドオニオン)'
+    },
+    'dli.menu.bf.5.food4': {
+        [I18N.ZH]: '季节性水果',
+        [I18N.EN]: 'Fruits',
+        [I18N.JP]: '季節果物'
+    },
+    'dli.menu.bf.5.food5': {
+        [I18N.ZH]: '酸奶',
+        [I18N.EN]: 'Yogurt',
+        [I18N.JP]: 'ヨーグルト'
+    },
+    'dli.menu.bf.5.food6': {
+        [I18N.ZH]: '有机谷类食',
+        [I18N.EN]: 'Organic Cereal',
+        [I18N.JP]: 'オーガニックシリアル'
+    },
+    'dli.menu.bf.5.food7': {
+        [I18N.ZH]: '饮料 (牛奶、果汁、咖啡、茶)',
+        [I18N.EN]: 'Drinks (Milk, Juice, Coffee, Tea)',
+        [I18N.JP]: '飲み物 (ミルク、ジュース、コーヒー、お茶)'
+    },
+    'dli.menu.bf.5.tip1': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+
+    // 晚餐菜单
+    'dli.menu.dinner': {
+        [I18N.ZH]: '晚餐',
+        [I18N.EN]: 'Dinner',
+        [I18N.JP]: '夕食'
+    },
+    // 西洋料理
+    'dli.menu.dinner.1.cpt': {
+        [I18N.ZH]: '西洋料理菜单',
+        [I18N.EN]: 'French Menu',
+        [I18N.JP]: '西洋料理コース'
+    },
+    'dli.menu.dinner.1.food1': {
+        [I18N.ZH]: '开胃菜',
+        [I18N.EN]: 'Amuse Bouche',
+        [I18N.JP]: 'アミューズブーシュ'
+    },
+    'dli.menu.dinner.1.food2': {
+        [I18N.ZH]: '橄榄油渍岩牡蛎',
+        [I18N.EN]: 'Oil-marinated Iwagaki Oyster',
+        [I18N.JP]: '山と海 岩牡蠣'
+    },
+    'dli.menu.dinner.1.food3': {
+        [I18N.ZH]: '毛蟹 油桃果南瓜酱 渍三文鱼籽',
+        [I18N.EN]: 'Hair Crab, Butternut Squash, Salmon Roe',
+        [I18N.JP]: '毛蟹 バターナッツ イクラ'
+    },
+    'dli.menu.dinner.1.food4': {
+        [I18N.ZH]: '海胆 汤叶豆腐',
+        [I18N.EN]: 'Urchin Sea and Tofu Skin',
+        [I18N.JP]: '雲丹と湯葉 '
+    },
+    'dli.menu.dinner.1.food5': {
+        [I18N.ZH]: '煎鲍鱼 绿色稻饭 西葫芦',
+        [I18N.EN]: 'Abalone, Green Rice, Zucchini',
+        [I18N.JP]: '鮑 グリーンライス ズッキーニ '
+    },
+    'dli.menu.dinner.1.food6': {
+        [I18N.ZH]: '甘鲷鳞烧 秋葵汁',
+        [I18N.EN]: 'Tilefish grilled with oil “Matsukasa Yaki”',
+        [I18N.JP]: '甘鯛の鱗焼き '
+    },
+    'dli.menu.dinner.1.food7': {
+        [I18N.ZH]: '炸和牛 北海道扇贝 山椒',
+        [I18N.EN]: 'Beef Cutlet with Hokkaido Scallops',
+        [I18N.JP]: '牛と北海道帆立'
+    },
+    'dli.menu.dinner.1.food8': {
+        [I18N.ZH]: '和栗勃朗峰',
+        [I18N.EN]: 'Mont Blanc',
+        [I18N.JP]: 'モンブラン'
+    },
+    'dli.menu.dinner.1.food9': {
+        [I18N.ZH]: '餐后点心',
+        [I18N.EN]: 'Petit Four',
+        [I18N.JP]: 'プチフール'
+    },
+    'dli.menu.dinner.1.tip1': {
+        [I18N.ZH]: '※ 成年人及8岁以上的儿童价格为每位¥35,000 (含税)',
+        [I18N.EN]: '※ Adults & 8-year-olds and the above: ¥35,000 (Tax included)/person',
+        [I18N.JP]: '※ 大人料金 (35,000円税・サ込み/名) とさせて頂きます'
+    },
+    'dli.menu.dinner.1.tip2': {
+        [I18N.ZH]: '※ 特殊日期 12/24~12/26、12/30~1/1 价格上浮10%',
+        [I18N.EN]: '※ Prices up by 10% during special events including 12/24~12/26, 12/30~1/1',
+        [I18N.JP]: '※ 特別期間 (12/24-26、12/30-1/1) は通常料金より10%値上げさせていただきます'
+    },
+    'dli.menu.dinner.1.tip3': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+    // 锅物套餐
+    'dli.menu.dinner.2.cpt': {
+        [I18N.ZH]: '锅物菜单',
+        [I18N.EN]: 'Nabe Menu',
+        [I18N.JP]: '鍋物コース'
+    },
+    'dli.menu.dinner.2.food1': {
+        [I18N.ZH]: '前菜',
+        [I18N.EN]: 'Appetizers',
+        [I18N.JP]: '前菜'
+    },
+    'dli.menu.dinner.2.food2': {
+        [I18N.ZH]: '三文鱼籽、海胆、柚子',
+        [I18N.EN]: 'Salmon Roe, Sea Urchin, Yuzu',
+        [I18N.JP]: 'いくら雲丹の柚子釜'
+    },
+    'dli.menu.dinner.2.food3': {
+        [I18N.ZH]: '炸物',
+        [I18N.EN]: 'Deep-fried Dish',
+        [I18N.JP]: '揚げ物'
+    },
+    'dli.menu.dinner.2.food4': {
+        [I18N.ZH]: '龙田炸鸡、灯笼椒',
+        [I18N.EN]: '“Tori no Tatsuta-age” Deep-fried Chicken Thigh',
+        [I18N.JP]: '鶏の竜田揚げ'
+    },
+    'dli.menu.dinner.2.food5': {
+        [I18N.ZH]: '刺身',
+        [I18N.EN]: 'Sashimi',
+        [I18N.JP]: 'お造り'
+    },
+    'dli.menu.dinner.2.food6': {
+        [I18N.ZH]: '真鲷薄切、北寄贝、酢橘',
+        [I18N.EN]: 'Sea Bream, Surf Clam',
+        [I18N.JP]: '真鯛そぎ作りと北寄貝'
+    },
+    'dli.menu.dinner.2.food7': {
+        [I18N.ZH]: '烧物',
+        [I18N.EN]: 'Grilled Dish',
+        [I18N.JP]: '焼き物'
+    },
+    'dli.menu.dinner.2.food8': {
+        [I18N.ZH]: '盐烧河豚白子',
+        [I18N.EN]: 'Fugu Shirako with Salt',
+        [I18N.JP]: 'ふぐ白子塩焼き'
+    },
+    'dli.menu.dinner.2.food9': {
+        [I18N.ZH]: '寿司',
+        [I18N.EN]: 'Sushi',
+        [I18N.JP]: 'お寿司'
+    },
+    'dli.menu.dinner.2.food10': {
+        [I18N.ZH]: '金枪鱼腹、扇贝、蟹肉',
+        [I18N.EN]: 'Tuna Belly, Hokkaido Scallop, Crab',
+        [I18N.JP]: '大トロ 帆立 かに'
+    },
+    'dli.menu.dinner.2.food11': {
+        [I18N.ZH]: '主菜',
+        [I18N.EN]: 'Main Dish',
+        [I18N.JP]: '主菜'
+    },
+    'dli.menu.dinner.2.food12': {
+        [I18N.ZH]: '顶级北海道十胜和牛寿喜锅 茼蒿 1⁄2豆腐 蒟蒻',
+        [I18N.EN]: '“Sukiyaki” Beef Hot Pot',
+        [I18N.JP]: '牛肉のすき焼き'
+    },
+    'dli.menu.dinner.2.food13': {
+        [I18N.ZH]: '主食',
+        [I18N.EN]: 'Rice Dish',
+        [I18N.JP]: '御飯'
+    },
+    'dli.menu.dinner.2.food14': {
+        [I18N.ZH]: '松茸陶锅饭',
+        [I18N.EN]: 'Matsutake Mushroom Rice',
+        [I18N.JP]: '松茸飯'
+    },
+    'dli.menu.dinner.2.food15': {
+        [I18N.ZH]: '甜点',
+        [I18N.EN]: 'Dessert',
+        [I18N.JP]: '甘味'
+    },
+    'dli.menu.dinner.2.food16': {
+        [I18N.ZH]: '椰子冻、抹茶',
+        [I18N.EN]: 'Coconut blancmange, Matcha',
+        [I18N.JP]: '椰子ブラマンジェ'
+    },
+    'dli.menu.dinner.2.tip1': {
+        [I18N.ZH]: '※ 成年人及8岁以上的儿童价格为每位¥35,000 (含税)',
+        [I18N.EN]: '※ Adults & 8-year-olds and the above: ¥35,000 (Tax included)/person',
+        [I18N.JP]: '※ 大人料金 (35,000円税・サ込み/名) とさせて頂きます'
+    },
+    'dli.menu.dinner.2.tip2': {
+        [I18N.ZH]: '※ 特殊日期 12/24~12/26、12/30~1/1 价格上浮10%',
+        [I18N.EN]: '※ Prices up by 10% during special events including 12/24~12/26, 12/30~1/1',
+        [I18N.JP]: '※ 特別期間 (12/24-26、12/30-1/1) は通常料金より10%値上げさせていただきます'
+    },
+    'dli.menu.dinner.2.tip3': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+    // 怀石套餐
+    'dli.menu.dinner.3.cpt': {
+        [I18N.ZH]: '怀石菜单',
+        [I18N.EN]: 'Kaiseki Menu',
+        [I18N.JP]: '懐石コース'
+    },
+    'dli.menu.dinner.3.food1': {
+        [I18N.ZH]: '前菜',
+        [I18N.EN]: 'Appetizers',
+        [I18N.JP]: '先付'
+    },
+    'dli.menu.dinner.3.food2': {
+        [I18N.ZH]: '鲍鱼软炖、鲑鱼子酱油渍',
+        [I18N.EN]: 'Softly Simmered Abalone, Marinade Salmon Roe',
+        [I18N.JP]: '鮑柔煮 いくらの醤油漬け'
+    },
+    'dli.menu.dinner.3.food3': {
+        [I18N.ZH]: '生鱼片',
+        [I18N.EN]: 'Sashimi',
+        [I18N.JP]: '向付'
+    },
+    'dli.menu.dinner.3.food4': {
+        [I18N.ZH]: '昆布盛 – 真鲷、山葵、鲣鱼酱油',
+        [I18N.EN]: 'Seabream Kobujime with Wasabi and Tosa Soy Sauce',
+        [I18N.JP]: '鯛の昆布締め ワサビ 土佐醤油'
+    },
+    'dli.menu.dinner.3.food5': {
+        [I18N.ZH]: '汤品',
+        [I18N.EN]: 'Steamed',
+        [I18N.JP]: '煮もの椀'
+    },
+    'dli.menu.dinner.3.food6': {
+        [I18N.ZH]: '虾肉丸子、松茸、柚子、青萝卜',
+        [I18N.EN]: 'Steamed Prawn, Matsutake Mushroom, Yuzu, Radish',
+        [I18N.JP]: '海老真蒸 松茸 柚子 青味大根'
+    },
+    'dli.menu.dinner.3.food7': {
+        [I18N.ZH]: '醋物',
+        [I18N.EN]: 'Vinegar Dish',
+        [I18N.JP]: '替り鉢'
+    },
+    'dli.menu.dinner.3.food8': {
+        [I18N.ZH]: '长芋冷面、北海道毛蟹',
+        [I18N.EN]: 'Nagaimo Somen with Crab and Yuzu Vinegar Dressing',
+        [I18N.JP]: '長芋そうめん かに ふりゆず 合わせ酢'
+    },
+    'dli.menu.dinner.3.food9': {
+        [I18N.ZH]: '烧物',
+        [I18N.EN]: 'Grilled Dish',
+        [I18N.JP]: '焼き物'
+    },
+    'dli.menu.dinner.3.food10': {
+        [I18N.ZH]: '金目鲷松笠烧、酢橘',
+        [I18N.EN]: 'Red Eye Amberjack Matsukasa Yaki',
+        [I18N.JP]: '金目鯛 松笠焼き'
+    },
+    'dli.menu.dinner.3.food11': {
+        [I18N.ZH]: '炸物',
+        [I18N.EN]: 'Deep-fried Dish',
+        [I18N.JP]: '揚げ物'
+    },
+    'dli.menu.dinner.3.food12': {
+        [I18N.ZH]: '十胜和牛肉排、花山椒酱',
+        [I18N.EN]: 'Beef Cutlet with Sansho Pepper Sauce',
+        [I18N.JP]: '牛肉かつ 山椒タレ'
+    },
+    'dli.menu.dinner.3.food13': {
+        [I18N.ZH]: '主食',
+        [I18N.EN]: 'Rice Dish',
+        [I18N.JP]: '御飯'
+    },
+    'dli.menu.dinner.3.food14': {
+        [I18N.ZH]: '松茸饭',
+        [I18N.EN]: 'Matsutake Mushroom Rice',
+        [I18N.JP]: '松茸飯'
+    },
+    'dli.menu.dinner.3.food15': {
+        [I18N.ZH]: '甜点',
+        [I18N.EN]: 'Dessert',
+        [I18N.JP]: '甘味'
+    },
+    'dli.menu.dinner.3.food16': {
+        [I18N.ZH]: '椰子、北海道牛乳冻、宇治抹茶',
+        [I18N.EN]: 'Coconut blancmange',
+        [I18N.JP]: '椰子ブラマンジェ'
+    },
+    'dli.menu.dinner.3.tip1': {
+        [I18N.ZH]: '※ 成年人及8岁以上的儿童价格为每位¥35,000 (含税)',
+        [I18N.EN]: '※ Adults & 8-year-olds and the above: ¥35,000 (Tax included)/person',
+        [I18N.JP]: '※ 大人料金 (35,000円税・サ込み/名) とさせて頂きます'
+    },
+    'dli.menu.dinner.3.tip2': {
+        [I18N.ZH]: '※ 特殊日期 12/24~12/26、12/30~1/1 价格上浮10%',
+        [I18N.EN]: '※ Prices up by 10% during special events including 12/24~12/26, 12/30~1/1',
+        [I18N.JP]: '※ 特別期間 (12/24-26、12/30-1/1) は通常料金より10%値上げさせていただきます'
+    },
+    'dli.menu.dinner.3.tip3': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+    
+    // 河豚套餐
+    'dli.menu.dinner.4.cpt': {
+        [I18N.ZH]: '河豚菜单',
+        [I18N.EN]: 'Fugu Blowfish Menu',
+        [I18N.JP]: 'ふぐコース'
+    },
+    'dli.menu.dinner.4.food1': {
+        [I18N.ZH]: '珍味',
+        [I18N.EN]: 'Delicacies',
+        [I18N.JP]: '珍味'
+    },
+    'dli.menu.dinner.4.food2': {
+        [I18N.ZH]: '河豚鱼鳍温酒',
+        [I18N.EN]: 'Hirezake - Grilled Blowfish Fin Sake',
+        [I18N.JP]: 'ヒレさけ'
+    },
+    'dli.menu.dinner.4.food3': {
+        [I18N.ZH]: '刺身',
+        [I18N.EN]: 'Sashimi',
+        [I18N.JP]: 'お造り'
+    },
+    'dli.menu.dinner.4.food4': {
+        [I18N.ZH]: '虎河豚刺身、昆布熟成',
+        [I18N.EN]: 'Fugu Kobujime - Blowfish aged on Kelp',
+        [I18N.JP]: 'フグ昆布じめ'
+    },
+    'dli.menu.dinner.4.food5': {
+        [I18N.ZH]: '汤品',
+        [I18N.EN]: 'Soup',
+        [I18N.JP]: '吸い物'
+    },
+    'dli.menu.dinner.4.food6': {
+        [I18N.ZH]: '清汁白子豆腐、日本柚子',
+        [I18N.EN]: 'Shirako Tofu Clear Soup',
+        [I18N.JP]: '白子豆腐 清まし仕立て'
+    },
+    'dli.menu.dinner.4.food7': {
+        [I18N.ZH]: '炸物',
+        [I18N.EN]: 'Deep-fried Dish',
+        [I18N.JP]: '揚げ物'
+    },
+    'dli.menu.dinner.4.food8': {
+        [I18N.ZH]: '河豚天妇罗、狮子头椒',
+        [I18N.EN]: 'Deep fried Fugu tempura',
+        [I18N.JP]: 'ふぐ天ぷら'
+    },
+    'dli.menu.dinner.4.food9': {
+        [I18N.ZH]: '蒸物',
+        [I18N.EN]: 'Steamed',
+        [I18N.JP]: '蒸し物'
+    },
+    'dli.menu.dinner.4.food10': {
+        [I18N.ZH]: '河豚萝卜蒸',
+        [I18N.EN]: 'Fugu Kaburamushi - Steamed Blowfish with Turnips',
+        [I18N.JP]: 'ふぐ蕪蒸し'
+    },
+    'dli.menu.dinner.4.food11': {
+        [I18N.ZH]: '烧物',
+        [I18N.EN]: 'Grilled Dish',
+        [I18N.JP]: '焼き物'
+    },
+    'dli.menu.dinner.4.food12': {
+        [I18N.ZH]: '盐烧河豚白子',
+        [I18N.EN]: 'Fugu Shirako with Salt',
+        [I18N.JP]: 'ふぐ白子塩焼き'
+    },
+    'dli.menu.dinner.4.food13': {
+        [I18N.ZH]: '主食',
+        [I18N.EN]: 'Rice Dish',
+        [I18N.JP]: '御飯'
+    },
+    'dli.menu.dinner.4.food14': {
+        [I18N.ZH]: '酱油渍三文鱼籽海胆饭',
+        [I18N.EN]: 'Salmon Roe and Sea Urchin on rice',
+        [I18N.JP]: '筋子雲丹ご飯'
+    },
+    'dli.menu.dinner.4.food15': {
+        [I18N.ZH]: '甜点',
+        [I18N.EN]: 'Dessert',
+        [I18N.JP]: '甘味'
+    },
+    'dli.menu.dinner.4.food16': {
+        [I18N.ZH]: '日式蕨饼',
+        [I18N.EN]: 'Dessert Bracken - Starch mochi rice cake',
+        [I18N.JP]: 'わらび餅'
+    },
+    'dli.menu.dinner.4.tip1': {
+        [I18N.ZH]: '※ 成年人及8岁以上的儿童价格为每位¥35,000 (含税)',
+        [I18N.EN]: '※ Adults & 8-year-olds and the above: ¥35,000 (Tax included)/person',
+        [I18N.JP]: '※ 大人料金 (35,000円税・サ込み/名) とさせて頂きます'
+    },
+    'dli.menu.dinner.4.tip2': {
+        [I18N.ZH]: '※ 特殊日期 12/24~12/26、12/30~1/1 价格上浮10%',
+        [I18N.EN]: '※ Prices up by 10% during special events including 12/24~12/26, 12/30~1/1',
+        [I18N.JP]: '※ 特別期間 (12/24-26、12/30-1/1) は通常料金より10%値上げさせていただきます'
+    },
+    'dli.menu.dinner.4.tip3': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+    // 怀石菜单-高级
+    'dli.menu.dinner.5.cpt': {
+        [I18N.ZH]: '怀石菜单 – 高级',
+        [I18N.EN]: 'Kaiseki Menu - Premium',
+        [I18N.JP]: '懷石コース – 高級メニュー'
+    },
+    'dli.menu.dinner.5.food1': {
+        [I18N.ZH]: '前菜',
+        [I18N.EN]: 'Appetizers',
+        [I18N.JP]: '先付'
+    },
+    'dli.menu.dinner.5.food2': {
+        [I18N.ZH]: '鲍鱼软炖、贝尔加鱼子酱、鲑鱼子酱油渍',
+        [I18N.EN]: 'Softly Simmered Abalone, Beluga Caviar, Marinade Salmon Roe',
+        [I18N.JP]: '鮑柔煮 ベルーガキャビア いくらの醤油漬け'
+    },
+    'dli.menu.dinner.5.food3': {
+        [I18N.ZH]: '生鱼片',
+        [I18N.EN]: 'Sashimi',
+        [I18N.JP]: '向付'
+    },
+    'dli.menu.dinner.5.food4': {
+        [I18N.ZH]: '昆布盛 – 比目鱼、红鲷、花枝、海胆、车虾、扇贝、柚子冻',
+        [I18N.EN]: 'Kombu-Infused Assortment: Flounder, Red Snapper, Squid, Sea Urchin, Tiger Prawn, and Scallop with Kombu Dashi Yuzu Jelly',
+        [I18N.JP]: '昆布じめ盛り ひらめ 真鯛 いか 雲丹 車海老 帆立 昆布だし柚子ゼリー'
+    },
+    'dli.menu.dinner.5.food5': {
+        [I18N.ZH]: '汤品',
+        [I18N.EN]: 'Steamed',
+        [I18N.JP]: '煮もの椀'
+    },
+    'dli.menu.dinner.5.food6': {
+        [I18N.ZH]: '伊势龙虾、松茸、柚子、青萝卜',
+        [I18N.EN]: 'Steamed lobster, Matsutake Mushroom, Yuzu, Radish',
+        [I18N.JP]: '伊勢海老 松茸 柚子 青味大根'
+    },
+    'dli.menu.dinner.5.food7': {
+        [I18N.ZH]: '醋物',
+        [I18N.EN]: 'Vinegar Dish',
+        [I18N.JP]: '替り鉢'
+    },
+    'dli.menu.dinner.5.food8': {
+        [I18N.ZH]: '长芋冷面、北海道毛蟹',
+        [I18N.EN]: 'Nagaimo Somen with Crab and Yuzu Vinegar Dressing',
+        [I18N.JP]: '長芋そうめん かに ふりゆず 合わせ酢'
+    },
+    'dli.menu.dinner.5.food9': {
+        [I18N.ZH]: '烧物',
+        [I18N.EN]: 'Grilled Dish',
+        [I18N.JP]: '焼き物'
+    },
+    'dli.menu.dinner.5.food10': {
+        [I18N.ZH]: '金目鲷松笠烧、酢橘',
+        [I18N.EN]: 'Red Eye Amberjack Matsukasa Yaki',
+        [I18N.JP]: '金目鯛 松笠焼き'
+    },
+    'dli.menu.dinner.5.food11': {
+        [I18N.ZH]: '炸物',
+        [I18N.EN]: 'Deep-fried Dish',
+        [I18N.JP]: '揚げ物'
+    },
+    'dli.menu.dinner.5.food12': {
+        [I18N.ZH]: '十胜和牛肉排、花山椒酱',
+        [I18N.EN]: 'Beef Cutlet with Sansho Pepper Sauce',
+        [I18N.JP]: '牛肉かつ 山椒タレ'
+    },
+    'dli.menu.dinner.5.food13': {
+        [I18N.ZH]: '主食',
+        [I18N.EN]: 'Rice Dish',
+        [I18N.JP]: '御飯'
+    },
+    'dli.menu.dinner.5.food14': {
+        [I18N.ZH]: '炙烧金枪鱼腹、松露玉米饭',
+        [I18N.EN]: 'Truffle, tuna belly, sweet corn rice',
+        [I18N.JP]: '鮪 松露玉米飯'
+    },
+    'dli.menu.dinner.5.food15': {
+        [I18N.ZH]: '甜点',
+        [I18N.EN]: 'Dessert',
+        [I18N.JP]: '甘味'
+    },
+    'dli.menu.dinner.5.food16': {
+        [I18N.ZH]: '椰子、北海道牛乳冻、宇治抹茶',
+        [I18N.EN]: 'Coconut blancmange, Matcha',
+        [I18N.JP]: '椰子ブラマンジェ'
+    },
+    'dli.menu.dinner.5.tip1': {
+        [I18N.ZH]: '※ 成年人及8岁以上的儿童价格为每位¥55,000 (含税)',
+        [I18N.EN]: '※ Adults & 8-year-olds and the above: ¥55,000 (Tax included)/person',
+        [I18N.JP]: '※ 大人料金 (55,000円税・サ込み/名) とさせて頂きます'
+    },
+    'dli.menu.dinner.5.tip2': {
+        [I18N.ZH]: '※ 特殊日期 12/24~12/26、12/30~1/1 价格上浮10%',
+        [I18N.EN]: '※ Prices up by 10% during special events including 12/24~12/26, 12/30~1/1',
+        [I18N.JP]: '※ 特別期間 (12/24-26、12/30-1/1) は通常料金より10%値上げさせていただきます'
+    },
+    'dli.menu.dinner.5.tip3': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+    // 寿司套餐 - 高级
+    'dli.menu.dinner.6.cpt': {
+        [I18N.ZH]: '寿司菜单 – 高级',
+        [I18N.EN]: 'Sushi Menu - Premium',
+        [I18N.JP]: '寿司コース – 高級メニュー'
+    },
+    'dli.menu.dinner.6.food1': {
+        [I18N.ZH]: '前菜',
+        [I18N.EN]: 'Appetizers',
+        [I18N.JP]: '前肴'
+    },
+    'dli.menu.dinner.6.food2': {
+        [I18N.ZH]: '鲍鱼软炖、贝尔加鱼子酱',
+        [I18N.EN]: 'Softly Simmered Abalone with Beluga Caviar',
+        [I18N.JP]: '鮑柔煮 ベルーガキャビア'
+    },
+    'dli.menu.dinner.6.food3': {
+        [I18N.ZH]: '蒸物',
+        [I18N.EN]: 'Steamed',
+        [I18N.JP]: '蒸し物'
+    },
+    'dli.menu.dinner.6.food4': {
+        [I18N.ZH]: '茶碗蒸、鲑鱼子酱油渍、北海道虾夷马粪海胆',
+        [I18N.EN]: 'Steamed Egg Custard, Salmon Roe, Sea Urchin',
+        [I18N.JP]: '茶碗蒸 いくらの醤油漬け 雲丹'
+    },
+    'dli.menu.dinner.6.food5': {
+        [I18N.ZH]: '刺身',
+        [I18N.EN]: 'Sashimi',
+        [I18N.JP]: 'お造り'
+    },
+    'dli.menu.dinner.6.food6': {
+        [I18N.ZH]: '河豚、白子、柑橘醋、紫苏花穗',
+        [I18N.EN]: 'Blowfish Sashimi with Shirako, Shiso Flowers, Purple Sprouts',
+        [I18N.JP]: '河豚薄造り 白子 ポン酢 はなほ 紫芽'
+    },
+    'dli.menu.dinner.6.food7': {
+        [I18N.ZH]: '汤品',
+        [I18N.EN]: 'Steamed',
+        [I18N.JP]: '煮もの椀'
+    },
+    'dli.menu.dinner.6.food8': {
+        [I18N.ZH]: '冬瓜、毛蟹丸子、轮切青柚子',
+        [I18N.EN]: 'Clear Dashi Soup, Hairy Crab with Winter Melon, Crab Tofu, Green Yuzu',
+        [I18N.JP]: '毛蟹だししゃぶ 冬瓜 毛蟹真薯 輪青柚子'
+    },
+    'dli.menu.dinner.6.food9': {
+        [I18N.ZH]: '寿司',
+        [I18N.EN]: 'Sushi',
+        [I18N.JP]: '寿司'
+    },
+    'dli.menu.dinner.6.food10': {
+        [I18N.ZH]: '金枪鱼赤身',
+        [I18N.EN]: 'Lean Tuna',
+        [I18N.JP]: '赤身'
+    },
+    'dli.menu.dinner.6.food11': {
+        [I18N.ZH]: '金枪鱼腹',
+        [I18N.EN]: 'Tuna Belly',
+        [I18N.JP]: '中トロ'
+    },
+    'dli.menu.dinner.6.food12': {
+        [I18N.ZH]: '鰤鱼鱼腹',
+        [I18N.EN]: 'Yellow Tail',
+        [I18N.JP]: 'はまち'
+    },
+    'dli.menu.dinner.6.food13': {
+        [I18N.ZH]: '比目鱼',
+        [I18N.EN]: 'Flounder',
+        [I18N.JP]: 'ひらめ'
+    },
+    'dli.menu.dinner.6.food14': {
+        [I18N.ZH]: '扇贝',
+        [I18N.EN]: 'Scallop',
+        [I18N.JP]: '扇贝'
+    },
+    'dli.menu.dinner.6.food15': {
+        [I18N.ZH]: '花枝',
+        [I18N.EN]: 'Squid',
+        [I18N.JP]: 'イカ'
+    },
+    'dli.menu.dinner.6.food16': {
+        [I18N.ZH]: '海胆',
+        [I18N.EN]: 'Sea urchin',
+        [I18N.JP]: '雲丹'
+    },
+    'dli.menu.dinner.6.food17': {
+        [I18N.ZH]: '炙烧金枪鱼',
+        [I18N.EN]: 'Seared tuna bell',
+        [I18N.JP]: '炙燒大トロ'
+    },
+    'dli.menu.dinner.6.food18': {
+        [I18N.ZH]: '鳗鱼手卷',
+        [I18N.EN]: 'Eel handroll',
+        [I18N.JP]: '鰻手巻き'
+    },
+    'dli.menu.dinner.6.food19': {
+        [I18N.ZH]: '金枪鱼手卷',
+        [I18N.EN]: 'Tuna belly handroll',
+        [I18N.JP]: '鮪手巻き'
+    },
+    'dli.menu.dinner.6.food20': {
+        [I18N.ZH]: '玉子烧',
+        [I18N.EN]: 'Layered Egg',
+        [I18N.JP]: '卵焼き'
+    },
+    'dli.menu.dinner.6.food21': {
+        [I18N.ZH]: '甜点',
+        [I18N.EN]: 'Dessert',
+        [I18N.JP]: '甘味'
+    },
+    'dli.menu.dinner.6.food22': {
+        [I18N.ZH]: '豆粉牛乳冻、葛饼、黑糖',
+        [I18N.EN]: 'Soybean blancmange, arrowroots mochi',
+        [I18N.JP]: 'きなこブラマンジェ 葛餅'
+    },
+    'dli.menu.dinner.6.tip1': {
+        [I18N.ZH]: '※ 成年人及8岁以上的儿童价格为每位¥55,000 (含税)',
+        [I18N.EN]: '※ Adults & 8-year-olds and the above: ¥55,000 (Tax included)/person',
+        [I18N.JP]: '※ 大人料金 (55,000円税・サ込み/名) とさせて頂きます'
+    },
+    'dli.menu.dinner.6.tip2': {
+        [I18N.ZH]: '※ 特殊日期 12/24~12/26、12/30~1/1 价格上浮10%',
+        [I18N.EN]: '※ Prices up by 10% during special events including 12/24~12/26, 12/30~1/1',
+        [I18N.JP]: '※ 特別期間 (12/24-26、12/30-1/1) は通常料金より10%値上げさせていただきます'
+    },
+    'dli.menu.dinner.6.tip3': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+
+    // 下午茶菜单
+    'dli.menu.tea': {
+        [I18N.ZH]: '下午茶',
+        [I18N.EN]: 'Afternoon Tea',
+        [I18N.JP]: 'アフタヌーンティー'
+    },
+    'dli.menu.teamenu': {
+        [I18N.ZH]: '下午茶菜单',
+        [I18N.EN]: 'Afternoon Tea Menu',
+        [I18N.JP]: 'アフタヌーンティーメニュー'
+    },
+    'dli.menu.tea.d1': {
+        [I18N.ZH]: '周一',
+        [I18N.EN]: 'Mon.',
+        [I18N.JP]: '月曜日'
+    },
+    'dli.menu.tea.d1.tea': {
+        [I18N.ZH]: '英式烤饼',
+        [I18N.EN]: 'Scone',
+        [I18N.JP]: 'スコーン'
+    },
+    'dli.menu.tea.d2': {
+        [I18N.ZH]: '周二',
+        [I18N.EN]: 'Thu.',
+        [I18N.JP]: '火曜日'
+    },
+    'dli.menu.tea.d2.tea': {
+        [I18N.ZH]: '乳酪蛋糕',
+        [I18N.EN]: 'Cheese Cake',
+        [I18N.JP]: 'チーズケーキ'
+    },
+    'dli.menu.tea.d3': {
+        [I18N.ZH]: '周三',
+        [I18N.EN]: 'Wed.',
+        [I18N.JP]: '水曜日'
+    },
+    'dli.menu.tea.d3.tea': {
+        [I18N.ZH]: '巧克力干饼',
+        [I18N.EN]: 'Chocolate Chip Cookies',
+        [I18N.JP]: 'チョコレートチップクッキー'
+    },
+    'dli.menu.tea.d4': {
+        [I18N.ZH]: '周四',
+        [I18N.EN]: 'Thur.',
+        [I18N.JP]: '木曜日'
+    },
+    'dli.menu.tea.d4.tea': {
+        [I18N.ZH]: '烤苹果奶酥',
+        [I18N.EN]: 'Apple Crumble',
+        [I18N.JP]: 'アップルクランブル'
+    },
+
+    'dli.menu.tea.d5': {
+        [I18N.ZH]: '周五',
+        [I18N.EN]: 'Fri.',
+        [I18N.JP]: '金曜日'
+    },
+    'dli.menu.tea.d5.tea': {
+        [I18N.ZH]: '英式椰棗太妃蛋糕',
+        [I18N.EN]: 'Sticky Toffee Pudding',
+        [I18N.JP]: 'スティッキートフィープディング'
+    },
+    'dli.menu.tea.d6': {
+        [I18N.ZH]: '周六',
+        [I18N.EN]: 'Sat.',
+        [I18N.JP]: '土曜日'
+    },
+    'dli.menu.tea.d6.tea': {
+        [I18N.ZH]: '桂皮卷',
+        [I18N.EN]: 'Cinnamon Roll',
+        [I18N.JP]: 'シナモンロール'
+    },
+    'dli.menu.tea.d7': {
+        [I18N.ZH]: '周日',
+        [I18N.EN]: 'Sun.',
+        [I18N.JP]: '日曜日'
+    },
+    'dli.menu.tea.d7.tea': {
+        [I18N.ZH]: '巧克力布朗尼',
+        [I18N.EN]: 'Chocolate Brownie',
+        [I18N.JP]: 'ブラウニー'
+    },
+    'dli.menu.tea.tip1': {
+        [I18N.ZH]: '※ 菜单上的食材可能会根据采购情况变更，请知悉',
+        [I18N.EN]: '※ Please be noted that ingredients on the menu may vary depending on the availability status',
+        [I18N.JP]: '※ メニューは仕入状況等により食材変更となる場合がございます。予めご了承ください'
+    },
+
+
+
     'dli.s2.cpt': {
         [I18N.ZH]: '品赏',
         [I18N.EN]: 'Tasting',
@@ -1086,11 +2047,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'あなたの滞在計画では、最初の3泊のプライベートシェフカスタムディナーが含まれています'
     },
 
-
-
-
     // 预订
-
     'reserve.cpt1': {
         [I18N.ZH]: '管家将于提交后1个工作日内，以邮件形式与您联系具体事宜',
         [I18N.EN]: 'The butler will contact you by email within 1 working day after submission',

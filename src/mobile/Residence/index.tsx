@@ -129,7 +129,8 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                             { img.desc.map((desc: any) =>
                                 <div className='desc' style={{ letterSpacing: ls.TXT }}>{desc}</div>
                             )}
-                            <Image className='img' src={img.src} />
+                            {/* <Image className='img' src={img.src} /> */}
+                            <VScroll data={img.srcs} />
                         </div>
                     ))}
                 </div>
@@ -143,7 +144,9 @@ function Slide6 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
         { url: '/mobile/res-6-1.jpg' },
         { url: '/mobile/res-6-2.jpg' },
         { url: '/mobile/res-6-3.jpg' },
-        { url: '/mobile/res-6-4.jpg' }
+        { url: '/mobile/res-6-4.jpg' },
+        { url: '/mobile/res-6-5.jpg' },
+        { url: '/mobile/res-6-6.jpg' }
     ]
 
     return (
@@ -304,7 +307,7 @@ export default function MobileResidence () {
             title: I18N['res.s5.title'],
             images: [
                 {
-                    src: '/mobile/res-5-1.jpg',
+                    srcs: [{ url:'/mobile/res-5-1.jpg'}, { url:'/mobile/res-5-1-2.jpg'}],
                     caption: I18N['res.s5.image1.cpt'],
                     desc: [
                         I18N['res.s5.image1.desc1'],
@@ -312,7 +315,7 @@ export default function MobileResidence () {
                     ]
                 },
                 {
-                    src: '/mobile/res-5-2.jpg',
+                    srcs: [{ url:'/mobile/res-5-2.jpg'}, { url:'/mobile/res-5-3.jpg'}, { url:'/mobile/res-5-4.jpg'}, { url:'/mobile/res-5-5.jpg'}],
                     caption: I18N['res.s5.image2.cpt'],
                     desc: [
                         I18N['res.s5.image2.desc1'],
@@ -320,7 +323,7 @@ export default function MobileResidence () {
                     ]
                 },
                 {
-                    src: '/mobile/res-5-3.jpg',
+                    srcs: [{ url:'/mobile/res-5-6.jpg'}, { url:'/mobile/res-5-7.jpg'}, { url:'/mobile/res-5-8.jpg'}, { url:'/mobile/res-5-9.jpg'}],
                     caption: I18N['res.s5.image3.cpt'],
                     desc: [
                         I18N['res.s5.image3.desc1'],
@@ -328,7 +331,7 @@ export default function MobileResidence () {
                     ]
                 },
                 {
-                    src: '/mobile/res-5-4.jpg',
+                    srcs: [{ url:'/mobile/res-5-10.jpg'}, { url:'/mobile/res-5-11.jpg'}, { url:'/mobile/res-5-12.jpg'}],
                     caption: I18N['res.s5.image4.cpt'],
                     desc: [
                         I18N['res.s5.image4.desc1'],
@@ -336,7 +339,7 @@ export default function MobileResidence () {
                     ]
                 },
                 {
-                    src: '/mobile/res-5-5.jpg',
+                    srcs: [{ url:'/mobile/res-5-13.jpg'}, { url:'/mobile/res-5-14.jpg'}],
                     caption: I18N['res.s5.image5.cpt'],
                     desc: [
                         I18N['res.s5.image5.desc1'],

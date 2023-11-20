@@ -1,34 +1,33 @@
 import { useEffect, useState } from "react";
-import { useCommonStore, useFadeSlideStore, useOrderDialogStore } from "../../store";
+import { useCommonStore, useFadeSlideStore } from "../../store";
 import { ILetterSpacing } from "../../letterSpacings";
 import Fullpage from "../../components/FullPage";
-import Button from "../../components/Button";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Button2 from "../../components/Button2";
 import Image, { AnimateBg } from "../../components/Image";
 
 import './index.css'
-import Button2 from "../../components/Button2";
 
-function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    return (
-        <div className="section section1">
-            <Image src="/logo.svg" />
-            <Image className="scroll-down" src="/icons/scroll-down.svg" />
+// function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+//     return (
+//         <div className="section section1">
+//             <Image src="/logo.svg" />
+//             <Image className="scroll-down" src="/icons/scroll-down.svg" />
 
-            <AnimateBg src="/jpgs/home-1.jpg" infinite />
-        </div>
-    )
-}
+//             <AnimateBg src="/jpgs/home-1.jpg" infinite />
+//         </div>
+//     )
+// }
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 0
-    const I18N = useCommonStore(state => state.I18N)
-    const setOrderVisible = useOrderDialogStore(state => state.setVisible)
+    // const I18N = useCommonStore(state => state.I18N)
+    // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
-    const handleOrder = () => {
-        setOrderVisible(true)
-    }
+    // const handleOrder = () => {
+    //     setOrderVisible(true)
+    // }
 
     return (
         <div className="section section2">
@@ -72,6 +71,7 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
         if (active) {
             setActive(0)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [active])
 
     return (
@@ -123,7 +123,7 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance5}</div>
                 </div>
                 <div className="lgg">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.address}<a href="https://www.google.com/maps/place/1+Chome+Minami+6+Jonishi,+%E4%BF%B1%E7%9F%A5%E5%AE%89%E7%94%BA%E8%99%BB%E7%94%B0%E9%83%A1%E5%8C%97%E6%B5%B7%E9%81%93+044-0036%E6%97%A5%E6%9C%AC/@42.8957696,140.749132,17.66z" target="_blank">{data.viewMap}</a></div>
+                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.address}<a rel='noreferrer' href="https://www.google.com/maps/place/Arcadia/@42.8560658,140.7098538,19z/data=!4m6!3m5!1s0x5f0ab1e1c27b18d7:0x859d2d73d7f8c9d7!8m2!3d42.8560295!4d140.7099628!16s%2Fg%2F11v59_lb4z?entry=ttu" target="_blank">{data.viewMap}</a></div>
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.phone}</div>
                     {/* <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div> */}
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.email}</div>
@@ -187,8 +187,6 @@ export default function Home () {
 
     useEffect(() => {
         setPageSectionOrder(0)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-
         setTimeout(() => {
             setLPHide(true)
         }, 4000);
@@ -196,6 +194,7 @@ export default function Home () {
         setTimeout(() => {
             setLPRemoved(true)
         }, 5600);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

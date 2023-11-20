@@ -1,6 +1,5 @@
 // 佳肴
 import AmLine from "../../components/AmLine/AmLine";
-import Button from "../../components/Button";
 import CircleProgress from "../../components/CircleProgress";
 import FadeSlide from "../../components/FadeSlide/FadeSlide";
 import Footer from "../../components/Footer";
@@ -8,13 +7,13 @@ import Fullpage from "../../components/FullPage";
 import Header from "../../components/Header";
 import Image, { AnimateBg } from "../../components/Image";
 import { ILetterSpacing } from "../../letterSpacings";
-import { useCommonStore, useOrderDialogStore } from "../../store";
+import { useCommonStore } from "../../store";
 
 import './index.css'
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const I18N = useCommonStore(state => state.I18N)
-    const setOrderVisible = useOrderDialogStore(state => state.setVisible)
+    // const I18N = useCommonStore(state => state.I18N)
+    // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     return (
         <div className="section section1">
@@ -30,8 +29,49 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     )
 }
 
-function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+
+
+function SlideMenu ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 1
+    const { title, menuGroup } = data
+    const setActiveMenu = useCommonStore(state => state.setActiveMenu)
+    const setVisible = useCommonStore(state => state.setMenuDialogVisible)
+
+    const handleClickDetail = (menu: any) => {
+        setActiveMenu(menu)
+        setVisible(true)
+    }
+
+    return (
+        <>
+            <div className="section section-menu">
+                <div className={`content ${active ? 'animate' : ''}`}>
+                    <div className="title" style={{ letterSpacing: ls.H1 }}>{title}</div>
+                    <div className="menu-group" style={{ letterSpacing: ls.TXT }}>
+                        { menuGroup.map((group: any) => (
+                            <div>
+                                <div className="group-title">{group.title}</div>
+                                <div className="group-body">
+                                    {group.detail.map((detail: any) => (
+                                        <div>
+                                            <span
+                                                className="detail-item"
+                                                onClick={() => handleClickDetail(detail)}
+                                            >{detail.type}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 2
     const images = [
         '/jpgs/dli-2-1.jpg',
         '/jpgs/dli-2-2.jpg',
@@ -72,7 +112,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 2
+    const active = order === 3
     const images = [
         '/jpgs/dli-3-1.jpg',
         '/jpgs/dli-3-2.jpg',
@@ -111,22 +151,6 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     )
 }
 
-function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order === 3
-    
-    return (
-        <div className="section section4">
-            <div className={`content ${active ? 'animate' : ''}`}>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="tip" style={{ letterSpacing: ls.TXT}}>{data.tip}</div>
-            </div>
-
-            <AnimateBg src="/jpgs/dli-4.jpg" infinite />
-        </div>
-    )
-}
-
 export default function Delicious () {
     const I18N = useCommonStore(state => state.I18N)
     const pageSectionOrder = useCommonStore(state => state.pageSectionOrder)
@@ -141,6 +165,268 @@ export default function Delicious () {
             title: I18N['delicious'],
             desc1: I18N['dli.s1.desc1'],
             desc2: I18N['dli.s1.desc2']
+        },
+        sectionMenu: {
+            title: I18N['dli.menu.cpt'],
+            menuGroup: [
+                {
+                    // 早餐
+                    title: I18N['dli.menu.breakfast'],
+                    detail: [
+                        {
+                            // 和式早餐 A
+                            type: I18N['dli.menu.bf.1.cpt'],
+                            menu: [
+                                I18N['dli.menu.bf.1.food1'],
+                                I18N['dli.menu.bf.1.food2'],
+                                I18N['dli.menu.bf.1.food3'],
+                                I18N['dli.menu.bf.1.food4'],
+                                I18N['dli.menu.bf.1.food5'],
+                                I18N['dli.menu.bf.1.food6'],
+                            ],
+                            tips: [I18N['dli.menu.bf.1.tip1']]
+                        },
+                        {
+                            // 和式早餐 B
+                            type: I18N['dli.menu.bf.2.cpt'],
+                            menu: [
+                                I18N['dli.menu.bf.2.food1'],
+                                I18N['dli.menu.bf.2.food2'],
+                                I18N['dli.menu.bf.2.food3'],
+                                I18N['dli.menu.bf.2.food4'],
+                                I18N['dli.menu.bf.2.food5'],
+                                I18N['dli.menu.bf.2.food6'],
+                                I18N['dli.menu.bf.2.food7'],
+                                I18N['dli.menu.bf.2.food8'],
+                                I18N['dli.menu.bf.2.food9'],
+                            ],
+                            tips: [I18N['dli.menu.bf.2.tip1']]
+                        },
+                        {},
+                        {
+                            // 西式早餐 A
+                            type: I18N['dli.menu.bf.3.cpt'],
+                            menu: [
+                                I18N['dli.menu.bf.3.food1'],
+                                I18N['dli.menu.bf.3.food2'],
+                                I18N['dli.menu.bf.3.food3'],
+                                I18N['dli.menu.bf.3.food4'],
+                                I18N['dli.menu.bf.3.food5'],
+                                I18N['dli.menu.bf.3.food6'],
+                                I18N['dli.menu.bf.3.food7'],
+                                I18N['dli.menu.bf.3.food8']
+                            ],
+                            tips: [I18N['dli.menu.bf.3.tip1']]
+                        },
+                        {
+                            // 西式早餐 B
+                            type: I18N['dli.menu.bf.4.cpt'],
+                            menu: [
+                                I18N['dli.menu.bf.4.food1'],
+                                I18N['dli.menu.bf.4.food2'],
+                                I18N['dli.menu.bf.4.food3'],
+                                I18N['dli.menu.bf.4.food4'],
+                                I18N['dli.menu.bf.4.food5'],
+                                I18N['dli.menu.bf.4.food6'],
+                                I18N['dli.menu.bf.4.food7']
+                            ],
+                            tips: [I18N['dli.menu.bf.4.tip1']]
+                        },
+                        {
+                            // 西式早餐 C
+                            type: I18N['dli.menu.bf.5.cpt'],
+                            menu: [
+                                I18N['dli.menu.bf.5.food1'],
+                                I18N['dli.menu.bf.5.food2'],
+                                I18N['dli.menu.bf.5.food3'],
+                                I18N['dli.menu.bf.5.food4'],
+                                I18N['dli.menu.bf.5.food5'],
+                                I18N['dli.menu.bf.5.food6'],
+                                I18N['dli.menu.bf.5.food7']
+                            ],
+                            tips: [I18N['dli.menu.bf.5.tip1']]
+                        },
+                    ]
+                },
+                {
+                    // 晚餐
+                    title: I18N['dli.menu.dinner'],
+                    detail: [
+                        {
+                            // 西洋料理
+                            type: I18N['dli.menu.dinner.1.cpt'],
+                            menu: [
+                                I18N['dli.menu.dinner.1.food1'],
+                                I18N['dli.menu.dinner.1.food2'],
+                                I18N['dli.menu.dinner.1.food3'],
+                                I18N['dli.menu.dinner.1.food4'],
+                                I18N['dli.menu.dinner.1.food5'],
+                                I18N['dli.menu.dinner.1.food6'],
+                                I18N['dli.menu.dinner.1.food7'],
+                                I18N['dli.menu.dinner.1.food8'],
+                                I18N['dli.menu.dinner.1.food9'],
+                            ],
+                            tips: [
+                                I18N['dli.menu.dinner.1.tip1'],
+                                I18N['dli.menu.dinner.1.tip2'],
+                                I18N['dli.menu.dinner.1.tip3'],
+                            ]
+                        },
+                        {
+                            // 锅物套餐
+                            type: I18N['dli.menu.dinner.2.cpt'],
+                            menu: [
+                                I18N['dli.menu.dinner.2.food1'],
+                                I18N['dli.menu.dinner.2.food2'],
+                                I18N['dli.menu.dinner.2.food3'],
+                                I18N['dli.menu.dinner.2.food4'],
+                                I18N['dli.menu.dinner.2.food5'],
+                                I18N['dli.menu.dinner.2.food6'],
+                                I18N['dli.menu.dinner.2.food7'],
+                                I18N['dli.menu.dinner.2.food8'],
+                                I18N['dli.menu.dinner.2.food9'],
+                                I18N['dli.menu.dinner.2.food10'],
+                                I18N['dli.menu.dinner.2.food11'],
+                                I18N['dli.menu.dinner.2.food12'],
+                                I18N['dli.menu.dinner.2.food13'],
+                                I18N['dli.menu.dinner.2.food14'],
+                                I18N['dli.menu.dinner.2.food15'],
+                                I18N['dli.menu.dinner.2.food16'],
+                            ],
+                            tips: [
+                                I18N['dli.menu.dinner.2.tip1'],
+                                I18N['dli.menu.dinner.2.tip2'],
+                                I18N['dli.menu.dinner.2.tip3'],
+                            ]
+                        },
+                        {
+                            // 怀石套餐
+                            type: I18N['dli.menu.dinner.3.cpt'],
+                            menu: [
+                                I18N['dli.menu.dinner.3.food1'],
+                                I18N['dli.menu.dinner.3.food2'],
+                                I18N['dli.menu.dinner.3.food3'],
+                                I18N['dli.menu.dinner.3.food4'],
+                                I18N['dli.menu.dinner.3.food5'],
+                                I18N['dli.menu.dinner.3.food6'],
+                                I18N['dli.menu.dinner.3.food7'],
+                                I18N['dli.menu.dinner.3.food8'],
+                                I18N['dli.menu.dinner.3.food9'],
+                                I18N['dli.menu.dinner.3.food10'],
+                                I18N['dli.menu.dinner.3.food11'],
+                                I18N['dli.menu.dinner.3.food12'],
+                                I18N['dli.menu.dinner.3.food13'],
+                                I18N['dli.menu.dinner.3.food14'],
+                                I18N['dli.menu.dinner.3.food15'],
+                                I18N['dli.menu.dinner.3.food16'],
+                            ],
+                            tips: [
+                                I18N['dli.menu.dinner.3.tip1'],
+                                I18N['dli.menu.dinner.3.tip2'],
+                                I18N['dli.menu.dinner.3.tip3'],
+                            ]
+                        },
+                        {
+                            // 河豚套餐
+                            type: I18N['dli.menu.dinner.4.cpt'],
+                            menu: [
+                                I18N['dli.menu.dinner.4.food1'],
+                                I18N['dli.menu.dinner.4.food2'],
+                                I18N['dli.menu.dinner.4.food3'],
+                                I18N['dli.menu.dinner.4.food4'],
+                                I18N['dli.menu.dinner.4.food5'],
+                                I18N['dli.menu.dinner.4.food6'],
+                                I18N['dli.menu.dinner.4.food7'],
+                                I18N['dli.menu.dinner.4.food8'],
+                                I18N['dli.menu.dinner.4.food9'],
+                                I18N['dli.menu.dinner.4.food10'],
+                                I18N['dli.menu.dinner.4.food11'],
+                                I18N['dli.menu.dinner.4.food12'],
+                                I18N['dli.menu.dinner.4.food13'],
+                                I18N['dli.menu.dinner.4.food14'],
+                                I18N['dli.menu.dinner.4.food15'],
+                                I18N['dli.menu.dinner.4.food16'],
+                            ],
+                            tips: [
+                                I18N['dli.menu.dinner.4.tip1'],
+                                I18N['dli.menu.dinner.4.tip2'],
+                                I18N['dli.menu.dinner.4.tip3'],
+                            ]
+                        },
+                        {
+                            // 怀石菜单-高级
+                            type: I18N['dli.menu.dinner.5.cpt'],
+                            menu: [
+                                I18N['dli.menu.dinner.5.food1'],
+                                I18N['dli.menu.dinner.5.food2'],
+                                I18N['dli.menu.dinner.5.food3'],
+                                I18N['dli.menu.dinner.5.food4'],
+                                I18N['dli.menu.dinner.5.food5'],
+                                I18N['dli.menu.dinner.5.food6'],
+                                I18N['dli.menu.dinner.5.food7'],
+                                I18N['dli.menu.dinner.5.food8'],
+                                I18N['dli.menu.dinner.5.food9'],
+                                I18N['dli.menu.dinner.5.food10'],
+                                I18N['dli.menu.dinner.5.food11'],
+                                I18N['dli.menu.dinner.5.food12'],
+                                I18N['dli.menu.dinner.5.food13'],
+                                I18N['dli.menu.dinner.5.food14'],
+                                I18N['dli.menu.dinner.5.food15'],
+                                I18N['dli.menu.dinner.5.food16'],
+                            ],
+                            tips: [
+                                I18N['dli.menu.dinner.5.tip1'],
+                                I18N['dli.menu.dinner.5.tip2'],
+                                I18N['dli.menu.dinner.5.tip3'],
+                            ]
+                        },
+                        {
+                            // 寿司套餐 - 高级
+                            type: I18N['dli.menu.dinner.6.cpt'],
+                            menu: [
+                                I18N['dli.menu.dinner.6.food1'],
+                                I18N['dli.menu.dinner.6.food2'],
+                                I18N['dli.menu.dinner.6.food3'],
+                                I18N['dli.menu.dinner.6.food4'],
+                                I18N['dli.menu.dinner.6.food5'],
+                                I18N['dli.menu.dinner.6.food6'],
+                                I18N['dli.menu.dinner.6.food7'],
+                                I18N['dli.menu.dinner.6.food8'],
+                                I18N['dli.menu.dinner.6.food9'],
+                                I18N['dli.menu.dinner.6.food10'] + '、' + I18N['dli.menu.dinner.6.food11'] + '、' + I18N['dli.menu.dinner.6.food12'] + '、' + I18N['dli.menu.dinner.6.food13'],
+                                I18N['dli.menu.dinner.6.food14'] + '、' + I18N['dli.menu.dinner.6.food15'] + '、' + I18N['dli.menu.dinner.6.food16'],
+                                I18N['dli.menu.dinner.6.food17'] + '、' + I18N['dli.menu.dinner.6.food18'] + '、' + I18N['dli.menu.dinner.6.food19'] + '、' + I18N['dli.menu.dinner.6.food20'],
+                                I18N['dli.menu.dinner.6.food21'],
+                                I18N['dli.menu.dinner.6.food22'],
+                            ],
+                            tips: [
+                                I18N['dli.menu.dinner.6.tip1'],
+                                I18N['dli.menu.dinner.6.tip2'],
+                                I18N['dli.menu.dinner.6.tip3'],
+                            ]
+                        }
+                    ]
+                },
+                {
+                    // 下午茶
+                    title: I18N['dli.menu.tea'],
+                    detail: [
+                        {
+                            type: I18N['dli.menu.teamenu'],
+                            menu: [
+                                I18N['dli.menu.tea.d1'] + '：' + I18N['dli.menu.tea.d1.tea'],
+                                I18N['dli.menu.tea.d2'] + '：' + I18N['dli.menu.tea.d2.tea'],
+                                I18N['dli.menu.tea.d3'] + '：' + I18N['dli.menu.tea.d3.tea'],
+                                I18N['dli.menu.tea.d4'] + '：' + I18N['dli.menu.tea.d4.tea'],
+                                I18N['dli.menu.tea.d5'] + '：' + I18N['dli.menu.tea.d5.tea'],
+                                I18N['dli.menu.tea.d6'] + '：' + I18N['dli.menu.tea.d6.tea'],
+                                I18N['dli.menu.tea.d7'] + '：' + I18N['dli.menu.tea.d7.tea'],
+                            ],
+                            tips: [I18N['dli.menu.tea.tip1']]
+                        }
+                    ]
+                }
+            ]
         },
         section2: {
             title: I18N['dli.s2.cpt'],
@@ -175,6 +461,7 @@ export default function Delicious () {
                 ignoreHideIndex={[3,4]}
                 sliders={[
                     <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
+                    <SlideMenu ls={letterSpacing} data={data.sectionMenu} order={pageSectionOrder} />,
                     <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
                     <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
                     // <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
