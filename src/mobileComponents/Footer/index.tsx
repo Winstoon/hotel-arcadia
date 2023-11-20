@@ -18,13 +18,13 @@ export default function Footer() {
                     <div className='otherlogos'>
                         <div>
                             <a rel="noreferrer" target="_blank" href="https://www.ishibekojimuan.com">
-                                <Image src="/logos/foot.logo1.svg" />
+                                <Image src="/logos/mobile.foot.logo1.svg" />
                             </a>
                         </div>
-                        <div><Image src="/logos/foot.logo2.svg" style={{ width: 170 }} /></div>
-                        <div><Image src="/logos/foot.logo4.svg" /></div>
-                        <div><Image src="/logos/foot.logo3.svg" /></div>
-                        <div><Image src="/logos/foot.logo5.svg" /></div>
+                        <div><Image src="/logos/mobile.foot.logo2.svg" /></div>
+                        <div><Image src="/logos/mobile.foot.logo3.svg" /></div>
+                        <div><Image src="/logos/mobile.foot.logo4.svg" /></div>
+                        <div><Image src="/logos/mobile.foot.logo5.svg" /></div>
                     </div>
                 </div>
                 <div className='footer-btm'>

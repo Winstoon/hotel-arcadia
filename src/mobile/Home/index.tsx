@@ -186,22 +186,18 @@ export default function MobileHome () {
         }
     }
 
-
-    useEffect(() => {
-        setTimeout(() => {
-            setLPHide(true)
-        }, 4000);
-
+    const handlePlayEnded = () => {
+        setLPHide(true)
         setTimeout(() => {
             setLPRemoved(true)
-        }, 5600);
-    }, [])
+        }, 1000)
+    }
 
     return (
         <>
             <Header />
             <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
-                <video src='/lp.mp4' autoPlay muted playsInline />
+                <video src='/lp.mp4' autoPlay muted playsInline onEnded={handlePlayEnded} />
             </div>
 
             <div className="mobile-container mobile-home">

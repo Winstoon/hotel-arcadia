@@ -13,7 +13,11 @@ export default function Footer({ noborder }: {noborder?:boolean}) {
                     <Image className='comlogo' src="/logos/com.logo.svg" />
                     <div className='divider'></div>
                     <div className='otherlogos'>
-                        <Image src="/logos/foot.logo1.svg" />
+                        <div>
+                            <a rel="noreferrer" target="_blank" href="https://www.ishibekojimuan.com">
+                                <Image src="/logos/foot.logo1.svg" />
+                            </a>
+                        </div>
                         <Image src="/logos/foot.logo2.svg" style={{ width: 170 }} />
                         <Image src="/logos/foot.logo3.svg" />
                         <Image src="/logos/foot.logo4.svg" />

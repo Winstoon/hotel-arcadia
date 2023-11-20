@@ -30,7 +30,8 @@
 
 .mobile-header .header-left .more{
     height: 48px;
-    padding: 12px
+    padding: 12px;
+    margin-left: -12px;
 }
 .mobile-header .header-center{
     flex: 1;
