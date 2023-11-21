@@ -217,13 +217,14 @@
     position: fixed;
     z-index: 999;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     inset: 0;
 }
 
 .loading-page.hide{
     opacity: 0;
+    pointer-events: none;
     transition: opacity 1s ease-in;
 }
 
@@ -231,9 +232,14 @@
     display: none;
 }
 
-.loading-page video{
-    min-height: 100%;
+.loading-page .logo{
+    position: relative;
+    left: 55px;
+    top: 35px;
+    width: 174px;
+    z-index: 2;
 }
+
 
 @keyframes flicker {
     0% { opacity: .2; }

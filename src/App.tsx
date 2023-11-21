@@ -96,6 +96,15 @@ function App() {
         }, 0);
     }, [])
 
+    useEffect(() => {
+        const titles = {
+            [I18N.ZH]: 'ARCADIA 二世谷 雪屋',
+            [I18N.EN]: 'ARCADIA Chalet Niseko',
+            [I18N.JP]: 'ARCADIA ニセコ雪屋',
+        }
+        document.title = isMobile ? titles[mobileLang] : titles[lang]
+    }, [isMobile, lang, mobileLang])
+
     return (
         <div style={{ fontFamily: `EBGaramond, ${isMobile ? mobileFontFamily : fontFamily}` }}>
             { loading ? null :

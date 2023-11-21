@@ -29,16 +29,15 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
 
     return (
-        <div className="section section2">
+        <div className="section section2" style={{ height: window.innerHeight }}>
             <div className="content">
-                <Image className="banner" src={data.banner} />
-                <div className='paragraph'>
-                    <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                    <Button2 to="/mobile/env" dark>{I18N['explore']}</Button2>
-                </div>
+                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <Button2 to="/mobile/env">{I18N['explore']}</Button2>
             </div>
+            
+            <AnimateBg src='/mobile/home-2.jpg' infinite />
         </div>
     )
 }
@@ -92,7 +91,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <Button2 to="/mobile/residence">{I18N['explore']}</Button2>
+                <Button2 to="/mobile/delicious">{I18N['explore']}</Button2>
             </div>
 
             <AnimateBg src="/mobile/home-4.jpg" infinite />
@@ -121,7 +120,11 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
         <div className="section section5">
             <div className='content'>
-                <div className="title" style={{ letterSpacing: ls.TXT }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.TXT }}>{data.cpt}</div>
+                
+                <div className='group'>
+                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.location}</div>
+                </div>
                 <div className="group">
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance1}</div>
                     <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance2}</div>
@@ -156,7 +159,6 @@ export default function MobileHome () {
             desc2: I18N['home.s2.desc2'],
         },
         section2: {
-            banner: '/mobile/home-2.jpg',
             title: I18N['environment'],
             desc1: I18N['home.s3.desc1'],
             desc2: I18N['home.s3.desc2'],
@@ -172,7 +174,8 @@ export default function MobileHome () {
             desc2: I18N['home.s5.desc2'],
         },
         section5: {
-            title: I18N['home.s6.title'],
+            cpt: I18N['home.s6.cpt'],
+            location: I18N['home.s6.location'],
             distance1: I18N['home.s6.desc1'],
             distance2: I18N['home.s6.desc2'],
             distance3: I18N['home.s6.desc3'],
@@ -186,36 +189,22 @@ export default function MobileHome () {
         }
     }
 
-    const handlePlayEnded = () => {
-        setLPHide(true)
+    useEffect(() => {
+        setTimeout(() => {
+            setLPHide(true)
+        }, 3000);
         setTimeout(() => {
             setLPRemoved(true)
-        }, 1000)
-    }
-
-    useEffect(() => {
-        // is wechat browser
-        if (/micromessenger/i.test(navigator.userAgent)) {
-            setLPHide(true)
-            setTimeout(() => {
-                setLPRemoved(true)
-            }, 1000)
-        }
+        }, 4100)
     }, [])
 
     return (
         <>
-            { lpHide ? <Header /> : null }
-            <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
+            <Header />
+            <div className={`mobile-loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
                 {/* @ts-ignore */}
-                <video
-                    src='/lp.mp4'
-                    muted
-                    autoPlay
-                    playsInline
-                    webkit-playsinline
-                    onEnded={handlePlayEnded}
-                />
+                <Image className='logo' src='/logo.mobile.svg' />
+                <AnimateBg src='/mobile/home-0.jpg' />
             </div>
 
             <div className="mobile-container mobile-home">

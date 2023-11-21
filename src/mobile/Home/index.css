@@ -17,8 +17,6 @@
 
 /* Section 2 */
 .mobile-home .section2 {
-    background-color: #fff;
-    color: #333;
     padding: 20px 20px 28px;
 }
 .mobile-home .section2 .content{
@@ -26,31 +24,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-}
-.mobile-home .section2 .content .banner{
-    width: 100%;
-}
-
-.mobile-home .section2 .paragraph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 28px;
-}
-.mobile-home .section2 .paragraph  .mobile-button2{
-    margin-top: 8px;
 }
 
 .mobile-home .section2 .content .title{
     font-size: 22px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .mobile-home .section2 .content .desc{
     font-size: 14px;
     line-height: 24px;
+}
+.mobile-home .section2 .content .mobile-button2{
+    margin-top: 40px;
 }
 
 /* Section 3, Section 4 */
@@ -94,7 +81,7 @@
 /* Section 5 */
 .mobile-home.mobile-container .section5{
     display: block;
-    padding: 104px 0 0;
+    padding: 60px 0 0;
 }
 
 .mobile-home.mobile-container .section5 .map{
@@ -111,7 +98,12 @@
     z-index: 1;
 }
 
-.mobile-home .section5 .content .title,
+.mobile-home .section5 .content .title{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
 .mobile-home .section5 .content .group{
     font-size: 13px;
     line-height: 28px;
@@ -122,6 +114,31 @@
     font-size: 14px;
     line-height: 24px;
     opacity: .7;
+}
+
+.mobile-loading-page{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+}
+
+.mobile-loading-page.hide{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in;
+}
+
+.mobile-loading-page.remove{
+    display: none;
+}
+
+.mobile-loading-page .logo{
+    position: relative;
+    width: 190px;
+    z-index: 2;
 }
 
 @keyframes flicker {

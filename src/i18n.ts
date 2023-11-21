@@ -147,6 +147,16 @@ export const I18NS: I18NFullData = {
         [I18N.EN]: 'ARCADIA is located in the most famous Hirafu Town in Niseko, Hokkaido',
         [I18N.JP]: 'ARCADIAは、北海道ニセコの最も有名な比羅夫町にあります',
     },
+    'home.s6.cpt': {
+        [I18N.ZH]: '联系我们',
+        [I18N.EN]: 'Contact us',
+        [I18N.JP]: 'お問い合わせ',
+    },
+    'home.s6.location': {
+        [I18N.ZH]: 'ARCADIA坐落于北海道二世古地区最富盛名的比罗夫镇',
+        [I18N.EN]: 'ARCADIA is located in the most famous Hirafu Town in Niseko, Hokkaido',
+        [I18N.JP]: 'ARCADIAは、北海道ニセコの最も有名な比羅夫町にあります',
+    },
     'home.s6.desc1': {
         [I18N.ZH]: '距离札幌新千岁机场 (New Chitose Airport) 约2小时车程',
         [I18N.EN]: 'About 2 hours drive from New Chitose Airport in Sapporo',
