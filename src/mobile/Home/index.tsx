@@ -192,19 +192,19 @@ export default function MobileHome () {
     useEffect(() => {
         setTimeout(() => {
             setLPHide(true)
-        }, 3000);
+        }, 4000);
         setTimeout(() => {
             setLPRemoved(true)
-        }, 4100)
+        }, 5100)
     }, [])
 
     return (
         <>
-            <Header />
+            { lpHide ? <Header /> : null }
             <div className={`mobile-loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
                 {/* @ts-ignore */}
                 <Image className='logo' src='/logo.mobile.svg' />
-                <AnimateBg src='/mobile/home-0.jpg' />
+                <AnimateBg src='/mobile/home-0.jpg' reverse />
             </div>
 
             <div className="mobile-container mobile-home">

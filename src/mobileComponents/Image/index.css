@@ -16,6 +16,10 @@
     animation: scaleIn 10s ease-in-out;
 }
 
+.mobile-bgimg img.reverse{
+    animation-direction: reverse;
+}
+
 .mobile-bgimg.infinite img {
     animation: scaleIn 10s ease-in-out alternate infinite;
 }

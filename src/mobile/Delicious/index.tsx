@@ -59,7 +59,7 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const { title, menuGroup } = data
     
     return (
-        <div className="section section2" style={{ minHeight: window.innerHeight - 64 }}>
+        <div className="section section2" style={{ minHeight: 770 }}>
             <div className='title' style={{ letterSpacing: ls.H1 }}>{title}</div>
             <div className='menu-groups' style={{ letterSpacing: ls.TXT }}>
                 { menuGroup.map((group: any) =>
@@ -112,7 +112,7 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     ]
 
     return (
-        <div className="section section4" style={{ height: window.innerHeight }}>
+        <div className="section section4" style={{ minHeight: 770 }}>
             <div className='content'>
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
@@ -130,11 +130,11 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 waiting={6500}
                 trigger='hover'
                 render={active => images.map((img, idx) => (
-                    <div className="h2-slideitem" key={idx}>
+                    <div className="h4-slideitem" key={idx}>
                         <AnimateBg infinite src={img} className={active === idx ? 'active' : ''} />
                     </div>
                 ))}
-                paginationClassName="h2-pagination"
+                paginationClassName="h4-pagination"
                 renderPaginations={active => images.map((img, idx) => (
                     <CircleProgress key={idx} active={active === idx} width={14} height={14} />
                 ))}

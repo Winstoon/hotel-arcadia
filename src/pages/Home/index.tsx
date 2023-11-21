@@ -49,15 +49,16 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section3">
-            <div className="content">
-                <Image className="banner" src={data.banner} />
-                <div className={`paragraph ${active ? 'animate' : ''}`}>
-                    <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                    <Button2 to="/env" dark>{I18N['explore']}</Button2>
-                </div>
+            <div className={`content ${active ? 'animate' : ''}`}>
+                {/* <Image className="banner" src={data.banner} /> */}
+                {/* <div className={`paragraph ${active ? 'animate' : ''}`}>
+                </div> */}
+                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <Button2 to="/env">{I18N['explore']}</Button2>
             </div>
+            <AnimateBg src="/jpgs/home-3.jpg" infinite />
         </div>
     )
 }
@@ -143,7 +144,7 @@ export default function Home () {
     const pageSectionOrder = useCommonStore(state => state.pageSectionOrder)
     const setPageSectionOrder = useCommonStore(state => state.setPageSectionOrder)
     const headerConfig = {
-        lightmode: pageSectionOrder === 1,
+        // lightmode: pageSectionOrder === 1,
         mask: pageSectionOrder >= 4,
     }
 
@@ -155,7 +156,6 @@ export default function Home () {
             desc2: I18N['home.s2.desc2'],
         },
         section3: {
-            banner: '/jpgs/home-3.jpg',
             title: I18N['environment'],
             desc1: I18N['home.s3.desc1'],
             desc2: I18N['home.s3.desc2'],

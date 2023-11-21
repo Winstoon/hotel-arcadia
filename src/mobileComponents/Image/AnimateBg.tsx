@@ -8,14 +8,15 @@ interface IProps {
     style?: React.CSSProperties
     className?: string
     infinite?: boolean
+    reverse?: boolean
     onClick?: () => void
 }
 
 export default function AnimateBg (props: IProps) {
-    const { infinite, ...others } = props
+    const { infinite, reverse, ...others } = props
     return (
         <div className={`mobile-bgimg ${infinite ? 'infinite' : ''}`}>
-            <Image {...others} />
+            <Image {...others} className={reverse ? 'reverse' : ''} />
         </div>
     )
 }

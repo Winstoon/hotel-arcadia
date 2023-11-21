@@ -8,6 +8,7 @@
 
 /* Section 2 */
 .home .section2 .content,
+.home .section3 .content,
 .home .section4 .content,
 .home .section5 .content {
     display: flex;
@@ -22,6 +23,7 @@
 
 .home .section2 .content.animate,
 .home .section4 .content.animate,
+.home .section3 .content.animate,
 .home .section5 .content.animate {
     opacity: 1;
     transform: translateY(0);
@@ -29,6 +31,7 @@
 
 .home .section2 .content .title,
 .home .section4 .content .title,
+.home .section3 .content .title,
 .home .section5 .content .title {
     font-size: 24px;
     line-height: 35px;
@@ -38,6 +41,7 @@
 
 .home .section2 .content .desc,
 .home .section4 .content .desc,
+.home .section3 .content .desc,
 .home .section5 .content .desc {
     font-size: 14px;
     line-height: 24px;
@@ -45,59 +49,8 @@
 
 .home .section2 .content .button,
 .home .section4 .content .button2,
+.home .section3 .content .button2,
 .home .section5 .content .button2 {
-    margin-top: 22px;
-}
-
-/* Section 3 */
-.home .section.section3 {
-    padding-top: 100px;
-    color: #333;
-    background-color: #fff;
-}
-
-.home .section3 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 78%;
-}
-
-.home .section3 .paragraph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    opacity: 0;
-    transform: translateY(50px);
-    transition: transform .7s ease-out 1.4s, opacity .7s ease-out 1.4s;
-}
-
-.home .section3 .paragraph.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.home .section3 .content .banner{
-    min-width: 1120px;
-    max-width: 1600px;
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-.home .section3 .content .title{
-    font-size: 22px;
-    margin-bottom: 22px;
-}
-
-.home .section3 .content .desc{
-    font-size: 14px;
-    line-height: 24px;
-}
-
-.home .section3 .content .button2{
     margin-top: 22px;
 }
 
@@ -217,8 +170,8 @@
     position: fixed;
     z-index: 999;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     inset: 0;
 }
 

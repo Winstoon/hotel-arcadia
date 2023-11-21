@@ -129,7 +129,7 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                             { img.desc.map((desc: any) =>
                                 <div className='desc' style={{ letterSpacing: ls.TXT }}>{desc}</div>
                             )}
-                            {/* <Image className='img' src={img.src} /> */}
+                            
                             <VScroll data={img.srcs} />
                         </div>
                     ))}
