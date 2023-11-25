@@ -146,6 +146,22 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     )
 }
 
+function SlidePics ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    return (
+        <div className='section sectionpics'>
+            <div className='content'>
+                <div className='title' style={{ letterSpacing: ls.TXT }}>{data.title}</div>
+                <div className='imgs'>
+                    <Image src='/mobile/home-p-1.jpg' />
+                    <Image src='/mobile/home-p-2.jpg' />
+                    <Image src='/mobile/home-p-3.jpg' />
+                </div>
+                <Button2 to="/mobile/pics">{data.btntxt}</Button2>
+            </div>
+        </div>
+    )
+}
+
 export default function MobileHome () {
     const [lpHide, setLPHide] = useState(false)
     const [lpRemoved, setLPRemoved] = useState(false)
@@ -186,6 +202,10 @@ export default function MobileHome () {
             phone: I18N['home.s6.desc8'],
             fax: I18N['home.s6.desc9'],
             email: I18N['home.s6.desc10'],
+        },
+        sectionpics: {
+            title: I18N['home.pics.title'],
+            btntxt: I18N['home.pics.btntxt'],
         }
     }
 
@@ -214,6 +234,7 @@ export default function MobileHome () {
                         <Slide2 ls={letterSpacing} data={data.section2} />
                         <Slide3 ls={letterSpacing} data={data.section3} />
                         <Slide4 ls={letterSpacing} data={data.section4} />
+                        <SlidePics ls={letterSpacing} data={data.sectionpics} />
                         <Slide5 ls={letterSpacing} data={data.section5} />
                         <Footer />
                     </> : null

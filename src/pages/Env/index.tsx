@@ -158,8 +158,8 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     const active = order === 4
     
     return (
-        <div className={`section section5 ${active ? 'animate' : ''}`}>
-            <SwiperImages2 images={data.images} />
+        <div className='section section5'>
+            <SwiperImages2 images={data.images} className={active ? 'animate' : ''} />
         </div>
     )
 }

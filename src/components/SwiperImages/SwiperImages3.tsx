@@ -12,14 +12,16 @@ interface IImage {
 
 interface IProps{
     images: IImage[]
+    onClick?: (d: any) => void
 }
 
 export default function SwiperImages3 (props: IProps) {
-    const { images } = props
+    const { images, onClick } = props
     const ls = useCommonStore(state => state.letterSpacing)
     const [page, setPage] = useSwiperImage3Store(state => [state.page, state.setPage])
     const [activeIdx, setActiveIdx] = useState<number[]>([])
-
+    const prevable = page > 1
+    const nextable = page < 3
 
     useEffect(() => {
         if (page === 1) {
@@ -35,23 +37,38 @@ export default function SwiperImages3 (props: IProps) {
         return activeIdx.includes(idx)
     }
 
-
-    const handleClick = (idx: number) => {
-        if (page === 1 && idx === 2) {
-            setPage(2)
+    const handleClick = (idx: number, img: IImage) => {
+        if (isDisableClick(idx)) {
+            onClick && onClick(img)
         }
+    }
 
-        if (page === 2 && idx === 1) {
-            setPage(1)
-        } 
+    // const handleClick = (idx: number) => {
+    //     if (page === 1 && idx === 2) {
+    //         setPage(2)
+    //     }
 
-        if (page === 2 && idx === 4) {
-            setPage(3)
-        }
+    //     if (page === 2 && idx === 1) {
+    //         setPage(1)
+    //     } 
 
-        if (page === 3 && idx === 2) {
-            setPage(2)
-        }
+    //     if (page === 2 && idx === 4) {
+    //         setPage(3)
+    //     }
+
+    //     if (page === 3 && idx === 2) {
+    //         setPage(2)
+    //     }
+    // }
+
+    const handlePrev = () => {
+        if (!prevable) return
+        setPage(page - 1)
+    }
+
+    const handleNext = () => {
+        if (!nextable) return
+        setPage(page + 1)
     }
 
     return (
@@ -61,7 +78,7 @@ export default function SwiperImages3 (props: IProps) {
                     <div
                         key={index}
                         className={`swiper-item ${isDisableClick(index) ? 'nopointer' : '' }`}
-                        onClick={() => handleClick(index)}
+                        onClick={() => handleClick(index, img)}
                     >
                         <Image src={img.src} />
                         <div className="intros" style={{ letterSpacing: ls.TXT}}>
@@ -73,8 +90,16 @@ export default function SwiperImages3 (props: IProps) {
                     </div>
                 )}
             </div>
-            <div className={`swiper-imagesbar ${page === 2 ? 'secondpage' : page === 3 ? 'thridpage' : ''}`}>
-                <div className="bar"></div>
+            <div className="swiper-imagesnav">
+                <div className={`nav-icon ${prevable ? '' : 'disabled'}`} onClick={handlePrev}>
+                    <Image src="/icons/left.svg" />
+                </div>
+                <div className={`swiper-imagesbar ${page === 2 ? 'secondpage' : page === 3 ? 'thridpage' : ''}`}>
+                    <div className="bar"></div>
+                </div>
+                <div className={`nav-icon ${nextable ? '' : 'disabled'}`} onClick={handleNext}>
+                    <Image src="/icons/right.svg" />
+                </div>
             </div>
         </>
     )

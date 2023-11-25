@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
             <div className='footer-btn-group'>
                 <Button3 onClick={() => setOrderDialogVisible(true)}>
-                    {I18N['reserve']}
+                    {I18N['reservebtn']}
                     <Image src="/icons/right-arrow.svg" />
                 </Button3>
             </div>

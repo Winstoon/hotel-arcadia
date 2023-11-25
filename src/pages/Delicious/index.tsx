@@ -447,11 +447,11 @@ export default function Delicious () {
             desc5: I18N['dli.s3.desc5'],
             desc6: I18N['dli.s3.desc6'],
         },
-        section4: {
-            desc1: I18N['dli.s4.desc1'],
-            desc2: I18N['dli.s4.desc2'],
-            tip: I18N['dli.s4.tip']
-        },
+        // section4: {
+        //     desc1: I18N['dli.s4.desc1'],
+        //     desc2: I18N['dli.s4.desc2'],
+        //     tip: I18N['dli.s4.tip']
+        // },
     }
 
     return (

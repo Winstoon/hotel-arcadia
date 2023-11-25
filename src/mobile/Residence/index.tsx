@@ -311,7 +311,10 @@ export default function MobileResidence () {
                     caption: I18N['res.s5.image1.cpt'],
                     desc: [
                         I18N['res.s5.image1.desc1'],
-                        // I18N['res.s5.image1.desc2'],
+                        I18N['res.s5.image1.desc2'],
+                        I18N['res.s5.image1.desc3'],
+                        I18N['res.s5.image1.desc4'],
+                        I18N['res.s5.image1.desc5'],
                     ]
                 },
                 {
@@ -319,7 +322,11 @@ export default function MobileResidence () {
                     caption: I18N['res.s5.image2.cpt'],
                     desc: [
                         I18N['res.s5.image2.desc1'],
-                        // I18N['res.s5.image2.desc2'],
+                        I18N['res.s5.image2.desc2'],
+                        I18N['res.s5.image2.desc3'],
+                        I18N['res.s5.image2.desc4'],
+                        I18N['res.s5.image2.desc5'],
+                        I18N['res.s5.image2.desc6'],
                     ]
                 },
                 {
@@ -327,7 +334,11 @@ export default function MobileResidence () {
                     caption: I18N['res.s5.image3.cpt'],
                     desc: [
                         I18N['res.s5.image3.desc1'],
-                        // I18N['res.s5.image3.desc2'],
+                        I18N['res.s5.image3.desc2'],
+                        I18N['res.s5.image3.desc3'],
+                        I18N['res.s5.image3.desc4'],
+                        I18N['res.s5.image3.desc5'],
+                        I18N['res.s5.image3.desc6'],
                     ]
                 },
                 {
@@ -335,7 +346,10 @@ export default function MobileResidence () {
                     caption: I18N['res.s5.image4.cpt'],
                     desc: [
                         I18N['res.s5.image4.desc1'],
-                        // I18N['res.s5.image4.desc2'],
+                        I18N['res.s5.image4.desc2'],
+                        I18N['res.s5.image4.desc3'],
+                        I18N['res.s5.image4.desc4'],
+                        I18N['res.s5.image4.desc5'],
                     ]
                 },
                 {
@@ -343,7 +357,10 @@ export default function MobileResidence () {
                     caption: I18N['res.s5.image5.cpt'],
                     desc: [
                         I18N['res.s5.image5.desc1'],
-                        // I18N['res.s5.image5.desc2'],
+                        I18N['res.s5.image5.desc2'],
+                        I18N['res.s5.image5.desc3'],
+                        I18N['res.s5.image5.desc4'],
+                        I18N['res.s5.image5.desc5']
                     ]
                 }
             ]

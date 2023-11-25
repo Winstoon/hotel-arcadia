@@ -29,26 +29,29 @@ import MobileWeChatDialog from './mobileComponents/WeChatDialog';
 import 'react-calendar/dist/Calendar.css';
 import './App.css';
 import MenuDialog from './components/MenuDialog';
+import PageNavgation from './components/PageNavgation';
+
+export const VideoSrc = 'https://www.w3schools.com/html/mov_bbb.mp4'
 
 export const ROUTERS = [
     {
-        label: { [I18N.EN]: '览', [I18N.ZH]: '览', [I18N.JP]: '览' },
+        label: { [I18N.EN]: 'View', [I18N.ZH]: '览', [I18N.JP]: '覧' },
         path: '/', element: <Home />, mobile: <MobileHome />
     },
     {
-        label: { [I18N.EN]: '境', [I18N.ZH]: '境', [I18N.JP]: '境' },
+        label: { [I18N.EN]: 'Locale', [I18N.ZH]: '境', [I18N.JP]: '境' },
         path: '/env', element: <Environment />, mobile: <MobileEnv />
     },
     {
-        label: { [I18N.EN]: '居', [I18N.ZH]: '居', [I18N.JP]: '居' },
+        label: { [I18N.EN]: 'Residence', [I18N.ZH]: '居', [I18N.JP]: '居' },
         path: '/residence', element: <Residence />, mobile: <MobileResidence />
     },
     {
-        label: { [I18N.EN]: '肴', [I18N.ZH]: '肴', [I18N.JP]: '肴' },
+        label: { [I18N.EN]: 'Dining', [I18N.ZH]: '肴', [I18N.JP]: '肴' },
         path: '/delicious', element: <Delicious />, mobile: <MobileDelicious />
     },
     {
-        label: { [I18N.EN]: '映', [I18N.ZH]: '映', [I18N.JP]: '映' },
+        label: { [I18N.EN]: 'Gallery', [I18N.ZH]: '映', [I18N.JP]: '映' },
         path: '/pics', element: <Pictures />, mobile: <MobilePics />
     }
 ]
@@ -70,6 +73,7 @@ function mobileCheck () {
 
 function App() {
     const lang = useCommonStore(state => state.lang)
+    const pcPageOrder = useCommonStore(state => state.pageSectionOrder)
     const mobileLang = useMobileCommonStore(state => state.lang)
 
     const fontFamily = FontFamilies[lang]
@@ -127,6 +131,8 @@ function App() {
             <MobileWeChatDialog />
 
             <MenuDialog />
+
+            { isMobile ? null : <PageNavgation lightmode={location.pathname.startsWith('/residence') && pcPageOrder === 1} /> }
         </div>
     )
 }

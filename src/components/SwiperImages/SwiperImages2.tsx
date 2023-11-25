@@ -12,10 +12,11 @@ interface IImage {
 
 interface IProps{
     images: IImage[]
+    className?: string
 }
 
 export default function SwiperImages2 (props: IProps) {
-    const { images } = props
+    const { images, className } = props
     const ls = useCommonStore(state => state.letterSpacing)
     const [active, setActive] = useSwiperImage2Store(state => [state.page, state.setPage]) // 0: 0-2, 3: 3-5
 
@@ -36,7 +37,7 @@ export default function SwiperImages2 (props: IProps) {
 
     return (
         <>
-            <div className='swiper-images2'>
+            <div className={'swiper-images2 ' + className || ''}>
                 { btnVisible &&
                     <Image
                         className={`prev ${prevable ? '' : 'disabled'}`}

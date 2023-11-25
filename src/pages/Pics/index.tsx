@@ -1,27 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Image from "../../components/Image";
 
 import './index.css'
 import Footer from "../../components/Footer";
-
-const data = [
-    { id: 1, url: '/jpgs/pic-1.jpg', burl: '/pngs/bpic-1.png' },
-    { id: 2, url: '/jpgs/pic-2.jpg', burl: '/pngs/bpic-2.png' },
-    { id: 3, url: '/jpgs/pic-3.jpg', burl: '/pngs/bpic-3.png' },
-    { id: 4, url: '/jpgs/pic-4.jpg', burl: '/pngs/bpic-4.png' },
-    { id: 5, url: '/jpgs/pic-5.jpg', burl: '/pngs/bpic-5.png' },
-    { id: 6, url: '/jpgs/pic-6.jpg', burl: '/pngs/bpic-6.png' },
-    { id: 7, url: '/jpgs/pic-7.jpg', burl: '/pngs/bpic-7.png' },
-    { id: 8, url: '/jpgs/pic-8.jpg', burl: '/pngs/bpic-8.png' },
-    { id: 9, url: '/jpgs/pic-9.jpg', burl: '/pngs/bpic-9.png' },
-    { id: 10, url: '/jpgs/pic-10.jpg', burl: '/pngs/bpic-10.png' },
-    { id: 11, url: '/jpgs/pic-11.jpg', burl: '/pngs/bpic-11.png' },
-    { id: 12, url: '/jpgs/pic-12.jpg', burl: '/pngs/bpic-12.png' },
-    { id: 13, url: '/jpgs/pic-13.jpg', burl: '/pngs/bpic-13.png' },
-    { id: 14, url: '/jpgs/pic-14.jpg', burl: '/pngs/bpic-14.png' },
-    { id: 15, url: '/jpgs/pic-15.jpg', burl: '/pngs/bpic-15.png' },
-]
+import { VideoSrc } from "../../App";
 
 function PPT ({
     idx,
@@ -75,14 +58,75 @@ function PPT ({
     )
 }
 
+function VideoModal ({ visible, onClose }: { visible: boolean, onClose: () => void }) {
+    const handleClose = () => {
+        onClose()
+    }
+
+    useEffect(() => {
+        var video = document.getElementById("firstVideo")
+        if (!video) return
+
+        if (visible) {
+            // @ts-ignore
+            video.currentTime = 0
+            // @ts-ignore
+            video.play()
+        } else {
+            try {
+                // @ts-ignore
+                video.pause()
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }, [visible])
+
+    return (
+        <div className={`ppt ${visible ? 'show' : ''}`}>
+            <div className="close" onClick={() => handleClose()}>
+                <Image src="/icons/close.svg" />
+            </div>
+            { visible ?
+                <video controls id="firstVideo" style={{ width: 960 }}>
+                    <source src={VideoSrc} type="video/mp4" />
+                </video> : null
+            }
+        </div>
+    )
+}
+
 // 影像
 export default function Pictures () {
     const [pptMode, setPPTMode] = useState(false)
     const [pptIdx, setPPTIdx] = useState(0)
 
+    const [videoVisible, setVideoVisible] = useState(false)
+
     const handleClick = (idx: number) => {
         setPPTIdx(idx)
         setPPTMode(true)
+    }
+
+    // 15张图
+    const getImages = () => {
+        return Array.from({ length: 63 }).map((_, index) => {
+            return {
+                id: index+ 1,
+                url: `/pics/pic-${index + 1}.jpg`,
+                burl: `/pngs/bpic-${index + 1}.png`
+            }
+        })
+    }
+
+    const data = getImages()
+
+    const handlePlayVideo = () => {
+        setVideoVisible(true)
+    }
+
+    const handleCloseVideo = () => {
+        setVideoVisible(false)
     }
 
     return (
@@ -90,13 +134,19 @@ export default function Pictures () {
             <Header withbg />
             <div className="pictures">
                 <div className="pictures-center">
+                    <div className="picbox">
+                        <Image src="/icons/play.svg" className="play" />
+                        <Image className="picture" src="/pics/pic-0.jpg" onClick={() => handlePlayVideo()} />
+                    </div>
                     {data.map((img, idx) => 
                         <div key={img.id} className="picbox">
-                            <Image onClick={() => handleClick(idx)} className="picture" src={img.url} />
+                            <Image className="picture" src={img.url} onClick={() => handleClick(idx)} />
                         </div>
                     )}
                 </div>
             </div>
+
+            <VideoModal visible={videoVisible} onClose={handleCloseVideo} />
             
             <PPT
                 visible={pptMode}
@@ -105,6 +155,7 @@ export default function Pictures () {
                 onIdxChange={setPPTIdx}
                 onVisibleChange={setPPTMode}
             />
+
             <Footer noborder />
         </>
     )

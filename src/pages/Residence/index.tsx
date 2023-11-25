@@ -1,5 +1,5 @@
 // 居所
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import AmLine from "../../components/AmLine/AmLine";
 import CircleProgress from "../../components/CircleProgress";
 import FadeSlide from "../../components/FadeSlide/FadeSlide";
@@ -163,10 +163,10 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 
-function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+function Slide5 ({ data, ls, order, onClick }: { data: any, ls: ILetterSpacing, order: number, onClick: (d: any) => void }) {
     return (
         <div className="section section5">
-            <SwiperImages3 images={data.images} />
+            <SwiperImages3 images={data.images} onClick={onClick} />
         </div>
     )
 }
@@ -351,6 +351,7 @@ export default function Residence () {
     const I18N = useCommonStore(state => state.I18N)
     const pageSectionOrder = useCommonStore(state => state.pageSectionOrder)
     const letterSpacing = useCommonStore(state => state.letterSpacing)
+    const [detail, setDetail] = useState(undefined)
 
     const headerConfig = {
         lightmode: pageSectionOrder === 1,
@@ -406,24 +407,60 @@ export default function Residence () {
                     src: '/jpgs/res-5-1.jpg',
                     caption: I18N['res.s5.image1.cpt'],
                     desc: [
+                        I18N['res.s5.image1.desc1']
+                    ],
+                    imgs: [
+                        '/jpgs/res-5-1.1.jpg',
+                        '/jpgs/res-5-1.2.jpg'
+                    ],
+                    details: [
                         I18N['res.s5.image1.desc1'],
-                        // I18N['res.s5.image1.desc2'],
+                        I18N['res.s5.image1.desc2'],
+                        I18N['res.s5.image1.desc3'],
+                        I18N['res.s5.image1.desc4'],
+                        I18N['res.s5.image1.desc5'],
                     ]
                 },
                 {
                     src: '/jpgs/res-5-2.jpg',
                     caption: I18N['res.s5.image2.cpt'],
                     desc: [
+                        I18N['res.s5.image2.desc1']
+                    ],
+                    imgs: [
+                        '/jpgs/res-5-2.1.jpg',
+                        '/jpgs/res-5-2.2.jpg',
+                        '/jpgs/res-5-2.3.jpg',
+                        '/jpgs/res-5-2.4.jpg'
+                    ],
+                    details: [
                         I18N['res.s5.image2.desc1'],
-                        // I18N['res.s5.image2.desc2'],
+                        I18N['res.s5.image2.desc2'],
+                        I18N['res.s5.image2.desc3'],
+                        I18N['res.s5.image2.desc4'],
+                        I18N['res.s5.image2.desc5'],
+                        I18N['res.s5.image2.desc6']
                     ]
                 },
                 {
                     src: '/jpgs/res-5-3.jpg',
                     caption: I18N['res.s5.image3.cpt'],
                     desc: [
+                        I18N['res.s5.image3.desc1']
+                    ],
+                    imgs: [
+                        '/jpgs/res-5-3.1.jpg',
+                        '/jpgs/res-5-3.2.jpg',
+                        '/jpgs/res-5-3.3.jpg',
+                        '/jpgs/res-5-3.4.jpg'
+                    ],
+                    details: [
                         I18N['res.s5.image3.desc1'],
-                        // I18N['res.s5.image3.desc2'],
+                        I18N['res.s5.image3.desc2'],
+                        I18N['res.s5.image3.desc3'],
+                        I18N['res.s5.image3.desc4'],
+                        I18N['res.s5.image3.desc5'],
+                        I18N['res.s5.image3.desc6'],
                     ]
                 },
                 {
@@ -431,7 +468,18 @@ export default function Residence () {
                     caption: I18N['res.s5.image4.cpt'],
                     desc: [
                         I18N['res.s5.image4.desc1'],
-                        // I18N['res.s5.image4.desc2'],
+                    ],
+                    imgs: [
+                        '/jpgs/res-5-4.1.jpg',
+                        '/jpgs/res-5-4.2.jpg',
+                        '/jpgs/res-5-4.3.jpg'
+                    ],
+                    details: [
+                        I18N['res.s5.image4.desc1'],
+                        I18N['res.s5.image4.desc2'],
+                        I18N['res.s5.image4.desc3'],
+                        I18N['res.s5.image4.desc4'],
+                        I18N['res.s5.image4.desc5']
                     ]
                 },
                 {
@@ -439,7 +487,17 @@ export default function Residence () {
                     caption: I18N['res.s5.image5.cpt'],
                     desc: [
                         I18N['res.s5.image5.desc1'],
-                        // I18N['res.s5.image5.desc2'],
+                    ],
+                    imgs: [
+                        '/jpgs/res-5-5.1.jpg',
+                        '/jpgs/res-5-5.2.jpg'
+                    ],
+                    details: [
+                        I18N['res.s5.image5.desc1'],
+                        I18N['res.s5.image5.desc2'],
+                        I18N['res.s5.image5.desc3'],
+                        I18N['res.s5.image5.desc4'],
+                        I18N['res.s5.image5.desc5']
                     ]
                 }
             ]
@@ -521,20 +579,92 @@ export default function Residence () {
         <div className="container residence">
             <Header {...headerConfig} />
             <Fullpage
-                ignoreHideIndex={[5,6]}
+                ignoreHideIndex={[6,7]}
                 sliders={[
                     <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
                     <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
                     <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
                     <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
-                    <Slide5 ls={letterSpacing} data={data.section5} order={pageSectionOrder} />,
+                    <Slide5 ls={letterSpacing} data={data.section5} order={pageSectionOrder} onClick={setDetail} />,
                     <Slide6 ls={letterSpacing} data={data.section6} order={pageSectionOrder} />,
                     <Slide7 ls={letterSpacing} data={data.section7} order={pageSectionOrder} />,
                     <Footer />
                 ]}
             />
+
+            <SwiperModal data={detail} onClose={() => setDetail(undefined)} />
         </div>
     )
 }
 
 
+function SwiperModal ({ data, onClose }: { data: any | undefined, onClose: () => void }) {
+    const { imgs, details, caption } = data || {
+        imgs: [],
+        details: [],
+        caption: ''
+    }
+
+    return (
+        <div className={`swiper-modal ${!!data ? 'show' : ''}`}>
+            <div className="close" onClick={onClose}><Image src="/icons/close.svg" /></div>
+            <div className="sm-body">
+                <SwiperBody imgs={imgs} />
+                <div className="sm-content">
+                    <div className="caption">{caption}</div>
+                    { details.map((d: string) =>
+                        <div className="detail">{d}</div>
+                    )}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function SwiperBody ({ imgs }: { imgs: string[] }) {
+    const [current, setCurrent] = useState(0)
+    const prevable = current > 0
+    const nextable = current < imgs.length - 1
+
+    useEffect(() => {
+        setCurrent(0)
+        // @ts-ignore
+        const swiper = new Swiper('.swiper-imgs', {
+            speed: 300,
+            mousewheel: true,
+            spaceBetween: 30,
+            navigation: {
+                prevEl: '.swiper-btn-prev',
+                nextEl: '.swiper-btn-next',
+            },
+        })
+
+        swiper.on('slideChange', (a: any) => {
+            setCurrent(a.activeIndex)
+        })
+
+        return () => {
+            swiper.destroy()
+        }
+    }, [imgs])
+    
+    return (
+        <div className="swiper-root">
+            <div className="swiper swiper-imgs">
+                <div className="swiper-wrapper">
+                    {imgs.map((src: string, index: number) => (
+                        <div className='swiper-slide' key={index}>
+                            <Image className="swiper-img" src={src} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className={`swiper-btn-prev ${prevable ? '' : 'disabled'}`}>
+                <Image src="/icons/left.svg" />
+            </div>
+            <div className={`swiper-btn-next ${nextable ? '' : 'disabled'}`}>
+                <Image src="/icons/right.svg" />
+            </div>
+        </div>
+    )
+}

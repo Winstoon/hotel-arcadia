@@ -10,6 +10,19 @@
 .mobile-pic .pics img{
     width: 100%;
 }
+.mobile-pic .pics .pic-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-pic .pics .play{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: .8;
+    pointer-events: none;
+}
 
 .org-dialog{
     position: fixed;

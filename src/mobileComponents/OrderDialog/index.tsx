@@ -214,7 +214,7 @@ export default function MobileOrderDialog (props: IProps) {
                         <ul>
                             <li>{I18N['reserve.policy.desc1']}</li>
                             <li>{I18N['reserve.policy.desc2']}</li>
-                            <li>{I18N['reserve.policy.desc3']}</li>
+                            {/* <li>{I18N['reserve.policy.desc3']}</li> */}
                             <li>{I18N['reserve.policy.desc4']}</li>
                             <li>{I18N['reserve.policy.desc5']}</li>
                             <li>{I18N['reserve.policy.desc6']}</li>
@@ -232,7 +232,7 @@ export default function MobileOrderDialog (props: IProps) {
                 <Button onClick={() => {
                     setSuccess(false)
                     setVisible(false)
-                }}>确定</Button>
+                }}>{I18N['reserve.form.ok']}</Button>
             </div>
         </>
     )

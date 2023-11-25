@@ -107,8 +107,26 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     )
 }
 
+function SlidePics ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const active = order === 4
+    return (
+        <div className="section sectionpics">
+            <div className={`content ${active ? 'animate' : ''}`}>
+                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <Button2 to="/pics">{data.btntxt}</Button2>
+
+                <div className="imgs">
+                    <Image src="/jpgs/home-p-1.jpg" />
+                    <Image src="/jpgs/home-p-2.jpg" />
+                    <Image src="/jpgs/home-p-3.jpg" />
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const active = order >= 4
+    const active = order >= 5
 
     return (
         <div className="section section6">
@@ -182,6 +200,10 @@ export default function Home () {
             phone: I18N['home.s6.desc8'],
             fax: I18N['home.s6.desc9'],
             email: I18N['home.s6.desc10'],
+        },
+        pics: {
+            title: I18N['home.pics.title'],
+            btntxt: I18N['home.pics.btntxt']
         }
     }
 
@@ -208,13 +230,14 @@ export default function Home () {
 
             { lpHide ?
                 <Fullpage
-                    ignoreHideIndex={[4,5]}
+                    ignoreHideIndex={[5,6]}
                     sliders={[
                         // <Slide1 ls={letterSpacing} data={data.section1} order={pageSectionOrder} />,
                         <Slide2 ls={letterSpacing} data={data.section2} order={pageSectionOrder} />,
                         <Slide3 ls={letterSpacing} data={data.section3} order={pageSectionOrder} />,
                         <Slide4 ls={letterSpacing} data={data.section4} order={pageSectionOrder} />,
                         <Slide5 ls={letterSpacing} data={data.section5} order={pageSectionOrder} />,
+                        <SlidePics ls={letterSpacing} data={data.pics} order={pageSectionOrder} />,
                         <Slide6 ls={letterSpacing} data={data.section6} order={pageSectionOrder} />,
                         <Footer />
                     ]}

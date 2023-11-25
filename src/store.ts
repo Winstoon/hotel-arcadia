@@ -26,6 +26,7 @@ type CommonState = {
     wechatDialogVisible: boolean
     menuDialogVisible: boolean
     activeMenu: any
+    swiper: any
 }
 
 type CommonActions = {
@@ -34,9 +35,11 @@ type CommonActions = {
     setWeChatDialogVisible: (visible: boolean) => void
     setMenuDialogVisible: (visible: boolean) => void
     setActiveMenu: (menu: any) => void
+    setSwiper: (swiper: any) => void
 }
 
 export const useCommonStore = create(immer<CommonState & CommonActions>((set, get) => ({
+    swiper: undefined,
     lang: I18N.ZH,
     I18N: getDefaultI18NData(),
     letterSpacing: LetterSpacingMap,
@@ -44,6 +47,7 @@ export const useCommonStore = create(immer<CommonState & CommonActions>((set, ge
     wechatDialogVisible: false,
     menuDialogVisible: false,
     activeMenu: null,
+    setSwiper: swiper => set({ swiper }),
     setActiveMenu: menu => set({ activeMenu: menu }),
     setMenuDialogVisible: visible => set({ menuDialogVisible: visible }),
     setLang: lang => {

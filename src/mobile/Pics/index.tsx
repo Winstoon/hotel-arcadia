@@ -1,31 +1,67 @@
 import { useEffect, useState } from "react";
 import Header from "../../mobileComponents/Header";
-
-import './index.css'
 import Image from "../../mobileComponents/Image";
 import Footer from "../../mobileComponents/Footer";
+
+import './index.css'
+import { VideoSrc } from "../../App";
+
+
+function VideoModal ({ visible, onClose }: { visible: boolean, onClose: () => void }) {
+    const handleClose = () => {
+        onClose()
+    }
+
+    useEffect(() => {
+        var video = document.getElementById("mfirstVideo")
+        if (!video) return
+
+        if (visible) {
+            // @ts-ignore
+            video.currentTime = 0
+            // @ts-ignore
+            video.play()
+        } else {
+            try {
+                // @ts-ignore
+                video.pause()
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    }, [visible])
+
+    return (
+        <div className={`org-dialog ${visible ? 'show' : ''}`}>
+            <div className="close" onClick={() => handleClose()}>
+                <Image src="/icons/close.svg" />
+            </div>
+            { visible ?
+                <video controls id="mfirstVideo" style={{ width: 960 }}>
+                    <source src={VideoSrc} type="video/mp4" />
+                </video> : null
+            }
+        </div>
+    )
+}
+
 
 export default function MobilePics () {
     const [swiper, setSwiper] = useState<any>()
     const [dialogVisible, setDialogVisible] = useState(false)
+    const [videoVisible, setVideoVisible] = useState(false)
+    
     // 15张图
-    const images = [
-        { preview: '/mobile/pic-1.jpg', origin: '/mobile/bpic-1.png' },
-        { preview: '/mobile/pic-2.jpg', origin: '/mobile/bpic-2.png' },
-        { preview: '/mobile/pic-3.jpg', origin: '/mobile/bpic-3.png' },
-        { preview: '/mobile/pic-4.jpg', origin: '/mobile/bpic-4.png' },
-        { preview: '/mobile/pic-5.jpg', origin: '/mobile/bpic-5.png' },
-        { preview: '/mobile/pic-6.jpg', origin: '/mobile/bpic-6.png' },
-        { preview: '/mobile/pic-7.jpg', origin: '/mobile/bpic-7.png' },
-        { preview: '/mobile/pic-8.jpg', origin: '/mobile/bpic-8.png' },
-        { preview: '/mobile/pic-9.jpg', origin: '/mobile/bpic-9.png' },
-        { preview: '/mobile/pic-10.jpg', origin: '/mobile/bpic-10.png' },
-        { preview: '/mobile/pic-11.jpg', origin: '/mobile/bpic-11.png' },
-        { preview: '/mobile/pic-12.jpg', origin: '/mobile/bpic-12.png' },
-        { preview: '/mobile/pic-13.jpg', origin: '/mobile/bpic-13.png' },
-        { preview: '/mobile/pic-14.jpg', origin: '/mobile/bpic-14.png' },
-        { preview: '/mobile/pic-15.jpg', origin: '/mobile/bpic-15.png' }
-    ]
+    const getImages = () => {
+        return Array.from({ length: 63 }).map((_, index) => {
+            return {
+                preview: `/pics/pic-${index + 1}.jpg`,
+                origin: `/pngs/bpic-${index + 1}.png`
+            }
+        })
+    }
+
+    const images = getImages()
 
     const handleClick = (idx: number) => {
         setDialogVisible(true)
@@ -44,6 +80,11 @@ export default function MobilePics () {
             <Header />
             <div className="mobile-container mobile-pic">
                 <div className="pics">
+                    <div className="pic-box">
+                        <Image src="/icons/play.svg" className="play" />
+                        <Image src="/pics/pic-0.jpg" onClick={() => setVideoVisible(true)} />
+                    </div>
+
                     {images.map((item, index) =>
                         <Image
                             src={item.preview}
@@ -52,6 +93,7 @@ export default function MobilePics () {
                     )}
                 </div>
             </div>
+
             <div className={`org-dialog ${dialogVisible ? 'show' : ''}`}>
                 <div className="close" onClick={() => setDialogVisible(false)}>
                     <Image src="/icons/close.svg" />
@@ -66,6 +108,8 @@ export default function MobilePics () {
                     </div>
                 </div>
             </div>
+
+            <VideoModal visible={videoVisible} onClose={() => setVideoVisible(false)} />
             <Footer />
         </>
     )

@@ -168,7 +168,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
 }
 .residence .section5 .swiper-imagesbar{
     background-color: rgba(255, 255, 255, .2);
@@ -176,7 +176,6 @@
 .residence .section5 .swiper-imagesbar .bar{
     background-color: rgba(255, 255, 255, .5);
 }
-
 
 .residence.container .section7{
     padding-top: 140px;
@@ -273,8 +272,6 @@
     pointer-events: auto;
 }
 
-
-
 /* animations */
 .residence .section2 .content .intros {
     opacity: 0;
@@ -309,4 +306,97 @@
 .residence .section4 .h4-content.animate {
     opacity: 1;
     transform: translateX(0);
+}
+
+.swiper-modal{
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
+}
+.swiper-modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.swiper-modal .close{
+    position: absolute;
+    top: 60px;
+    left: 150px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.swiper-modal .sm-body{
+    display: flex;
+    align-items: center;
+    /* width: 1060px; */
+}
+
+.swiper-modal .swiper-root{
+    position: relative;
+    padding: 0 48px;
+    margin: 0 68px;
+}
+
+.swiper-modal .swiper-root .swiper-imgs{
+    width: auto;
+    height: auto;
+}
+
+.swiper-modal .swiper-root .swiper-wrapper{
+    width: 720px;
+    height: 480px;
+}
+
+.swiper-modal .swiper-root .swiper-wrapper .swiper-img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-modal .swiper-btn-prev,
+.swiper-modal .swiper-btn-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 12px;
+    opacity: .7;
+    transition: opacity .3s ease-out;
+}
+
+.swiper-modal .swiper-btn-prev { left: -12px; }
+.swiper-modal .swiper-btn-next { right: -12px; }
+
+.swiper-modal .swiper-btn-prev img,
+.swiper-modal .swiper-btn-next img{
+    width: 32px;
+    height: 32px;
+}
+
+.swiper-modal .swiper-btn-prev:hover,
+.swiper-modal .swiper-btn-next:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.swiper-modal .swiper-btn-prev.disabled,
+.swiper-modal .swiper-btn-next.disabled{
+    opacity: .3;
+    pointer-events: none;
+}
+
+.swiper-modal .sm-content{
+    font-size: 14px;
+    line-height: 24px;
+    opacity: .8;
+}
+.swiper-modal .sm-content .caption{
+    margin-bottom: 24px;
 }

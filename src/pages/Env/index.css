@@ -88,6 +88,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 320px;
 }
 
 .environment .section4 .h4-content{
@@ -138,13 +139,13 @@
     transform: translateX(0);
 }
 
-.environment .section5 {
+.environment .section5 .swiper-images2 {
     opacity: 0;
     transform: translateY(50px);
-    transition: transform 1.4s ease-out 1s, opacity 1.4s ease-out 1s;
+    transition: transform 1.4s ease-out .8s, opacity 1.4s ease-out .8s;
 }
 
-.environment .section5.animate {
+.environment .section5 .swiper-images2.animate {
     opacity: 1;
     transform: translateY(0);
 }

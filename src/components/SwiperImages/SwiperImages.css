@@ -219,9 +219,31 @@
     width: 100%;
 }
 
-.swiper-images3 .swiper-item:not(.nopointer):hover,
-.swiper-images3 .swiper-item:not(.nopointer):hover{
+.swiper-images3 .swiper-item.nopointer:hover,
+.swiper-images3 .swiper-item.nopointer:hover{
     cursor: pointer;
     transition: opacity .6s ease-out;
     opacity: .8;
+}
+
+.swiper-imagesnav{
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+}
+.swiper-imagesnav .swiper-imagesbar{
+    margin: 0 60px;
+}
+.swiper-imagesnav .nav-icon{
+    opacity: .7;
+    padding: 12px;
+    transition: opacity .3s ease-out;
+}
+.swiper-imagesnav .nav-icon:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.swiper-imagesnav .nav-icon.disabled{
+    opacity: .3;
+    pointer-events: none;
 }
