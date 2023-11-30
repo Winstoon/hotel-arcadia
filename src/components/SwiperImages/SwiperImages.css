@@ -159,9 +159,11 @@
 }
 
 .swiper-images2 .images .img-desc {
-    margin-top: 8px;
+    margin-top: 4px;
     font-size: 14px;
+    line-height: 24px;
     opacity: .7;
+    white-space: pre-wrap;
 }
 
 .swiper-imagesbar.secondSwiper .bar{

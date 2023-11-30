@@ -57,7 +57,8 @@ export default function Fullpage (props: IProps) {
             speed,
             mousewheel: true,
             slidesPerView: 'auto',
-            direction: 'vertical'
+            direction: 'vertical',
+            allowTouchMove: false
         });
 
         swiper.on('slideChange', (a: any) => {

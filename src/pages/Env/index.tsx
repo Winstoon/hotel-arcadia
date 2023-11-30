@@ -1,5 +1,4 @@
 import AmLine from "../../components/AmLine/AmLine";
-import Button from "../../components/Button";
 import CircleProgress from "../../components/CircleProgress";
 import FadeSlide from "../../components/FadeSlide/FadeSlide";
 import FadeSlide2 from "../../components/FadeSlide/FadeSlide2";
@@ -9,14 +8,15 @@ import Fullpage from "../../components/FullPage";
 import Header from "../../components/Header";
 import Image, { AnimateBg } from "../../components/Image";
 import SwiperImages2 from "../../components/SwiperImages/SwiperImages2";
+import { I18N } from "../../i18n";
 import { ILetterSpacing } from "../../letterSpacings";
-import { useCommonStore, useOrderDialogStore } from "../../store";
+import { useCommonStore } from "../../store";
 
 import './index.css'
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    const I18N = useCommonStore(state => state.I18N)
-    const setOrderVisible = useOrderDialogStore(state => state.setVisible)
+    // const I18N = useCommonStore(state => state.I18N)
+    // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     return (
         <div className="section section1">
@@ -33,6 +33,8 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
+    const isEn = lang === I18N.EN
     const active = order === 1
     const images = [
         '/jpgs/env-2-1.jpg',
@@ -47,8 +49,13 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                
+                { isEn ? <div className="desc"></div> : null }
+                
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                <div className="desc"></div>
+                
+                { isEn ? null : <div className="desc"></div> }
+                
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>

@@ -103,6 +103,10 @@
     transform: translateX(-30px);
     animation: slideInFromLeft .6s ease-in-out;
 }
+.mobile-header-dialog.show .router-item.en.active::after{
+    transform: translateX(-47px);
+    animation: slideInFromLeftEn .6s ease-in-out;
+}
 
 .mobile-header-dialog .quicklinks{
     align-self: center;
@@ -115,6 +119,7 @@
 .mobile-header-dialog .quicklinks img{
     height: 24px;
 }
+
 @keyframes slideInFromLeft {
     0% {
         opacity: 0;
@@ -123,5 +128,16 @@
     100% {
         opacity: 1;
         transform: translateX(-30px);
+    }
+}
+
+@keyframes slideInFromLeftEn {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-47px);
     }
 }

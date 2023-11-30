@@ -7,6 +7,7 @@ import Footer from '../../mobileComponents/Footer'
 import { VScroll } from '../../mobileComponents/VScroll'
 
 import './index.css'
+import { I18N } from '../../i18n'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
@@ -24,6 +25,8 @@ function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 
 function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    const lang = useCommonStore(state => state.lang)
+    const isEn = lang === I18N.EN
     const imgs = [
         { url: '/mobile/res-2-1.jpg', width: 260 },
         { url: '/mobile/res-2-2.jpg', width: 360 },
@@ -40,9 +43,10 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
             <div className="content">
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}></div>
+                { !isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null }
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                { isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null }
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>

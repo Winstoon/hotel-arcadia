@@ -10,6 +10,7 @@ import Footer from '../../mobileComponents/Footer'
 import { VScroll } from '../../mobileComponents/VScroll'
 
 import './index.css'
+import { I18N } from '../../i18n'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
@@ -27,6 +28,8 @@ function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 
 function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    const lang = useCommonStore(state => state.lang)
+    const isEn = lang === I18N.EN
     const images = [
         '/mobile/env-2-1.jpg',
         '/mobile/env-2-2.jpg',
@@ -39,8 +42,9 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                {isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null}
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}></div>
+                {!isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null}
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
@@ -105,8 +109,8 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}></div>
+                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
@@ -135,7 +139,7 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
         <div className="section section5" style={{ minHeight: window.innerHeight }}>
             <div className="content">
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                {/* <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div> */}
                 <div className='groups'>
                     { data.images.map((img: any, idx: number) => (
                         <div className='img-group' key={idx}>

@@ -110,6 +110,7 @@
     font-size: 14px;
     line-height: 24px;
     min-height: 24px;
+    white-space: pre-wrap;
 }
 
 

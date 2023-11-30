@@ -24,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .mobile-home .section2 .content .title{
@@ -35,6 +36,7 @@
 .mobile-home .section2 .content .desc{
     font-size: 14px;
     line-height: 24px;
+    white-space: pre-wrap;
 }
 .mobile-home .section2 .content .mobile-button2{
     margin-top: 40px;

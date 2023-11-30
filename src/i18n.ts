@@ -100,8 +100,8 @@ export const I18NS: I18NFullData = {
     },
 
     'home.s2.title': {
-        [I18N.ZH]: 'ARCADIA 二世古 雪屋',
-        [I18N.EN]: 'ARCADIA NISEKO YUKIYA',
+        [I18N.ZH]: 'ARCADIA 二世谷 雪屋',
+        [I18N.EN]: 'ARCADIA Chalet Niseko',
         [I18N.JP]: 'ARCADIA ニセコ 雪屋',
     },
     'home.s2.desc1': {
@@ -117,7 +117,7 @@ export const I18NS: I18NFullData = {
 
     'home.s3.desc1': {
         [I18N.ZH]: '登临旷美雪岭 穿梭山林',
-        [I18N.EN]: 'Up to the astounding snow hill. Cross the mountain forest.',
+        [I18N.EN]: 'Up to the astounding snow hill.\nCross the mountain forest.',
         [I18N.JP]: '最高のパウダースノーの中で',
     },
     'home.s3.desc2': {
@@ -149,7 +149,7 @@ export const I18NS: I18NFullData = {
     },
 
     'home.s6.title': {
-        [I18N.ZH]: 'ARCADIA 坐落于北海道二世古地区最富盛名的比罗夫镇',
+        [I18N.ZH]: 'ARCADIA 坐落于北海道二世谷地区最富盛名的比罗夫镇',
         [I18N.EN]: 'ARCADIA is located at the renowned Hirafu Town in Niseko, Hokkaido.',
         [I18N.JP]: 'ARCADIA は、北海道のニセコ地方で最も有名なエリアのひとつであるひらふ地区に位置しています',
     },
@@ -159,32 +159,32 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'お問い合わせ',
     },
     'home.s6.location': {
-        [I18N.ZH]: 'ARCADIA 坐落于北海道二世古地区最富盛名的比罗夫镇',
+        [I18N.ZH]: 'ARCADIA 坐落于北海道二世谷地区最富盛名的比罗夫镇',
         [I18N.EN]: 'ARCADIA is located at the renowned Hirafu Town in Niseko, Hokkaido',
         [I18N.JP]: 'ARCADIA は、北海道のニセコ地方で最も有名なエリアのひとつであるひらふ地区に位置しています',
     },
     'home.s6.desc1': {
-        [I18N.ZH]: '距离札幌新千岁机场 (New Chitose Airport) 约2小时车程',
+        [I18N.ZH]: '距离札幌新千岁机场约2小时车程',
         [I18N.EN]: '2-hour drive to New Chitose Airport',
-        [I18N.JP]: '札幌·新千歳空港 (New Chitose Airport) から車で約2時間',
+        [I18N.JP]: '札幌·新千歳空港から車で約2時間',
     },
     'home.s6.desc2': {
-        [I18N.ZH]: '距离北海道札幌市 (Sapporo, Hokkaido) 约2小时车程',
+        [I18N.ZH]: '距离北海道札幌市约2小时车程',
         [I18N.EN]: '2-hour drive to Sapporo, Hokkaido',
-        [I18N.JP]: '北海道札幌市 (Sapporo, Hokkaido) から車で約2時間',
+        [I18N.JP]: '北海道札幌市から車で約2時間',
     },
     'home.s6.desc3': {
         [I18N.ZH]: '距离比罗夫镇游客中心步行约5分钟',
         [I18N.EN]: '5-min walk to Central Hirafu Village',
-        [I18N.JP]: 'ひらふ村ビジターセンター (Central Hirafu Village) から徒歩約5分',
+        [I18N.JP]: 'ひらふ村ビジターセンターから徒歩約5分',
     },
     'home.s6.desc4': {
         [I18N.ZH]: '距离比罗夫镇缆车中心车程约5分钟',
         [I18N.EN]: '5-min drive to Ace Family Chair Lift',
-        [I18N.JP]: 'ひらふエースファミリーチェアリフト (Ace Family Chair Lift) より車で約5分',
+        [I18N.JP]: 'ひらふエースファミリーチェアリフトより車で約5分',
     },
     'home.s6.desc5': {
-        [I18N.ZH]: '距离YUKORO温泉 (预计2025年开业) 20米 步行约1分钟',
+        [I18N.ZH]: '距离 YUKORO 温泉 (预计2025年开业) 步行约1分钟',
         [I18N.EN]: '1-min walk to YUKORO Spring (est. to open in 2025)',
         [I18N.JP]: 'ゆころ温泉 (2025年オープン予定) より徒歩約1分',
     },
@@ -233,7 +233,7 @@ export const I18NS: I18NFullData = {
 
     'env.s1.desc1': {
         [I18N.ZH]: '登临旷美雪岭 穿梭山林',
-        [I18N.EN]: 'Up to the astounding snow hill. Cross the mountain forest.',
+        [I18N.EN]: 'Up to the astounding snow hill.\nCross the mountain forest.',
         [I18N.JP]: '最高のパウダースノーの中で',
     },
     'env.s1.desc2': {
@@ -260,7 +260,7 @@ export const I18NS: I18NFullData = {
     'env.s2.desc3': {
         [I18N.ZH]: '体味内心的怦然与明朗',
         [I18N.EN]: 'Your heart is pumping and soaring,',
-        [I18N.JP]: '情熱なスキーヤーだちの 心の鼓動と喜びを味わおう',
+        [I18N.JP]: '情熱なスキーヤーだちの\n心の鼓動と喜びを味わおう',
     },
     'env.s2.desc4': {
         [I18N.ZH]: '驰骋于冬日的主场',
@@ -410,7 +410,7 @@ export const I18NS: I18NFullData = {
     },
     'env.s5.image3.desc1': {
         [I18N.ZH]: '专人陪同租购雪具',
-        [I18N.EN]: 'Ski equipment rental or purchase with personal assistance.',
+        [I18N.EN]: 'Ski equipment rental or purchase\nwith personal assistance.',
         [I18N.JP]: '専門コンシェルジェによるスキーレンタルとご購入',
     },
     'env.s5.image3.desc2': {
@@ -510,7 +510,7 @@ export const I18NS: I18NFullData = {
     },
     'res.s3.desc5': {
         [I18N.ZH]: '壁炉渐燃 远眺羊蹄',
-        [I18N.EN]: 'Dancing flames in the fireplace, overlooking the Mount Yotei.',
+        [I18N.EN]: 'Dancing flames in the fireplace,\noverlooking the Mount Yotei.',
         [I18N.JP]: '広がる窓からは羊蹄山を望むことができる眺め',
     },
     'res.s3.desc6': {
@@ -545,7 +545,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'マスタールーム I',
     },
     'res.s4.desc2': {
-        [I18N.ZH]: '私享 65 平方米开阔空间',
+        [I18N.ZH]: '私享65平方米开阔空间',
         [I18N.EN]: '65 sqm wide space.',
         [I18N.JP]: '65平方メートルの広々としたプライベート空間',
     },
@@ -565,7 +565,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'マスタールームII',
     },
     'res.s4.desc6': {
-        [I18N.ZH]: '独享 55 平方米静谧空间',
+        [I18N.ZH]: '独享55平方米静谧空间',
         [I18N.EN]: '55 sqm private space.',
         [I18N.JP]: '55平方メートルの落ち着きのある空間',
     },
@@ -591,7 +591,7 @@ export const I18NS: I18NFullData = {
     },
     'res.s4.tip3': {
         [I18N.ZH]: '· 意大利进口家居',
-        [I18N.EN]: '· Italian imported furniture',
+        [I18N.EN]: '· Italian made furniture',
         [I18N.JP]: '· イタリア製輸入家具',
     },
     'res.s4.tip4': {
@@ -635,7 +635,7 @@ export const I18NS: I18NFullData = {
     },
     'res.s5.image1.desc5': {
         [I18N.ZH]: '意大利进口家具',
-        [I18N.EN]: 'Italian imported furniture',
+        [I18N.EN]: 'Italian made furniture',
         [I18N.JP]: 'イタリア製家具',
     },
 
@@ -844,9 +844,9 @@ export const I18NS: I18NFullData = {
     },
 
     'res.s6.tip': {
-        [I18N.ZH]: '· 功能设施亦包含中西厨房、洗衣房，尽享便捷无缝的居住体验',
+        [I18N.ZH]: '· 功能设施亦包含中西厨房、洗衣房，\n尽享便捷无缝的居住体验',
         [I18N.EN]: '· Chinese/Western kitchen, laundry room are included in facilities. A convenient and seamless living experience.',
-        [I18N.JP]: '· 和式・洋式キッチン、ランドリールームなど、シームレスで快適な暮らしをお届けする機能的な設備を揃っております',
+        [I18N.JP]: '· 和式・洋式キッチン、ランドリールームなど、\nシームレスで快適な暮らしをお届けする機能的な設備を揃っております',
     },
 
 
@@ -863,7 +863,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '基本情報',
     },
     'res.s7.cpt1.1': {
-        [I18N.ZH]: '全屋三层，地面二层，地下一层，建筑总面积 740 平方米；',
+        [I18N.ZH]: '全屋三层，地面二层，地下一层，建筑总面积740平方米；',
         [I18N.EN]: 'Three floors. Two floors above ground. One floor under the ground. A total building area of 740 sqm.',
         [I18N.JP]: '地上二階と地下1階の全館三階建てで、総建築面積740平方メートル',
     },
@@ -1208,7 +1208,7 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '漬物 (切り干し大根、セロリー) '
     },
     'dli.menu.bf.2.food7': {
-        [I18N.ZH]: '味增汤',
+        [I18N.ZH]: '味噌汤',
         [I18N.EN]: 'Miso Soup',
         [I18N.JP]: '味噌汁'
     },
@@ -2141,7 +2141,7 @@ export const I18NS: I18NFullData = {
     },
     'dli.s3.desc4': {
         [I18N.ZH]: '深思土壤 共鸣万物',
-        [I18N.EN]: 'With in-depth awareness and respect of everything from the earth,',
+        [I18N.EN]: 'With in-depth awareness and respect of\neverything from the earth,',
         [I18N.JP]: '土にも恵まれている地元食材を極め'
     },
     'dli.s3.desc5': {

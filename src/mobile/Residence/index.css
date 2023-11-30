@@ -39,7 +39,7 @@
 
 .mobile-res .section2 .content .desc {
     font-size: 14px;
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
     opacity: .7;
 }
@@ -65,7 +65,7 @@
 
 .mobile-res .section3 .content .desc {
     font-size: 14px;
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
 }
 
@@ -90,7 +90,7 @@
 
 .mobile-res .section4 .content .desc {
     font-size: 14px;
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
 }
 .mobile-res .section4 .content .v-scroll {
@@ -159,7 +159,7 @@
 
 .mobile-res .section6 .content .desc {
     font-size: 14px;
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
 }
 
@@ -167,6 +167,7 @@
     font-size: 12px;
     margin-top: 20px;
     opacity: .7;
+    white-space: pre-wrap;
 }
 
 /* Section 7 */

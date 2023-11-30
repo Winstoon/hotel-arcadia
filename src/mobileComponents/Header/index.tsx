@@ -6,6 +6,7 @@ import Image from "../../mobileComponents/Image"
 import Language, { RadioLanguage } from "../Language"
 
 import './index.css'
+import { I18N } from "../../i18n"
 
 interface IProps{
     hidden?: boolean
@@ -21,6 +22,7 @@ export default function Header (props: IProps) {
     const [maskVisible, setMaskVisible] = useState(false)
     const lang = useCommonStore(state => state.lang)
     const setDialogVisible = useCommonStore(state => state.setWeChatDialogVisible)
+    const isEn = lang === I18N.EN
 
     const onClose = () => {
         setMaskVisible(false)
@@ -62,7 +64,7 @@ export default function Header (props: IProps) {
                     { ROUTERS.map((router, idx) =>
                         <div
                             key={idx}
-                            className={`router-item ${sameRouterPath(router.path, pathname) ? 'active' : ''}`}
+                            className={`router-item ${isEn ? 'en' : ''} ${sameRouterPath(router.path, pathname) ? 'active' : ''}`}
                         >
                             <Link to={'/mobile' + router.path}>{router.label[lang]}</Link>
                         </div>

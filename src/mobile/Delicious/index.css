@@ -114,7 +114,7 @@
 
 .mobile-delicious .section3 .content .desc {
     font-size: 14px;
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
 }
 
@@ -137,6 +137,7 @@
 
 .mobile-delicious .section4 .content .desc{
     font-size: 14px;
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
+    white-space: pre-wrap;
 }

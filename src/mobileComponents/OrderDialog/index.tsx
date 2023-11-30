@@ -205,7 +205,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
 
-                        <div className='button' onClick={handleSubmit}>{I18N['submit']}</div>
+                        <div className='button' style={{ letterSpacing: ls.TXT }} onClick={handleSubmit}>{I18N['submit']}</div>
                         <div className={`error-msg ${errorMsg ? 'show' : ''}`}>{errorMsg}</div>
                     </div>
 

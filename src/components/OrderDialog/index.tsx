@@ -204,7 +204,7 @@ export default function OrderDialog (props: IProps) {
                             </div>
                         </div>
 
-                        <div className='button' onClick={handleSubmit}>提交</div>
+                        <div className='button' onClick={handleSubmit} style={{ letterSpacing: ls.H1 }}>{I18N['submit']}</div>
                         <div className={`error-msg ${errorMsg ? 'show' : ''}`}>{errorMsg}</div>
                     </div>
 

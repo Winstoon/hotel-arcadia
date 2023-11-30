@@ -50,7 +50,7 @@
 }
 
 .residence .section2 .content .intros .desc {
-    height: 24px;
+    min-height: 24px;
     line-height: 24px;
 }
 
@@ -148,6 +148,12 @@
     opacity: .8;
 }
 
+.residence .section3 .h3-content .tips .tip,
+.residence .section4 .h4-content .tips .tip,
+.residence .section6 .h6-content .tips .tip {
+    white-space: pre-wrap;
+}
+
 .residence .section6 .h6-content .title,
 .residence .section4 .h4-content .title,
 .residence .section3 .h3-content .title{
@@ -162,6 +168,7 @@
     font-size: 14px;
     line-height: 24px;
     min-height: 24px;
+    white-space: pre-wrap;
 }
 
 .residence.container .section5 {
