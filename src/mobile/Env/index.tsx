@@ -42,10 +42,10 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
                 <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                {isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null}
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
                 {!isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null}
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                {isEn ? <div className="desc" style={{ letterSpacing: ls.TXT }}></div> : null}
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
             </div>

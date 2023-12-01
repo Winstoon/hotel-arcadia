@@ -181,10 +181,11 @@ function Slide6 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 function ToggleContainer ({ label, children }: { label: string, children: React.ReactNode }) {
     const [visible, setVisible] = useState(true)
+    const ls = useCommonStore(state => state.letterSpacing)
 
     return (
         <div className='toggle-container'>
-            <div className='toggle-header' onClick={() => setVisible(!visible)}>
+            <div className='toggle-header' onClick={() => setVisible(!visible)} style={{ letterSpacing: ls.TXT }}>
                 {label}
                 { visible ?
                     <Image src='/icons/up.svg' /> :
