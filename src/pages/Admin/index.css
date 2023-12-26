@@ -157,22 +157,20 @@
     outline: none;
     padding: 6px 12px;
     background-color: white;
-
-    &:focus{
-        border-color: #0086f6;
-    }
+}
+.admin-login input:focus{
+    border-color: #0086f6;
 }
 
+.admin-login input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #0086f6;
+    border-color: #0086f6;
+    color: white;
+}
 .admin-login input[type=submit]{
     width: 165px;
     margin-left: 52px;
-
-    &:hover{
-        cursor: pointer;
-        background-color: #0086f6;
-        border-color: #0086f6;
-        color: white;
-    }
 }
 
 .admin-calendar .cld-dates{
@@ -225,6 +223,9 @@
     background-color: gray;
     color: white;
 }
+.admin-calendar .cld-dates .operation .calendar .react-calendar__month-view__days__day--neighboringMonth{
+    opacity: .6;
+}
 
 .admin-calendar .cld-dates .operation .opt-right{
     flex: 1;
@@ -264,4 +265,36 @@
 .admin-calendar .button:active{
     background-color: #0086f6;
     border-color: #0086f6;
+}
+
+
+.admin.mobile .left-nav{
+    width: 30px;
+    font-size: 12px;
+}
+.admin.mobile .left-nav .caption,
+.admin.mobile .left-nav .nav{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admin.mobile .right-cont{
+    padding: 10px;
+}
+.admin.mobile .right-cont .order-caption{
+    padding: 4px;
+}
+.admin.mobile .right-cont .order-date{
+    text-align: right;
+}
+.admin.mobile .right-cont .operation .calendar {
+    padding: 0;
+}
+.admin.mobile .right-cont .react-calendar__tile{
+    flex: 0 0 12%!important;
+}
+
+.admin.mobile .admin-calendar .cld-dates .operation{
+    flex-direction: column;
 }

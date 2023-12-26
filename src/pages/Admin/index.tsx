@@ -4,6 +4,7 @@ import Orders from './Orders'
 import CalendarOperation from './OrderCalendar'
 
 import './index.css'
+import { mobileCheck } from '../../App'
 
 enum Pages {
     OR = 'orders',
@@ -16,6 +17,7 @@ export default function Admin () {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const auth = cookie.load('passauth')
+    const isMobile = mobileCheck()
 
     useEffect(() => {
         setLoged(auth)
@@ -51,8 +53,8 @@ export default function Admin () {
     }
 
     return (loged ? 
-        <div className="admin">
-            <div className='left-nav'>
+        <div className={`admin ${isMobile ? 'mobile' : ''}`}>
+            <div className={'left-nav'}>
                 <div className='caption'>菜单</div>
                 <div style={{ flex: 1 }}>
                     <div className={`nav ${page === Pages.OR ? 'active' : ''}`} onClick={() => setPage(Pages.OR)}>订单列表</div>
