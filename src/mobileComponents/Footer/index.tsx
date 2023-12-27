@@ -1,12 +1,13 @@
-import { useCommonStore, useOrderDialogStore } from '../../mobilestore'
+import { useLocation } from 'react-router-dom'
+import { useCommonStore } from '../../mobilestore'
 import Button3 from '../Button3'
 import Image from '../Image'
 
 import './index.css'
 
 export default function Footer() {
+    const loc = useLocation()
     const I18N = useCommonStore(state => state.I18N)
-    const setOrderDialogVisible = useOrderDialogStore(state => state.setVisible)
     const setWeChatDialogVisible = useCommonStore(state => state.setWeChatDialogVisible)
 
     return (
@@ -44,7 +45,7 @@ export default function Footer() {
                 
             </div>
             <div className='footer-btn-group'>
-                <Button3 onClick={() => setOrderDialogVisible(true)}>
+                <Button3 to={loc.pathname + '?order=true'}>
                     {I18N['reservebtn']}
                     <Image src="/icons/right-arrow.svg" />
                 </Button3>

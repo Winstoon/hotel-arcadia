@@ -48,7 +48,7 @@ export default function Header (props: IProps) {
             </div>
             <div className="header-right">
                 <Language lightmode={!!lightmode} />
-                <Button size='small' uppercase onClick={handleOrder}>{I18N['reservebtn']}</Button>
+                <Button size='small' uppercase to={pathname + '?order=true'}>{I18N['reservebtn']}</Button>
             </div>
         </div>
     )

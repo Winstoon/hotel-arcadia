@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useCommonStore, useFadeSlideStore } from "../../store";
+import { useCommonStore, useFadeSlideStore, useOrderDialogStore } from "../../store";
 import { ILetterSpacing } from "../../letterSpacings";
 import Fullpage from "../../components/FullPage";
 import Header from "../../components/Header";
@@ -155,6 +155,7 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
 // 首页
 export default function Home () {
+    const orderDialogVisible = useOrderDialogStore(state => state.visible)
     const [lpHide, setLPHide] = useState(false)
     const [lpRemoved, setLPRemoved] = useState(false)
     const I18N = useCommonStore(state => state.I18N)
@@ -207,7 +208,6 @@ export default function Home () {
         }
     }
 
-
     useEffect(() => {
         setTimeout(() => {
             setLPHide(true)
@@ -217,16 +217,24 @@ export default function Home () {
         }, 5100)
     }, [])
 
+    useEffect(() => {
+        if (orderDialogVisible) {
+            setLPHide(true)
+            setLPRemoved(true)
+        }
+    }, [orderDialogVisible])
 
     return (
         <div className="container home">
             <Header {...headerConfig} />
 
-            <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
-                {/* @ts-ignore */}
-                <Image className='logo' src='/logo.mobile.svg' />
-                <AnimateBg src='/jpgs/home-0.jpg' />
-            </div>
+            { orderDialogVisible ? null :
+                <div className={`loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
+                    {/* @ts-ignore */}
+                    <Image className='logo' src='/logo.mobile.svg' />
+                    <AnimateBg src='/jpgs/home-0.jpg' />
+                </div>
+            }
 
             { lpHide ?
                 <Fullpage

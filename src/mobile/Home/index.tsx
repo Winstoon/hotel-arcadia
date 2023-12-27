@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useCommonStore } from '../../mobilestore'
+import { useCommonStore, useOrderDialogStore } from '../../mobilestore'
 import { ILetterSpacing } from '../../letterSpacings'
 import Header from '../../mobileComponents/Header'
 import Button2 from '../../mobileComponents/Button2'
@@ -163,6 +163,7 @@ function SlidePics ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 }
 
 export default function MobileHome () {
+    const orderVisible = useOrderDialogStore(state => state.visible)
     const [lpHide, setLPHide] = useState(false)
     const [lpRemoved, setLPRemoved] = useState(false)
     const I18N = useCommonStore(state => state.I18N)
@@ -218,14 +219,23 @@ export default function MobileHome () {
         }, 5100)
     }, [])
 
+    useEffect(() => {
+        if (orderVisible) {
+            setLPHide(true)
+            setLPRemoved(true)
+        }
+    }, [orderVisible])
+
     return (
         <>
             { lpHide ? <Header /> : null }
-            <div className={`mobile-loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
-                {/* @ts-ignore */}
-                <Image className='logo' src='/logo.mobile.svg' />
-                <AnimateBg src='/mobile/home-0.jpg' reverse />
-            </div>
+            { orderVisible ? null :
+                <div className={`mobile-loading-page ${lpHide ? 'hide' : ''} ${lpRemoved ? 'remove' : ''}`}>
+                    {/* @ts-ignore */}
+                    <Image className='logo' src='/logo.mobile.svg' />
+                    <AnimateBg src='/mobile/home-0.jpg' reverse />
+                </div>
+            }
 
             <div className="mobile-container mobile-home">
                 { lpHide ?

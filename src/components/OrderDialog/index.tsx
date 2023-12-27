@@ -1,4 +1,5 @@
 import { InputHTMLAttributes, useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { useCommonStore, useOrderDialogStore } from '../../store'
 import Image from '../Image'
 import CalendarInput, { formatCalendarDate } from './CalendarInput'
@@ -27,6 +28,7 @@ function Input (props: InputHTMLAttributes<HTMLInputElement>) {
 }
 
 export default function OrderDialog (props: IProps) {
+    const { pathname } = useLocation()
     const I18N = useCommonStore(state => state.I18N)
     const ls = useCommonStore(state => state.letterSpacing)
     const visible = useOrderDialogStore(state => state.visible)
@@ -117,7 +119,7 @@ export default function OrderDialog (props: IProps) {
     return (
         <>
             <div className={`order-dialog ${visible ? 'show' : ''}`} onClick={handleHideAll}>
-                <div className='close' onClick={onClose}><Image src='/icons/close.svg' /></div>
+                <Link className='close' to={pathname}><Image src='/icons/close.svg' /></Link>
                 <div className='order-form'>
                     <div className='form-header'>
                         <h2 style={{ letterSpacing: ls.H1}}>{I18N['reserve']}</h2>

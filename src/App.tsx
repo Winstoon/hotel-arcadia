@@ -80,17 +80,21 @@ function App() {
     const mobileFontFamily = FontFamilies[mobileLang]
     
     const orderDialogVisible = useOrderDialogStore(state => state.visible)
+    const setOrderDialogVisible = useOrderDialogStore(state => state.setVisible)
     const mobileOrderDialogVisible = useMobileOrderDialogStore(state => state.visible)
+    const setMobileOrderDialogVisible = useMobileOrderDialogStore(state => state.setVisible)
     
     const isMobile = mobileCheck()
     const location = useLocation()
+    const searchParams = new URLSearchParams(location.search);
+    const isOrder = !!searchParams.get('order');
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if (isMobile && !location.pathname.startsWith('/mobile')) {
-            window.location.href = `/mobile${location.pathname}`
+            window.location.href = `/mobile${location.pathname}` + location.search
         } else if (!isMobile && location.pathname.startsWith('/mobile')) {
-            window.location.href = location.pathname.replace('/mobile', '')
+            window.location.href = location.pathname.replace('/mobile', '') + location.search
         }
     }, [isMobile, location.pathname])
 
@@ -108,6 +112,14 @@ function App() {
         }
         document.title = isMobile ? titles[mobileLang] : titles[lang]
     }, [isMobile, lang, mobileLang])
+
+    useEffect(() => {
+        if (isMobile) {
+            setMobileOrderDialogVisible(isOrder)
+        } else {
+            setOrderDialogVisible(isOrder)
+        }
+    }, [isOrder])
 
     return (
         <div style={{ fontFamily: `EBGaramond, ${isMobile ? mobileFontFamily : fontFamily}` }}>

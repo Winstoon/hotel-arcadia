@@ -1,5 +1,6 @@
 
 import { InputHTMLAttributes, useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Image from '../Image'
 import Button from '../Button'
 import { useCommonStore, useOrderDialogStore } from '../../mobilestore'
@@ -29,6 +30,7 @@ function getChildrenNums (adultNums: number) {
 }
 
 export default function MobileOrderDialog (props: IProps) {
+    const { pathname } = useLocation()
     const I18N = useCommonStore(state => state.I18N)
     const ls = useCommonStore(state => state.letterSpacing)
     const visible = useOrderDialogStore(state => state.visible)
@@ -120,7 +122,7 @@ export default function MobileOrderDialog (props: IProps) {
         <>
             <div className={`mobile-order-dialog ${visible ? 'show' : ''}`} onClick={handleHideAll}>
                 <div className='top-mask' />
-                <div className='close' onClick={onClose}><Image src='/icons/close.svg' /></div>
+                <Link className='close' to={pathname}><Image src='/icons/close.svg' /></Link>
                 <div className='order-form'>
                     <div className='form-header'>
                         <h2 style={{ letterSpacing: ls.H1 }}>{I18N['reserve']}</h2>
