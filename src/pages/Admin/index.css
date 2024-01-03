@@ -188,6 +188,8 @@
     flex-wrap: wrap;
     gap: 12px;
     padding: 12px 16px;
+    max-height: 100px;
+    overflow: auto;
 }
 .admin-calendar .cld-dates .date-tag{
     padding: 4px 8px;
@@ -242,6 +244,8 @@
     align-items: flex-start;
     border: 1px dashed #e4e4e4;
     margin-bottom: 12px;
+    max-height: 300px;
+    overflow: auto;
 }
 
 .admin-calendar .button{
@@ -281,6 +285,7 @@
 }
 .admin.mobile .right-cont{
     padding: 10px;
+    overflow: auto;
 }
 .admin.mobile .right-cont .order-caption{
     padding: 4px;
@@ -291,10 +296,35 @@
 .admin.mobile .right-cont .operation .calendar {
     padding: 0;
 }
+.admin.mobile .right-cont .operation .react-calendar {
+    border: none;
+}
+    
 .admin.mobile .right-cont .react-calendar__tile{
     flex: 0 0 12%!important;
 }
-
+.admin.mobile .admin-calendar .cld-dates .list{
+    max-height: 200px;
+    padding: 12px;
+    gap: 6px;
+}
 .admin.mobile .admin-calendar .cld-dates .operation{
     flex-direction: column;
+}
+
+.admin.mobile .admin-calendar .cld-dates .operation .opt-right{
+    padding: 0;
+    border: none;
+}
+
+.admin.mobile .admin-calendar .cld-dates .operation .button{
+    margin: 6px;
+}
+.admin.mobile .admin-calendar .cld-dates .operation .list{
+    padding: 12px;
+    gap: 6px;
+    border: none;
+    max-height: 160px;
+    border-top: 1px dashed #e4e4e4;
+    border-bottom: 1px dashed #e4e4e4;
 }

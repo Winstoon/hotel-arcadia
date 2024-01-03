@@ -1,7 +1,7 @@
 import { useCommonStore } from "../../store"
 import Image from "../Image"
 
-export const MINDAYS = 7
+export const MINDAYS = 6
 
 interface IProps {
     days: number

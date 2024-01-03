@@ -40,11 +40,13 @@ export default function MobileOrderDialog (props: IProps) {
     const [calendarVisible, setCalendarVisible] = useState(false)
     const [adultsDpVisible, setAdultsDpVisible] = useState(false)
     const [childrenDpVisible, setChildrenDpVisible] = useState(false)
+    const [entourageDpVisible, setEntourageDpVisible] = useState(false)
 
     const [reserveDate, setReserveDate] = useState<string>(formatCalendarDate(new Date()))
     const [reserveDays, setReserveDays] = useState(MINDAYS)
     const [reserveAdults, setReserveAdults] = useState(1)
     const [reserveChildren, setReserveChildren] = useState(0)
+    const [entourages, setEntourages] = useState(0)
     const [reserveName, setReserveName] = useState('')
     const [reservePhone, setReservePhone] = useState('')
     const [reserveEmail, setReserveEmail] = useState('')
@@ -77,6 +79,7 @@ export default function MobileOrderDialog (props: IProps) {
                 days: reserveDays,
                 adults: reserveAdults,
                 children: reserveChildren,
+                entourages,
                 name: reserveName,
                 phone: reservePhone,
                 email: reserveEmail,
@@ -97,22 +100,31 @@ export default function MobileOrderDialog (props: IProps) {
         setCalendarVisible(false)
         setAdultsDpVisible(false)
         setChildrenDpVisible(false)
+        setEntourageDpVisible(false)
     }
 
     useEffect(() => {
         if (calendarVisible) {
             setAdultsDpVisible(false)
             setChildrenDpVisible(false)
+            setEntourageDpVisible(false)
         }
         if (adultsDpVisible) {
             setCalendarVisible(false)
             setChildrenDpVisible(false)
+            setEntourageDpVisible(false)
         }
         if (childrenDpVisible) {
             setCalendarVisible(false)
             setAdultsDpVisible(false)
+            setEntourageDpVisible(false)
         }
-    }, [calendarVisible, adultsDpVisible, childrenDpVisible])
+        if (entourageDpVisible) {
+            setCalendarVisible(false)
+            setAdultsDpVisible(false)
+            setChildrenDpVisible(false)
+        }
+    }, [calendarVisible, adultsDpVisible, childrenDpVisible, entourageDpVisible])
 
     useEffect(() => {
         setReserveChildren(0)
@@ -171,6 +183,16 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
+                            <span>* {I18N['reserve.form.entourage']}</span>
+                            <Dropdown
+                                dpVisible={entourageDpVisible}
+                                setDpVisible={setEntourageDpVisible}
+                                setValue={setEntourages}
+                                displayValue={`${entourages} ${I18N['person']}`}
+                                numbers={[0,1,2]}
+                            />
+                        </div>
+                        <div className='form-item'>
                             <span>* {I18N['reserve.form.name']}</span>
                             <Input
                                 value={reserveName}
@@ -198,7 +220,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.notes']}</span>
+                            <span>{I18N['reserve.form.notes']}</span>
                             <Input
                                 value={reserveNotes}
                                 placeholder={I18N['reserve.form.notes.placeholder']}
@@ -234,6 +256,7 @@ export default function MobileOrderDialog (props: IProps) {
                 <Button onClick={() => {
                     setSuccess(false)
                     setVisible(false)
+                    window.location.href = pathname
                 }}>{I18N['reserve.form.ok']}</Button>
             </div>
         </>

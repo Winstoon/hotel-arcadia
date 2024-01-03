@@ -32,7 +32,7 @@ app.post('/api/login', express.json(), (req, res) => {
 app.get('/api/getOrders', (req, res) => {
     // 获取订单列表
     var list = readJson('orders.json')
-    res.json({ data: list })
+    res.json({ data: list.filter(item => typeof item.deleted === 'boolean' ? !item.deleted : true ) })
 })
 
 app.post('/api/addOrder', express.json(), (req, res) => {
@@ -43,6 +43,7 @@ app.post('/api/addOrder', express.json(), (req, res) => {
     newOrder.id = orders.length + 1
     newOrder.addDate = new Date().toLocaleString()
     newOrder.processed = false
+    newOrder.deleted = false
     orders.push(newOrder)
     
     writeJson('orders.json', orders)
@@ -64,6 +65,22 @@ app.post('/api/updateOrder', express.json(), (req, res) => {
     writeJson('orders.json', orders)
     res.json({ code: 0, message: 'success' })
 })
+
+app.post('/api/deleteOrder', express.json(), (req, res) => {
+    var { oid } = req.body
+    var orders = readJson('orders.json')
+
+    orders = orders.map(item => {
+        if (item.id === oid) {
+            item.deleted = true
+        }
+        return item
+    })
+
+    writeJson('orders.json', orders)
+    res.json({ code: 0, message: 'success' })
+})
+
 
 app.get('/api/getCalendar', (req, res) => {
     const calendar = readJson('calendar.json')

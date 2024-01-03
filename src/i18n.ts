@@ -74,6 +74,11 @@ export const I18NS: I18NFullData = {
         [I18N.EN]: 'Children',
         [I18N.JP]: '子供',
     },
+    'person': {
+        [I18N.ZH]: '人',
+        [I18N.EN]: 'Person',
+        [I18N.JP]: '人',
+    },
 
     'night': {
         [I18N.ZH]: '晚',
@@ -2195,9 +2200,9 @@ export const I18NS: I18NFullData = {
     },
 
     'reserve.policy.desc1': {
-        [I18N.ZH]: '· 2023年12月1日起开放入住预订，8天7晚起订',
-        [I18N.EN]: '· Reservation opens from 1 December 2023, 7 nights minimum.',
-        [I18N.JP]: '· 2023年12月1日より予約受付開始、7泊からのご予約を承ります。',
+        [I18N.ZH]: '· 2023年12月1日起开放入住预订，7天6晚起订',
+        [I18N.EN]: '· Reservation opens from 1 December 2023, 6 nights minimum.',
+        [I18N.JP]: '· 2023年12月1日より予約受付開始、6泊からのご予約を承ります。',
     },
     'reserve.policy.desc2': {
         [I18N.ZH]: '· 入住时间: 16点后；退房时间: 10点前',
@@ -2234,9 +2239,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'チェックイン日',
     },
     'reserve.form.days': {
-        [I18N.ZH]: '入住天数（8天7晚起订）',
-        [I18N.EN]: 'Nights (7 nights minimum.)',
-        [I18N.JP]: '宿泊日数（7泊から承ります）',
+        [I18N.ZH]: '入住天数（7天6晚起订）',
+        [I18N.EN]: 'Nights (6 nights minimum.)',
+        [I18N.JP]: '宿泊日数（6泊から承ります）',
     },
     'reserve.form.adults': {
         [I18N.ZH]: '成人人数',
@@ -2247,6 +2252,11 @@ export const I18NS: I18NFullData = {
         [I18N.ZH]: '儿童人数（7岁以下）',
         [I18N.EN]: 'Children (under 7)',
         [I18N.JP]: 'お子様の人数（7歳未満）',
+    },
+    'reserve.form.entourage': {
+        [I18N.ZH]: '随行人员',
+        [I18N.EN]: 'Entourage',
+        [I18N.JP]: '随行員',
     },
     'reserve.form.name': {
         [I18N.ZH]: '联系人',

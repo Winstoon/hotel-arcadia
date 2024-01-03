@@ -6,10 +6,12 @@ export type NewOrder = {
     days: number        // 预订天数
     adults: number      // 成人数
     children: number    // 儿童数
+    entourages: number  // 随行人数
     name: string        // 姓名
     phone: string       // 电话
     email: string       // 邮箱
     notes: string       // 备注
+    deleted?: boolean   // 已删除
 }
 
 export type Order = {
@@ -27,6 +29,7 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
         date,
         days,
         adults,
+        entourages,
         children,
         name,
         phone,
@@ -55,6 +58,14 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
         })
     }
 
+    const deleteOrder = () => {
+        // TODO 删除订单
+    }
+
+    const editOrder = () => {
+        // TODO 编辑订单
+    }
+
     useEffect(() => {
         setIProcessed(processed)
     }, [processed])
@@ -81,7 +92,11 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
                     </div>
                     <div className="order-attr">
                         <div className="os-cpt">儿 童：</div>
-                        <div>{children} 人</div>
+                        <div>{children ? `${children} 人` : '无'}</div>
+                    </div>
+                    <div className="order-attr">
+                        <div className="os-cpt">随行人数：</div>
+                        <div>{entourages ? `${entourages} 人` : '无'}</div>
                     </div>
                 </div>
                 <div className="order-contact">

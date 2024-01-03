@@ -33,6 +33,7 @@ export default function OrderDialog (props: IProps) {
     const ls = useCommonStore(state => state.letterSpacing)
     const visible = useOrderDialogStore(state => state.visible)
     const setVisible = useOrderDialogStore(state => state.setVisible)
+    const [entourageDpVisible, setEntourageDpVisible] = useState(false)
     
     const [success, setSuccess] = useState(false)
     const [calendarVisible, setCalendarVisible] = useState(false)
@@ -43,6 +44,7 @@ export default function OrderDialog (props: IProps) {
     const [reserveDays, setReserveDays] = useState(MINDAYS)
     const [reserveAdults, setReserveAdults] = useState(1)
     const [reserveChildren, setReserveChildren] = useState(0)
+    const [entourages, setEntourages] = useState(0)
     const [reserveName, setReserveName] = useState('')
     const [reservePhone, setReservePhone] = useState('')
     const [reserveEmail, setReserveEmail] = useState('')
@@ -75,6 +77,7 @@ export default function OrderDialog (props: IProps) {
                 days: reserveDays,
                 adults: reserveAdults,
                 children: reserveChildren,
+                entourages,
                 name: reserveName,
                 phone: reservePhone,
                 email: reserveEmail,
@@ -95,22 +98,31 @@ export default function OrderDialog (props: IProps) {
         setCalendarVisible(false)
         setAdultsDpVisible(false)
         setChildrenDpVisible(false)
+        setEntourageDpVisible(false)
     }
 
     useEffect(() => {
         if (calendarVisible) {
             setAdultsDpVisible(false)
             setChildrenDpVisible(false)
+            setEntourageDpVisible(false)
         }
         if (adultsDpVisible) {
             setCalendarVisible(false)
             setChildrenDpVisible(false)
+            setEntourageDpVisible(false)
         }
         if (childrenDpVisible) {
             setCalendarVisible(false)
             setAdultsDpVisible(false)
+            setEntourageDpVisible(false)
         }
-    }, [calendarVisible, adultsDpVisible, childrenDpVisible])
+        if (entourageDpVisible) {
+            setCalendarVisible(false)
+            setAdultsDpVisible(false)
+            setChildrenDpVisible(false)
+        }
+    }, [calendarVisible, adultsDpVisible, childrenDpVisible, entourageDpVisible])
 
     useEffect(() => {
         setReserveChildren(0)
@@ -169,6 +181,16 @@ export default function OrderDialog (props: IProps) {
                                 />
                             </div>
                             <div className='form-item'>
+                                <span>* {I18N['reserve.form.entourage']}</span>
+                                <Dropdown
+                                    dpVisible={entourageDpVisible}
+                                    setDpVisible={setEntourageDpVisible}
+                                    setValue={setEntourages}
+                                    displayValue={`${entourages} ${I18N['person']}`}
+                                    numbers={[0,1,2]}
+                                />
+                            </div>
+                            <div className='form-item'>
                                 <span>* {I18N['reserve.form.name']}</span>
                                 <Input
                                     value={reserveName}
@@ -186,7 +208,7 @@ export default function OrderDialog (props: IProps) {
                                     style={{ letterSpacing: ls.TXT }}
                                 />
                             </div>
-                            <div className='form-item full'>
+                            <div className='form-item'>
                                 <span>* {I18N['reserve.form.email']}</span>
                                 <Input
                                     value={reserveEmail}
@@ -232,6 +254,7 @@ export default function OrderDialog (props: IProps) {
                 <Button onClick={() => {
                     setSuccess(false)
                     setVisible(false)
+                    window.location.href = pathname
                 }}>{I18N['reserve.form.ok']}</Button>
             </div>
         </>
