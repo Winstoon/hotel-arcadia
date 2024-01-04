@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import dayjs from "dayjs"
+import OrderDialog from "./OrderDialog"
 
 export type NewOrder = {
-    date: string        // 预订日期
+    date: number        // 预订日期
     days: number        // 预订天数
     adults: number      // 成人数
     children: number    // 儿童数
@@ -16,16 +17,17 @@ export type NewOrder = {
 
 export type Order = {
     id: number
-    addDate: string
+    addDate: number
     processed: boolean  // 已处理
 } & NewOrder
 
-function formatDate (date: string, format = 'YYYY/MM/DD') {
+export function formatDate (date: string | number, format = 'YYYY/MM/DD') {
     return dayjs(date).format(format)
 }
 
-function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
+function OrderItem ({ data, refetch, onEdit }: { data: Order, refetch: () => void, onEdit: (o: Order) => void }) {
     const {
+        id,
         date,
         days,
         adults,
@@ -59,11 +61,26 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
     }
 
     const deleteOrder = () => {
-        // TODO 删除订单
+        if (window.confirm('确定删除该订单？')) {
+            fetch('/api/deleteOrder', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    oid: id
+                })
+            }).then(res => res.json()).then(res => {
+                if (res.code === 0) {
+                    alert('删除成功')
+                    refetch()
+                } else {
+                    alert(res.message)
+                }
+            })
+        }
     }
 
     const editOrder = () => {
-        // TODO 编辑订单
+        onEdit(data)
     }
 
     useEffect(() => {
@@ -74,14 +91,20 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
         <div className="order-item">
             <div className="order-caption">
                 <label className="checkbox"><input type="checkbox" checked={iprocessed} onChange={handleChangeProcessed} /> 标为已处理</label>
-                <div className="order-date">下单时间：{addDate}</div>
+                <div className="order-time">下单时间：{formatDate(addDate, 'YYYY-MM-DD HH:mm')}</div>
             </div>
             <div className="order-basic">
-                <div className="order-info">
+                <div className="order-operation">
+                    <button className="btn" onClick={editOrder}>编辑</button>
+                    <button className="btn" onClick={deleteOrder}>删除</button>
+                </div>
+                <div className="order-date">
                     <div className="order-attr">
                         <div className="os-cpt">预订日期：</div>
                         <div>{formatDate(date)} - {formatDate(dayjs(date).add(days, 'day').toString())}</div>
                     </div>
+                </div>
+                <div className="order-info">
                     <div className="order-attr">
                         <div className="os-cpt">预订天数：</div>
                         <div>{days+1}天 {days}晚</div>
@@ -125,6 +148,7 @@ function OrderItem ({ data, refetch }: { data: Order, refetch: () => void }) {
 export default function Orders () {
     const [orders, setOrders] = useState<Order[]>([])
     const [hide, setHide] = useState(false)
+    const [editOrder, setEditOrder] = useState<Order | null>(null)
 
     const fetchOrders = () => {
         fetch('/api/getOrders').then(res => res.json()).then(res => {
@@ -134,22 +158,40 @@ export default function Orders () {
         })
     }
 
+    const handleEdit = (o: Order) => {
+        setEditOrder(o)
+    }
+
     useEffect(() => {
         fetchOrders()
     }, [])
 
     return (
-        <div className="orders">
-            <label className="checkbox"><input type="checkbox" checked={hide} onChange={() => setHide(!hide)} /> 隐藏已处理订单</label>
-            <div className="order-list">
-                { orders
-                    .filter(o => hide ? !o.processed : true)
-                    .sort((a, b) => dayjs(b.addDate).valueOf() - dayjs(a.addDate).valueOf())
-                    .map((order: Order) => (
-                        <OrderItem data={order} refetch={fetchOrders} />
-                    ))
-                }
+        <>
+            <div className="orders">
+                <label className="checkbox"><input type="checkbox" checked={hide} onChange={() => setHide(!hide)} /> 隐藏已处理订单</label>
+                <div className="order-list">
+                    { orders
+                        .filter(o => hide ? !o.processed : true)
+                        .sort((a, b) => dayjs(b.addDate).valueOf() - dayjs(a.addDate).valueOf())
+                        .map((order: Order) => (
+                            <OrderItem
+                                data={order}
+                                refetch={fetchOrders}
+                                onEdit={handleEdit}
+                            />
+                        ))
+                    }
+                </div>
+
             </div>
-        </div>
+            { editOrder ?
+                <OrderDialog
+                    data={editOrder}
+                    onClose={() => setEditOrder(null)}
+                    refetch={fetchOrders}
+                />  : null
+            }
+        </>
     )
 }

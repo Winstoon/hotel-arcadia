@@ -1,6 +1,7 @@
 var fs = require('fs')
 var path = require('path')
 var express = require('express')
+var dayjs = require('dayjs')
 var app = express()
 var PORT = process.env.PORT || 80
 
@@ -41,7 +42,8 @@ app.post('/api/addOrder', express.json(), (req, res) => {
     var orders = readJson('orders.json')
     
     newOrder.id = orders.length + 1
-    newOrder.addDate = new Date().toLocaleString()
+    newOrder.addDate = new Date().getTime()
+    newOrder.date = dayjs(newOrder.date).valueOf()
     newOrder.processed = false
     newOrder.deleted = false
     orders.push(newOrder)
@@ -63,7 +65,7 @@ app.post('/api/updateOrder', express.json(), (req, res) => {
     })
 
     writeJson('orders.json', orders)
-    res.json({ code: 0, message: 'success' })
+    res.json({ code: 0, message: 'Update success.' })
 })
 
 app.post('/api/deleteOrder', express.json(), (req, res) => {
@@ -78,7 +80,7 @@ app.post('/api/deleteOrder', express.json(), (req, res) => {
     })
 
     writeJson('orders.json', orders)
-    res.json({ code: 0, message: 'success' })
+    res.json({ code: 0, message: 'Delete success.' })
 })
 
 
