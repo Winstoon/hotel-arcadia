@@ -2200,9 +2200,9 @@ export const I18NS: I18NFullData = {
     },
 
     'reserve.policy.desc1': {
-        [I18N.ZH]: '· 2023年12月1日起开放入住预订，7天6晚起订',
-        [I18N.EN]: '· Reservation opens from 1 December 2023, 6 nights minimum.',
-        [I18N.JP]: '· 2023年12月1日より予約受付開始、6泊からのご予約を承ります。',
+        [I18N.ZH]: '· 2023年12月1日起开放入住预订，6天5晚起订',
+        [I18N.EN]: '· Reservation opens from 1 December 2023, 5 nights minimum.',
+        [I18N.JP]: '· 2023年12月1日より予約受付開始、5泊からのご予約を承ります。',
     },
     'reserve.policy.desc2': {
         [I18N.ZH]: '· 入住时间: 16点后；退房时间: 10点前',
@@ -2239,9 +2239,9 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: 'チェックイン日',
     },
     'reserve.form.days': {
-        [I18N.ZH]: '入住天数（7天6晚起订）',
-        [I18N.EN]: 'Nights (6 nights minimum.)',
-        [I18N.JP]: '宿泊日数（6泊から承ります）',
+        [I18N.ZH]: '入住天数（6天5晚起订）',
+        [I18N.EN]: 'Nights (5 nights minimum.)',
+        [I18N.JP]: '宿泊日数（5泊から承ります）',
     },
     'reserve.form.adults': {
         [I18N.ZH]: '成人人数',
