@@ -73,6 +73,7 @@ export function mobileCheck () {
 
 function App() {
     const lang = useCommonStore(state => state.lang)
+    const setLang = useCommonStore(state => state.setLang)
     const pcPageOrder = useCommonStore(state => state.pageSectionOrder)
     const mobileLang = useMobileCommonStore(state => state.lang)
 
@@ -88,6 +89,7 @@ function App() {
     const location = useLocation()
     const searchParams = new URLSearchParams(location.search);
     const isOrder = !!searchParams.get('order');
+    const langFromParams = searchParams.get('lang') as I18N
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -120,6 +122,12 @@ function App() {
             setOrderDialogVisible(isOrder)
         }
     }, [isOrder])
+
+    useEffect(() => {
+        if (langFromParams) {
+            setLang(langFromParams)
+        }
+    }, [langFromParams])
 
     return (
         <div style={{ fontFamily: `EBGaramond, ${isMobile ? mobileFontFamily : fontFamily}` }}>
