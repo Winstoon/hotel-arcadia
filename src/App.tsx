@@ -71,6 +71,17 @@ export function mobileCheck () {
     return regx1.test(ua) || regx2.test(ua.substr(0,4))
 }
 
+export function getFontSize (type: 'title' | 'desc', lang: I18N) {
+    if (lang !== I18N.EN) return ''
+
+    const fontSize = {
+        title: 24,
+        desc: 17
+    }
+
+    return fontSize[type]
+}
+
 function App() {
     const lang = useCommonStore(state => state.lang)
     const setLang = useCommonStore(state => state.setLang)

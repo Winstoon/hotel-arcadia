@@ -1,4 +1,5 @@
 // 佳肴
+import { getFontSize } from "../../App";
 import AmLine from "../../components/AmLine/AmLine";
 import CircleProgress from "../../components/CircleProgress";
 import FadeSlide from "../../components/FadeSlide/FadeSlide";
@@ -12,15 +13,15 @@ import { useCommonStore } from "../../store";
 import './index.css'
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    // const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
     // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     return (
         <div className="section section1">
             <div className="content">
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 {/* <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button> */}
             </div>
 
@@ -36,6 +37,7 @@ function SlideMenu ({ data, ls, order }: { data: any, ls: ILetterSpacing, order:
     const { title, menuGroup } = data
     const setActiveMenu = useCommonStore(state => state.setActiveMenu)
     const setVisible = useCommonStore(state => state.setMenuDialogVisible)
+    const lang = useCommonStore(state => state.lang)
 
     const handleClickDetail = (menu: any) => {
         setActiveMenu(menu)
@@ -46,17 +48,18 @@ function SlideMenu ({ data, ls, order }: { data: any, ls: ILetterSpacing, order:
         <>
             <div className="section section-menu">
                 <div className={`content ${active ? 'animate' : ''}`}>
-                    <div className="title" style={{ letterSpacing: ls.H1 }}>{title}</div>
+                    <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{title}</div>
                     <div className="menu-group" style={{ letterSpacing: ls.TXT }}>
                         { menuGroup.map((group: any) => (
                             <div>
-                                <div className="group-title">{group.title}</div>
+                                <div className="group-title" style={{ fontSize: getFontSize('desc', lang) }}>{group.title}</div>
                                 <div className="group-body">
                                     {group.detail.map((detail: any) => (
                                         <div>
                                             <span
                                                 className="detail-item"
                                                 onClick={() => handleClickDetail(detail)}
+                                                style={{ fontSize: getFontSize('desc', lang)}}
                                             >{detail.type}</span>
                                         </div>
                                     ))}
@@ -71,6 +74,7 @@ function SlideMenu ({ data, ls, order }: { data: any, ls: ILetterSpacing, order:
 }
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 2
     const images = [
         '/jpgs/dli-2-1.jpg',
@@ -81,16 +85,16 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section2">
             <div className={`h2-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc7}</div>
             </div>
             <FadeSlide
                 autoplay
@@ -112,6 +116,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 3
     const images = [
         '/jpgs/dli-3-1.jpg',
@@ -122,15 +127,15 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section3">
             <div className={`h3-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
             </div>
             <FadeSlide
                 autoplay

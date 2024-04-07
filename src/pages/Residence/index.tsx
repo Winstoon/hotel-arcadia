@@ -15,17 +15,18 @@ import { ILetterSpacing } from "../../letterSpacings";
 import { useCommonStore } from "../../store";
 
 import './index.css'
+import { getFontSize } from "../../App";
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    // const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
     // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     return (
         <div className="section section1">
             <div className="content">
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 {/* <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button> */}
             </div>
 
@@ -35,6 +36,7 @@ function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 1
     const images = [
         '/jpgs/res-2-1.jpg',
@@ -51,16 +53,16 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
         <div className="section section2">
             <div className="content">
                 <div className={`intros ${active ? 'animate' : ''}`}>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
                     <div className="desc"></div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc8}</div>
-                    <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc9}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc7}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc8}</div>
+                    <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc9}</div>
                 </div>
                 <div className="images">
                     <SwiperImages images={images} />
@@ -72,6 +74,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 2
     const images = [
         '/jpgs/res-3-1.jpg',
@@ -82,16 +85,16 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section3">
             <div className={`h3-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
-                <div className="tips" style={{ letterSpacing: ls.TXT }}>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
+                <div className="tips" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
                     <div className="tip">{data.tip1}</div>
                     <div className="tip">{data.tip2}</div>
                 </div>
@@ -116,6 +119,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 3
     const images = [
         '/jpgs/res-4-1.jpg',
@@ -125,18 +129,18 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section4">
             <div className={`h4-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc8}</div>
-                <div className="tips" style={{ letterSpacing: ls.TXT }}>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc7}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc8}</div>
+                <div className="tips" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
                     <div className="tip">{data.tip1}</div>
                     <div className="tip">{data.tip2}</div>
                     <div className="tip">{data.tip3}</div>
@@ -172,6 +176,7 @@ function Slide5 ({ data, ls, order, onClick }: { data: any, ls: ILetterSpacing, 
 }
 
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 5
     const images = [
         '/jpgs/res-6-1.jpg',
@@ -185,25 +190,25 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section6">
             <div className={`h6-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc8}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc9}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc7}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc8}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc9}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc10}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc11}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc12}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc10}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc11}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc12}</div>
 
-                <div className="tips" style={{ letterSpacing: ls.TXT }}>
+                <div className="tips" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
                     <div className="tip">{data.tip}</div>
                 </div>
             </div>
@@ -249,11 +254,12 @@ function ToggleVisible (props: {
 }) {
     const { grid, caption, children, visible, disabled, onChangeVisible } = props
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
 
     return (
         <div className={`toggle-item ${visible ? '' : 'hidden'}`}>
             <div className="toggle-title" onClick={onChangeVisible}>
-                <span className="toggle-cpt" style={{ letterSpacing: ls.H1 }}>{caption}</span>
+                <span className="toggle-cpt" style={{ letterSpacing: ls.H1, fontSize: getFontSize('desc', lang) }}>{caption}</span>
                 { disabled ? null :
                     <Image
                         className="toggle-btn"
@@ -261,12 +267,13 @@ function ToggleVisible (props: {
                     />
                 }
             </div>
-            <div className={`toggle-body ${grid ? 'grid' : ''}`} style={{ letterSpacing: ls.TXT }}>{children}</div>
+            <div className={`toggle-body ${grid ? 'grid' : ''}`} style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{children}</div>
         </div>
     )
 }
 
 function Slide7 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const [visibles, setVisibles] = useState([true, false, false])
     const [v2, v3, v4] = visibles
 
@@ -296,7 +303,7 @@ function Slide7 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
     return (
         <div className="section section7">
-            <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+            <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
             <div className="h7-content">
                 <ToggleVisible
                     visible
@@ -312,7 +319,7 @@ function Slide7 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                     onChangeVisible={onToggleV2}
                 >
                     {data.suite.desc.map((desc: string) =>
-                        <div className="suite-item" style={{ letterSpacing: ls.TXT }}>{desc}</div>
+                        <div className="suite-item" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{desc}</div>
                     )}
                 </ToggleVisible>
 
@@ -325,7 +332,7 @@ function Slide7 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                     {data.facility.list.map((fac: any) =>
                         fac.hover ?
                         <Tooltip {...fac} /> :
-                        <div className="list-item" style={{ letterSpacing: ls.TXT }}>{fac.label}</div>
+                        <div className="list-item" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{fac.label}</div>
                     )}
                 </ToggleVisible>
 
@@ -338,7 +345,7 @@ function Slide7 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                     {data.service.list.map((sv: any) =>
                         sv.hover ?
                         <Tooltip {...sv} /> :
-                        <div className="list-item" style={{ letterSpacing: ls.TXT }}>{sv.label}</div>
+                        <div className="list-item" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{sv.label}</div>
                     )}
                 </ToggleVisible>
             </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Image from "../Image"
 import { useCommonStore, useSwiperImage3Store } from "../../store"
 import './SwiperImages.css'
+import { getFontSize } from "../../App"
 
 
 interface IImage {
@@ -18,6 +19,7 @@ interface IProps{
 export default function SwiperImages3 (props: IProps) {
     const { images, onClick } = props
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
     const [page, setPage] = useSwiperImage3Store(state => [state.page, state.setPage])
     const [activeIdx, setActiveIdx] = useState<number[]>([])
     const prevable = page > 1
@@ -81,10 +83,10 @@ export default function SwiperImages3 (props: IProps) {
                         onClick={() => handleClick(index, img)}
                     >
                         <Image src={img.src} />
-                        <div className="intros" style={{ letterSpacing: ls.TXT}}>
-                            { img.caption ? <div className="img-caption">{img.caption}</div> : null }
+                        <div className="intros" style={{ letterSpacing: ls.TXT }}>
+                            { img.caption ? <div className="img-caption" style={{ fontSize: getFontSize('title', lang) }}>{img.caption}</div> : null }
                             { img.desc.map(desc => 
-                                <div className="img-desc">{desc}</div>
+                                <div className="img-desc" style={{ fontSize: getFontSize('desc', lang) }}>{desc}</div>
                             )}
                         </div>
                     </div>

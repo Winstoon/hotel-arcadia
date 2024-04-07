@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import { useCommonStore, useOrderDialogStore } from "../../store"
-import { ROUTERS } from "../../App"
+import { ROUTERS, getFontSize } from "../../App"
 import Image from "../Image"
 import Language from "../Language"
 import Button from "../Button"
@@ -42,6 +42,7 @@ export default function Header (props: IProps) {
                         <Link
                             to={router.path}
                             className={router.path === pathname ? 'active' : ''}
+                            style={{ fontSize: getFontSize('desc', lang) }}
                         >{router.label[lang]}</Link>
                     </div>
                 )}

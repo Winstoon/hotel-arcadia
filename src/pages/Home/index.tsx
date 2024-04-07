@@ -8,6 +8,7 @@ import Button2 from "../../components/Button2";
 import Image, { AnimateBg } from "../../components/Image";
 
 import './index.css'
+import { getFontSize } from "../../App";
 
 // function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
 //     return (
@@ -22,7 +23,7 @@ import './index.css'
 
 function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 0
-    // const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
     // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     // const handleOrder = () => {
@@ -32,9 +33,9 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section2">
             <div className={`content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 {/* <Button uppercase onClick={handleOrder}>{I18N['reserve']}</Button> */}
             </div>
 
@@ -46,6 +47,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 1
     const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
 
     return (
         <div className="section section3">
@@ -53,9 +55,9 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 {/* <Image className="banner" src={data.banner} /> */}
                 {/* <div className={`paragraph ${active ? 'animate' : ''}`}>
                 </div> */}
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <Button2 to="/env">{I18N['explore']}</Button2>
             </div>
             <AnimateBg src="/jpgs/home-3.jpg" infinite />
@@ -66,6 +68,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 2
     const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
     const setActive = useFadeSlideStore(state => state.setActive)
     
     useEffect(() => {
@@ -78,9 +81,9 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section4">
             <div className={`content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <Button2 to="/residence">{I18N['explore']}</Button2>
             </div>
 
@@ -92,13 +95,14 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 3
     const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
 
     return (
         <div className="section section5">
             <div className={`content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <Button2 to="/delicious">{I18N['explore']}</Button2>
             </div>
 
@@ -109,10 +113,12 @@ function Slide5 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 
 function SlidePics ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order === 4
+    const lang = useCommonStore(state => state.lang)
+
     return (
         <div className="section sectionpics">
             <div className={`content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <Button2 to="/pics">{data.btntxt}</Button2>
 
                 <div className="imgs">
@@ -127,25 +133,26 @@ function SlidePics ({ data, ls, order }: { data: any, ls: ILetterSpacing, order:
 
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const active = order >= 5
+    const lang = useCommonStore(state => state.lang)
 
     return (
         <div className="section section6">
             <div className={`content ${active ? 'animate' : ''}`}>
-                <div className="info" style={{ letterSpacing: ls.TXT }}>{data.title}</div>
+                <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.title}</div>
                 <div className="group">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance1}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance2}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.distance1}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.distance2}</div>
                 </div>
                 <div className="group">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance3}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance4}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance5}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.distance3}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.distance4}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.distance5}</div>
                 </div>
                 <div className="lgg">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.address}<a rel='noreferrer' href="https://www.google.com/maps/place/Arcadia/@42.8560658,140.7098538,19z/data=!4m6!3m5!1s0x5f0ab1e1c27b18d7:0x859d2d73d7f8c9d7!8m2!3d42.8560295!4d140.7099628!16s%2Fg%2F11v59_lb4z?entry=ttu" target="_blank">{data.viewMap}</a></div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.phone}</div>
-                    {/* <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div> */}
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.email}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.address}<a rel='noreferrer' href="https://www.google.com/maps/place/Arcadia/@42.8560658,140.7098538,19z/data=!4m6!3m5!1s0x5f0ab1e1c27b18d7:0x859d2d73d7f8c9d7!8m2!3d42.8560295!4d140.7099628!16s%2Fg%2F11v59_lb4z?entry=ttu" target="_blank">{data.viewMap}</a></div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.phone}</div>
+                    {/* <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.fax}</div> */}
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.email}</div>
                 </div>
             </div>
             <Image className={`map ${active ? 'animate' : ''}`} src="/jpgs/home-6.jpg" />

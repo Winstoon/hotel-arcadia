@@ -1,3 +1,4 @@
+import { getFontSize } from "../../App"
 import { useCommonStore } from "../../store"
 import Image from "../Image"
 
@@ -5,6 +6,7 @@ import './index.css'
 
 export default function MenuDialog () {
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
     const [visible, setVisible] = useCommonStore(state => [state.menuDialogVisible, state.setMenuDialogVisible])
     const [activeMenu, setActiveMenu] = useCommonStore(state => [state.activeMenu, state.setActiveMenu])
 
@@ -18,8 +20,8 @@ export default function MenuDialog () {
             { activeMenu ? (
                 <div className="dialog-body">
                     <Image className="dialog-close" src='/icons/close.svg' onClick={handleClose} />
-                    <div className="menu-title" style={{ letterSpacing: ls.H1 }}>{activeMenu.type}</div>
-                    <div className="menu-items" style={{ letterSpacing: ls.TXT }}>
+                    <div className="menu-title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{activeMenu.type}</div>
+                    <div className="menu-items" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
                         {activeMenu.menu.map((item: string) => (
                             <div>{item}</div>
                         ))}

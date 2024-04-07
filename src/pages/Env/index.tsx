@@ -1,3 +1,4 @@
+import { getFontSize } from "../../App";
 import AmLine from "../../components/AmLine/AmLine";
 import CircleProgress from "../../components/CircleProgress";
 import FadeSlide from "../../components/FadeSlide/FadeSlide";
@@ -15,15 +16,15 @@ import { useCommonStore } from "../../store";
 import './index.css'
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
-    // const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
     // const setOrderVisible = useOrderDialogStore(state => state.setVisible)
 
     return (
         <div className="section section1">
             <div className="content">
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 {/* <Button uppercase onClick={() => setOrderVisible(true)}>{I18N['reserve']}</Button> */}
             </div>
 
@@ -45,20 +46,20 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section2">
             <div className={`h2-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 
                 { isEn ? <div className="desc"></div> : null }
                 
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
                 
                 { isEn ? null : <div className="desc"></div> }
                 
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
             </div>
             <FadeSlide
                 autoplay
@@ -80,6 +81,7 @@ function Slide2 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 2
     const images = [
         '/jpgs/env-3-1.jpg',
@@ -90,16 +92,16 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section3">
             <div className={`h3-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc7}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc7}</div>
             </div>
             <FadeSlide2
                 autoplay
@@ -121,6 +123,7 @@ function Slide3 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
 }
 
 function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
+    const lang = useCommonStore(state => state.lang)
     const active = order === 3
     const images = [
         '/jpgs/env-4-1.jpg',
@@ -131,15 +134,15 @@ function Slide4 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
     return (
         <div className="section section4">
             <div className={`h4-content ${active ? 'animate' : ''}`}>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <AmLine active={active} style={{ marginBottom: 40 }} />
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <div className="desc"></div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc3}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc4}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc6}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
             </div>
             <FadeSlide3
                 autoplay

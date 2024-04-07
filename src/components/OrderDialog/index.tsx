@@ -8,6 +8,7 @@ import Dropdown from './Dropdown'
 import Button from '../Button'
 
 import './index.css'
+import { getFontSize } from '../../App'
 
 interface IProps {
     visible: boolean
@@ -31,6 +32,7 @@ export default function OrderDialog (props: IProps) {
     const { pathname } = useLocation()
     const I18N = useCommonStore(state => state.I18N)
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
     const visible = useOrderDialogStore(state => state.visible)
     const setVisible = useOrderDialogStore(state => state.setVisible)
     const [entourageDpVisible, setEntourageDpVisible] = useState(false)
@@ -134,8 +136,8 @@ export default function OrderDialog (props: IProps) {
                 <Link className='close' to={pathname}><Image src='/icons/close.svg' /></Link>
                 <div className='order-form'>
                     <div className='form-header'>
-                        <h2 style={{ letterSpacing: ls.H1}}>{I18N['reserve']}</h2>
-                        <div className='cpts' style={{ letterSpacing: ls.TXT }}>
+                        <h2 style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{I18N['reserve']}</h2>
+                        <div className='cpts' style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
                             <div>{I18N['reserve.cpt1']}</div>
                             <div>{I18N['reserve.cpt2']}</div>
                             <div>{I18N['reserve.cpt3']}</div>
@@ -232,7 +234,7 @@ export default function OrderDialog (props: IProps) {
                         <div className={`error-msg ${errorMsg ? 'show' : ''}`}>{errorMsg}</div>
                     </div>
 
-                    <div className='form-footer' style={{ letterSpacing: ls.TXT }}>
+                    <div className='form-footer' style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
                         <div className='policy-title'>{I18N['reserve.policy.title']}</div>
                         <ul>
                             <li>{I18N['reserve.policy.desc1']}</li>
@@ -246,11 +248,11 @@ export default function OrderDialog (props: IProps) {
                 </div>
             </div>
             <div className={`success-dialog ${success ? 'show' : ''}`}>
-                <div className='cpt' style={{ letterSpacing: ls.H1 }}>
+                <div className='cpt' style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>
                     <Image src='/icons/success.svg' />
                     {I18N['reserve.form.success.cpt']}
                 </div>
-                <div className='desc'style={{ letterSpacing: ls.TXT }}>{I18N['reserve.form.success.desc']}</div>
+                <div className='desc'style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{I18N['reserve.form.success.desc']}</div>
                 <Button onClick={() => {
                     setSuccess(false)
                     setVisible(false)

@@ -2,6 +2,7 @@ import { useState } from "react"
 import Image from "../Image"
 import './SwiperImages.css'
 import { useCommonStore, useSwiperImage2Store } from "../../store"
+import { getFontSize } from "../../App"
 
 
 interface IImage {
@@ -18,6 +19,7 @@ interface IProps{
 export default function SwiperImages2 (props: IProps) {
     const { images, className } = props
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
     const [active, setActive] = useSwiperImage2Store(state => [state.page, state.setPage]) // 0: 0-2, 3: 3-5
 
     const btnVisible = images.length > 3
@@ -51,9 +53,9 @@ export default function SwiperImages2 (props: IProps) {
                     { images.map((img, idx) =>
                         <div className="img-box" key={idx}>
                             <div className="hover-animate"><Image className="img" src={img.src} /></div>
-                            { img.caption ? <div className="img-caption" style={{ letterSpacing: ls.H1 }}>{img.caption}</div> : null }
+                            { img.caption ? <div className="img-caption" style={{ letterSpacing: ls.H1, fontSize: getFontSize('desc', lang) }}>{img.caption}</div> : null }
                             { img.desc.map(desc => 
-                                <div className="img-desc" style={{ letterSpacing: ls.TXT }}>{desc}</div>
+                                <div className="img-desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{desc}</div>
                             )}
                         </div>
                     )}
