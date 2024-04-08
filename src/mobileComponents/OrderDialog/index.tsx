@@ -9,6 +9,7 @@ import DaysInput, { MINDAYS } from './DaysInput'
 import Dropdown from './Dropdown'
 
 import './index.css'
+import { getFontSize } from '../../App'
 
 interface IProps {
     visible: boolean
@@ -33,6 +34,9 @@ export default function MobileOrderDialog (props: IProps) {
     const { pathname } = useLocation()
     const I18N = useCommonStore(state => state.I18N)
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
+    const titleFontSize = getFontSize('title', lang)
+    const descFontSize = getFontSize('desc', lang)
     const visible = useOrderDialogStore(state => state.visible)
     const setVisible = useOrderDialogStore(state => state.setVisible)
 
@@ -137,8 +141,8 @@ export default function MobileOrderDialog (props: IProps) {
                 <Link className='close' to={pathname}><Image src='/icons/close.svg' /></Link>
                 <div className='order-form'>
                     <div className='form-header'>
-                        <h2 style={{ letterSpacing: ls.H1 }}>{I18N['reserve']}</h2>
-                        <div className='cpts' style={{ letterSpacing: ls.TXT }}>
+                        <h2 style={{ letterSpacing: ls.H1, fontSize: titleFontSize }}>{I18N['reserve']}</h2>
+                        <div className='cpts' style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>
                             <div>{I18N['reserve.cpt1']}</div>
                             <div>{I18N['reserve.cpt2']}</div>
                             <div>{I18N['reserve.cpt3']}</div>
@@ -147,7 +151,7 @@ export default function MobileOrderDialog (props: IProps) {
 
                     <div className='form-body' style={{ letterSpacing: ls.TXT }}>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.date']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.date']}</span>
                             <CalendarInput
                                 popVisible={calendarVisible}
                                 setPopVisible={setCalendarVisible}
@@ -156,14 +160,14 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.days']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.days']}</span>
                             <DaysInput
                                 days={reserveDays}
                                 setDays={setReserveDays}
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.adults']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.adults']}</span>
                             <Dropdown
                                 dpVisible={adultsDpVisible}
                                 setDpVisible={setAdultsDpVisible}
@@ -173,7 +177,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.children']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.children']}</span>
                             <Dropdown
                                 dpVisible={childrenDpVisible}
                                 setDpVisible={setChildrenDpVisible}
@@ -183,7 +187,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.entourage']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.entourage']}</span>
                             <Dropdown
                                 dpVisible={entourageDpVisible}
                                 setDpVisible={setEntourageDpVisible}
@@ -193,7 +197,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.name']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.name']}</span>
                             <Input
                                 value={reserveName}
                                 placeholder={I18N['reserve.form.name.placeholder']}
@@ -202,7 +206,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.phone']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.phone']}</span>
                             <Input
                                 value={reservePhone}
                                 placeholder={I18N['reserve.form.phone.placeholder']}
@@ -211,7 +215,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>* {I18N['reserve.form.email']}</span>
+                            <span style={{ fontSize: descFontSize }}>* {I18N['reserve.form.email']}</span>
                             <Input
                                 value={reserveEmail}
                                 placeholder={I18N['reserve.form.email.placeholder']}
@@ -220,7 +224,7 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
                         <div className='form-item'>
-                            <span>{I18N['reserve.form.notes']}</span>
+                            <span style={{ fontSize: descFontSize }}>{I18N['reserve.form.notes']}</span>
                             <Input
                                 value={reserveNotes}
                                 placeholder={I18N['reserve.form.notes.placeholder']}
@@ -229,11 +233,11 @@ export default function MobileOrderDialog (props: IProps) {
                             />
                         </div>
 
-                        <div className='button' style={{ letterSpacing: ls.TXT }} onClick={handleSubmit}>{I18N['submit']}</div>
+                        <div className='button' style={{ letterSpacing: ls.TXT, fontSize: descFontSize }} onClick={handleSubmit}>{I18N['submit']}</div>
                         <div className={`error-msg ${errorMsg ? 'show' : ''}`}>{errorMsg}</div>
                     </div>
 
-                    <div className='form-footer' style={{ letterSpacing: ls.TXT }}>
+                    <div className='form-footer' style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>
                         <div className='policy-title'>{I18N['reserve.policy.title']}</div>
                         <ul>
                             <li>{I18N['reserve.policy.desc1']}</li>

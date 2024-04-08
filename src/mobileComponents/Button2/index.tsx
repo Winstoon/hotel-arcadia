@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useCommonStore } from '../../mobilestore'
 
 import './index.css'
+import { getFontSize } from '../../App'
 
 interface IProps {
     children: React.ReactNode
@@ -13,9 +14,10 @@ interface IProps {
 
 export default function Button2 (props: IProps) {
     const letterSpacing = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
     const { children, dark, to, href, onClick } = props
     const classname = `mobile-button2 ${dark ? 'dark' : ''}`
-    const style = { letterSpacing: letterSpacing.TXT, textIndent: letterSpacing.TXT }
+    const style = { letterSpacing: letterSpacing.TXT, textIndent: letterSpacing.TXT, fontSize: getFontSize('desc', lang) }
 
     const newChildren = (
         <>

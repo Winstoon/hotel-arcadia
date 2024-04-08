@@ -10,14 +10,17 @@ import Image, { AnimateBg } from '../../mobileComponents/Image'
 import Footer from '../../mobileComponents/Footer'
 
 import './index.css'
+import { getFontSize } from '../../App'
 
 function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    const lang = useCommonStore(state => state.lang)
+
     return (
         <div className="section section1" style={{ height: window.innerHeight }}>
             <div className='content'>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
             </div>
 
             <AnimateBg src="/mobile/home-1.jpg" infinite />
@@ -27,13 +30,14 @@ function Slide1 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
 
     return (
         <div className="section section2" style={{ height: window.innerHeight }}>
             <div className="content">
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <Button2 to="/mobile/env">{I18N['explore']}</Button2>
             </div>
             
@@ -45,13 +49,14 @@ function Slide2 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
 
     return (
         <div className="section section3" style={{ height: window.innerHeight }}>
             <div className='content'>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <Button2 to="/mobile/residence">{I18N['explore']}</Button2>
             </div>
 
@@ -78,6 +83,7 @@ function Slide3 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 
 function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     const I18N = useCommonStore(state => state.I18N)
+    const lang = useCommonStore(state => state.lang)
 
     // const images = [
     //     '/mobile/home-4-1.jpg',
@@ -88,9 +94,9 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
     return (
         <div className="section section4" style={{ height: window.innerHeight }}>
             <div className='content'>
-                <div className="title" style={{ letterSpacing: ls.H1 }}>{data.title}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc1}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT }}>{data.desc2}</div>
+                <div className="title" style={{ letterSpacing: ls.H1, fontSize: getFontSize('title', lang) }}>{data.title}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
+                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
                 <Button2 to="/mobile/delicious">{I18N['explore']}</Button2>
             </div>
 
@@ -117,28 +123,31 @@ function Slide4 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 }
 
 function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    const lang = useCommonStore(state => state.lang)
+    const descFontSize = getFontSize('desc', lang)
+
     return (
         <div className="section section5">
             <div className='content'>
-                <div className="title" style={{ letterSpacing: ls.TXT }}>{data.cpt}</div>
+                <div className="title" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.cpt}</div>
                 
                 <div className='group'>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.location}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.location}</div>
                 </div>
                 <div className="group">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance1}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance2}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.distance1}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.distance2}</div>
                 </div>
                 <div className="group">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance3}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance4}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.distance5}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.distance3}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.distance4}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.distance5}</div>
                 </div>
                 <div className="lgg">
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.address}</div>
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.phone}</div>
-                    {/* <div className="info" style={{ letterSpacing: ls.TXT }}>{data.fax}</div> */}
-                    <div className="info" style={{ letterSpacing: ls.TXT }}>{data.email}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.address}</div>
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.phone}</div>
+                    {/* <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.fax}</div> */}
+                    <div className="info" style={{ letterSpacing: ls.TXT, fontSize: descFontSize }}>{data.email}</div>
                 </div>
             </div>
             <Image className='map' src="/mobile/home-5.jpg" />
@@ -147,10 +156,12 @@ function Slide5 ({ data, ls }: { data: any, ls: ILetterSpacing }) {
 }
 
 function SlidePics ({ data, ls }: { data: any, ls: ILetterSpacing }) {
+    const lang = useCommonStore(state => state.lang)
+
     return (
         <div className='section sectionpics'>
             <div className='content'>
-                <div className='title' style={{ letterSpacing: ls.TXT }}>{data.title}</div>
+                <div className='title' style={{ letterSpacing: ls.TXT, fontSize: getFontSize('title', lang) }}>{data.title}</div>
                 <div className='imgs'>
                     <Image src='/mobile/home-p-1.jpg' />
                     <Image src='/mobile/home-p-2.jpg' />

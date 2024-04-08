@@ -1,5 +1,5 @@
-EN: EBGaramond-Regular.ttf
+EN: LeagueSpartan
 
-ZH: NotoSerifSC-Regular.otf
+ZH: SourceHanSansSC
 
-JP: ShipporiMinchoB1-Regular.ttf
+JP: NotoSansJP

@@ -607,6 +607,7 @@ export default function Residence () {
 
 function SwiperModal ({ data, onClose }: { data: any | undefined, onClose: () => void }) {
     const ls = useCommonStore(state => state.letterSpacing)
+    const lang = useCommonStore(state => state.lang)
     const { imgs, details, caption } = data || {
         imgs: [],
         details: [],
@@ -619,9 +620,9 @@ function SwiperModal ({ data, onClose }: { data: any | undefined, onClose: () =>
             <div className="sm-body">
                 <SwiperBody imgs={imgs} />
                 <div className="sm-content">
-                    <div className="caption" style={{ letterSpacing: ls.TXT}}>{caption}</div>
+                    <div className="caption" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang)}}>{caption}</div>
                     { details.map((d: string) =>
-                        <div className="detail" style={{ letterSpacing: ls.TXT }}>{d}</div>
+                        <div className="detail" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{d}</div>
                     )}
                 </div>
             </div>

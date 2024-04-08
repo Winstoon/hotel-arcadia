@@ -1,15 +1,39 @@
 @font-face {
     /* EN */
-    font-family: "EBGaramond";
-    src: url("./EBGaramond-Regular.ttf")
+    font-family: "LeagueSpartan";
+    src: url("./LeagueSpartan-Regular.ttf");
 }
+
+@font-face {
+    /* EN */
+    font-family: "LeagueSpartan";
+    src: url("./LeagueSpartan-SemiBold.ttf");
+    font-weight: 500;
+}
+
 @font-face {
     /* CN */
-    font-family: "NotoSerifSC";
-    src: url("./NotoSerifSC-Light.otf")
+    font-family: "SourceHanSansSC";
+    src: url("./SourceHanSansSC-Regular.otf");
 }
+
+@font-face {
+    /* CN */
+    font-family: "SourceHanSansSC";
+    src: url("./SourceHanSansSC-Medium.otf");
+    font-weight: 500;
+}
+
+
 @font-face {
     /* JP */
-    font-family: "ShipporiMinchoB1";
-    src: url("./ShipporiMinchoB1-Regular.ttf")
+    font-family: "NotoSansJP";
+    src: url("./NotoSansJP-Regular.ttf")
+}
+
+@font-face {
+    /* JP */
+    font-family: "NotoSansJP";
+    src: url("./NotoSansJP-Medium.ttf");
+    font-weight: 500;
 }

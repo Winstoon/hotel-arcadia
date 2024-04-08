@@ -57,9 +57,9 @@ export const ROUTERS = [
 ]
 
 const FontFamilies = {
-    [I18N.EN]: 'EBGaramond',
-    [I18N.ZH]: 'NotoSerifSC',
-    [I18N.JP]: 'ShipporiMinchoB1'
+    [I18N.EN]: 'LeagueSpartan',
+    [I18N.ZH]: 'SourceHanSansSC',
+    [I18N.JP]: 'NotoSansJP'
 }
 
 export function mobileCheck () {
