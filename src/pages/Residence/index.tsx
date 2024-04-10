@@ -417,8 +417,7 @@ export default function Residence () {
                         I18N['res.s5.image1.desc1']
                     ],
                     imgs: [
-                        '/jpgs/res-5-1.1.jpg',
-                        '/jpgs/res-5-1.2.jpg'
+                        '/jpgs/res-5-1.1.jpg'
                     ],
                     details: [
                         I18N['res.s5.image1.desc1'],
@@ -458,7 +457,7 @@ export default function Residence () {
                     imgs: [
                         '/jpgs/res-5-3.1.jpg',
                         '/jpgs/res-5-3.2.jpg',
-                        '/jpgs/res-5-3.3.jpg',
+                        // '/jpgs/res-5-3.3.jpg',
                         '/jpgs/res-5-3.4.jpg'
                     ],
                     details: [

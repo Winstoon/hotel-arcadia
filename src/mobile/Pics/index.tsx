@@ -53,7 +53,7 @@ export default function MobilePics () {
     
     // 15张图
     const getImages = () => {
-        return Array.from({ length: 63 }).map((_, index) => {
+        return Array.from({ length: 73 }).map((_, index) => {
             return {
                 preview: `/pics/pic-${index + 1}.jpg`,
                 origin: `/pngs/bpic-${index + 1}.png`

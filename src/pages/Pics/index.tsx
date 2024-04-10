@@ -110,7 +110,7 @@ export default function Pictures () {
 
     // 15张图
     const getImages = () => {
-        return Array.from({ length: 63 }).map((_, index) => {
+        return Array.from({ length: 73 }).map((_, index) => {
             return {
                 id: index+ 1,
                 url: `/pics/pic-${index + 1}.jpg`,
