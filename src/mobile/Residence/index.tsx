@@ -339,7 +339,10 @@ export default function MobileResidence () {
             title: I18N['res.s5.title'],
             images: [
                 {
-                    srcs: [{ url:'/mobile/res-5-1.jpg'}, { url:'/mobile/res-5-1-2.jpg'}],
+                    srcs: [
+                        { url:'/mobile/res-5-1.jpg'},
+                        // { url:'/mobile/res-5-1-2.jpg'}
+                    ],
                     caption: I18N['res.s5.image1.cpt'],
                     desc: [
                         I18N['res.s5.image1.desc1'],
@@ -362,7 +365,7 @@ export default function MobileResidence () {
                     ]
                 },
                 {
-                    srcs: [{ url:'/mobile/res-5-6.jpg'}, { url:'/mobile/res-5-7.jpg'}, { url:'/mobile/res-5-8.jpg'}, { url:'/mobile/res-5-9.jpg'}],
+                    srcs: [{ url:'/mobile/res-5-6.jpg'}, { url:'/mobile/res-5-7.jpg'}, { url:'/mobile/res-5-9.jpg'}],
                     caption: I18N['res.s5.image3.cpt'],
                     desc: [
                         I18N['res.s5.image3.desc1'],
