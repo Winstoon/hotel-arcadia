@@ -794,12 +794,12 @@ export const I18NS: I18NFullData = {
     },
     'res.s6.desc2': {
         [I18N.ZH]: '专业级酒窖空间',
-        [I18N.EN]: 'Pro cellar space',
+        [I18N.EN]: 'Pro cellar space, Ideal location for your wine collection.',
         [I18N.JP]: 'プロ仕様のワインセラー',
     },
     'res.s6.desc3': {
         [I18N.ZH]: '为名酒佳酿提供卓越窖藏',
-        [I18N.EN]: 'Ideal location for your wine collection.',
+        [I18N.EN]: '',
         [I18N.JP]: '高級ワイン用のワインセラー・スペースをご用意しています',
     },
     'res.s6.desc4': {
@@ -809,12 +809,12 @@ export const I18NS: I18NFullData = {
     },
     'res.s6.desc5': {
         [I18N.ZH]: '康体养生 平心疗愈',
-        [I18N.EN]: 'Heal your body and recover your wellness.',
+        [I18N.EN]: 'Heal your body and recover your wellness. Soothe your physical and spiritual state.',
         [I18N.JP]: '体の疲れを癒すために、',
     },
     'res.s6.desc6': {
         [I18N.ZH]: '由身至心 开启舒缓之境',
-        [I18N.EN]: 'Soothe your physical and spiritual state.',
+        [I18N.EN]: '',
         [I18N.JP]: '心身を解きほぐす心地よいやすらぎを存分にお楽しみいただけます',
     },
     'res.s6.desc7': {
@@ -824,12 +824,12 @@ export const I18NS: I18NFullData = {
     },
     'res.s6.desc8': {
         [I18N.ZH]: '全套法国自动加热烘干设备',
-        [I18N.EN]: 'Auto-heating and drying equipment from France.',
+        [I18N.EN]: 'Auto-heating and drying equipment from France. For your ultimate skiing experience.',
         [I18N.JP]: 'フランス製の自動加熱乾燥機で',
     },
     'res.s6.desc9': {
         [I18N.ZH]: '纵享至臻滑雪之旅',
-        [I18N.EN]: 'For your ultimate skiing experience.',
+        [I18N.EN]: '',
         [I18N.JP]: '最高のスキー旅をお手伝いします',
     },
     'res.s6.desc10': {
@@ -839,12 +839,12 @@ export const I18NS: I18NFullData = {
     },
     'res.s6.desc11': {
         [I18N.ZH]: '全套 TECHNOGYM 设备',
-        [I18N.EN]: 'Full TECHNOGYM equipment',
+        [I18N.EN]: 'Full TECHNOGYM equipment, For diversified physique needs.',
         [I18N.JP]: 'TECHNOGYM 設備が完備され',
     },
     'res.s6.desc12': {
         [I18N.ZH]: '满足多样体调需求',
-        [I18N.EN]: 'For diversified physique needs.',
+        [I18N.EN]: '',
         [I18N.JP]: '幅広いフィットネス・ニーズに対応',
     },
 

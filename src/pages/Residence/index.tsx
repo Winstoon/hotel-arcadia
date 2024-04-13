@@ -16,6 +16,7 @@ import { useCommonStore } from "../../store";
 
 import './index.css'
 import { getFontSize } from "../../App";
+import { I18N } from "../../i18n";
 
 function Slide1 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const lang = useCommonStore(state => state.lang)
@@ -177,6 +178,7 @@ function Slide5 ({ data, ls, order, onClick }: { data: any, ls: ILetterSpacing, 
 
 function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: number }) {
     const lang = useCommonStore(state => state.lang)
+    const isEn = lang === I18N.EN
     const active = order === 5
     const images = [
         '/jpgs/res-6-1.jpg',
@@ -194,21 +196,21 @@ function Slide6 ({ data, ls, order }: { data: any, ls: ILetterSpacing, order: nu
                 <AmLine active={active} style={{ marginBottom: 40 }} />
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc1}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc2}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div>
+                { isEn ? null : <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc3}</div> }
                 <div className="desc"></div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc4}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc5}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div>
+                { isEn ? null : <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc6}</div> }
                 <div className="desc"></div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc7}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc8}</div>
-                <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc9}</div>
+                { isEn ? null : <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc9}</div> }
                 <div className="desc"></div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc10}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc11}</div>
                 <div className="desc" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>{data.desc12}</div>
 
-                <div className="tips" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang) }}>
+                <div className="tips" style={{ letterSpacing: ls.TXT, fontSize: getFontSize('desc', lang), lineHeight: isEn ? 1.5 : 2 }}>
                     <div className="tip">{data.tip}</div>
                 </div>
             </div>
