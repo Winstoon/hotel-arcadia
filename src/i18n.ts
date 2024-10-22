@@ -206,8 +206,8 @@ export const I18NS: I18NFullData = {
     },
     
     'home.s6.desc8': {
-        [I18N.ZH]: '电话: +81 0136 55 7559',
-        [I18N.EN]: 'Tel: +81 0136 55 7559',
+        [I18N.ZH]: '电话: +81 136 55 8917',
+        [I18N.EN]: 'Tel: +81 136 55 8917',
         [I18N.JP]: '電話: 0136-55-7559',
     },
     // 不展示
@@ -218,9 +218,9 @@ export const I18NS: I18NFullData = {
     },
 
     'home.s6.desc10': {
-        [I18N.ZH]: '邮箱: info.arcadia@ryowhagroup.com',
-        [I18N.EN]: 'E-mail: info.arcadia@ryowhagroup.com',
-        [I18N.JP]: '電子メール: info.arcadia@ryowhagroup.com'
+        [I18N.ZH]: '邮箱: info@ryowhagroup.com',
+        [I18N.EN]: 'E-mail: info@ryowhagroup.com',
+        [I18N.JP]: '電子メール: info@ryowhagroup.com'
     },
 
     'home.pics.title': {
@@ -2183,14 +2183,14 @@ export const I18NS: I18NFullData = {
         [I18N.JP]: '送信後1営業日以内にコンシェルジュよりメールにてご連絡いたします',
     },
     'reserve.cpt2': {
-        [I18N.ZH]: '您也可以拨打预订电话 +81 0136 55 7559',
-        [I18N.EN]: 'You can also make a reservation by calling +81 0136 55 7559',
-        [I18N.JP]: 'ご予約は+81 0136 55 7559までお電話でも承ります',
+        [I18N.ZH]: '您也可以拨打预订电话 +81 136 55 8917',
+        [I18N.EN]: 'You can also make a reservation by calling +81 136 55 8917',
+        [I18N.JP]: 'ご予約は+81 136 55 8917までお電話でも承ります',
     },
     'reserve.cpt3': {
-        [I18N.ZH]: '或发送邮件至 info.arcadia@ryowhagroup.com 进行预订',
-        [I18N.EN]: 'or email info.arcadia@ryowhagroup.com',
-        [I18N.JP]: 'または info.arcadia@ryowhagroup.com までメールにてご予約ください',
+        [I18N.ZH]: '或发送邮件至 info@ryowhagroup.com 进行预订',
+        [I18N.EN]: 'or email info@ryowhagroup.com',
+        [I18N.JP]: 'または info@ryowhagroup.com までメールにてご予約ください',
     },
 
     'reserve.policy.title': {
