@@ -37,9 +37,10 @@ function VideoModal ({ visible, onClose }: { visible: boolean, onClose: () => vo
                 <Image src="/icons/close.svg" />
             </div>
             { visible ?
-                <video controls id="mfirstVideo" style={{ width: 960 }}>
-                    <source src={VideoSrc} type="video/mp4" />
-                </video> : null
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/CyFCuyXI7rE" title="ARCADIA 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> : null
+                // <video controls id="firstVideo" style={{ width: 960 }}>
+                //     <source src={VideoSrc} type="video/mp4" />
+                // </video> : null
             }
         </div>
     )

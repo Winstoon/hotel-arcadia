@@ -31,7 +31,7 @@ import './App.css';
 import MenuDialog from './components/MenuDialog';
 import PageNavgation from './components/PageNavgation';
 
-export const VideoSrc = 'https://www.w3schools.com/html/mov_bbb.mp4'
+export const VideoSrc = 'https://www.youtube.com/watch?v=CyFCuyXI7rE'
 
 export const ROUTERS = [
     {
